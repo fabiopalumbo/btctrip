@@ -1,0 +1,311 @@
+
+
+
+
+a, a:visited, a:hover {
+	color: #505050;
+	text-decoration: none;
+
+}
+
+.space25pxv {
+	height: 25px
+}
+
+img {
+	border: 0;
+}
+
+.labelwhite {
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#wowslider-container1 {
+	margin-left: 10px;
+}
+
+
+/* home 2.0 */
+
+
+.underscore {
+	margin-top: 0px;
+}
+
+.sectionsTitles {
+	margin-top: 10px;
+}
+
+.testimonial {
+	font-family: "Verdana", sans-serif;
+	font-size: 2em;
+	color: #808080;
+
+}
+
+.starbg {
+	float: left;
+	width: 139px;
+	height: 132px;
+	background: url('/bundles/btctrip/images/starbg.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #4f4f4f;
+	margin-top: -5px;
+	padding-top: 50px;
+
+
+}
+
+.starbginvert {
+	float: left;
+	width: 139px;
+	height: 284px;
+	background: url('/bundles/btctrip/images/starbginvert.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #ffffff;
+	margin-top: -5px;
+	padding-top: 50px;
+
+}
+
+.name {
+	color: #4f4f4f;
+	margin-top: 50px;
+
+}
+
+.secondrow {
+	margin-top: -120px;
+
+}
+
+.press {
+	margin-top: 20px;
+	/* margin-bottom: 70px; */
+
+}
+
+.testimonybox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: hidden;
+	margin-top: 0px;
+	background: #231f20;
+	z-index: 9999;
+
+}
+
+.tellafriendpos {
+	position: relative;
+	top: 50px;
+	z-index: 988;
+}
+
+.featuredby {
+	width: 280px;
+	height: 500px;
+	background: #818286;
+	z-index: 199;
+	color: #fff;
+	margin-top: -260px;
+	font-family: "Arial", sans-serif;
+}
+
+.higher {
+	background: url('/bundles/btctrip/images/flyhigherbanner280x496.jpg');
+	background-repeat: no-repeat;
+}
+
+#featuredby a { font-family: "Arial", sans-serif; text-decoration: none; color: #2a2a2a; font-weight: bold; }
+
+#featuredby a:visited { font-family: "Arial", sans-serif; text-decoration: none; color: #2a2a2a; font-weight: bold; }
+
+#featuredby a:hover { font-family: "Arial", sans-serif; text-decoration: none; color: #2a2a2a; font-weight: bold; }
+
+
+.mailerbox {
+	position: absolute;
+	top: 0;
+	left: 0;
+	visibility: visible;
+	margin-top: 0px;
+	padding: 20px;
+	background: #141414;
+	z-index: 399;
+
+}
+
+.mailerpos {
+	position: relative;
+	top: -250px;
+	z-index: 688;
+
+}
+
+.preloadimages {
+   position: absolute;
+   overflow: hidden;
+   left: -9999px; 
+   top: -9999px;
+   height: 1px;
+   width: 1px;
+
+}
+
+.killboth {
+	clear: both;
+
+}
+
+#left {
+    position: relative;
+    margin-right: 280px;
+
+}
+
+#right {
+    float: right;
+    position: relative;
+    text-align: left;
+    width: 280px;
+
+}
+
+.hidepress {
+	visibility: hidden;
+
+}
+
+.ontop {
+	position: absolute;
+	top: 0;
+	z-index: 99999;
+
+}
+
+.star {
+	float: left;
+	width: 139px;
+	height: 132px;
+	background: url('/bundles/btctrip/images/starbg.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #4f4f4f;
+	margin-top: -5px;
+
+}
+
+.starinvert {
+	float: left;
+	width: 139px;
+	height: 132px;
+	background: url('/bundles/btctrip/images/starbginvert.png');
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 0.75em;
+	font-weight: bold;
+	color: #4f4f4f;
+	margin-top: -5px;
+
+}
+
+.testimonial-section {
+	width: 640px; 
+	margin-top: -99px;
+}
+
+.testimonial-avatar {
+	margin-top: 28px; 
+	width: 76px;
+	height: 76px;
+}
+
+.testbox {
+	width: 221px;
+	height: 104px;
+	visibility: hidden;
+	position: relative;
+	top: 50px;
+	left: 25px; 
+	z-index: 988;
+	text-align: left;
+	vertical-align:bottom;
+}
+
+.testcopy {
+	top: -78px;
+	position: relative; 
+	vertical-align:middle; 
+	margin-left: 80px;
+	color: #333;
+	font-weight: normal;
+	font-size: 13px;
+	line-height: 16px;	
+}
+
+.name {
+	font-weight:bold;
+	margin-top: 50px;
+}
+
+.testimonial-bg {
+	background: url('../images/testimonialbg.png');
+}
+
+
+.pressheadline {
+	padding-top: 20px;
+
+}
+
+.pressbgd {
+	background: url('/bundles/btctrip/images/pressbg.png');
+	background-repeat: no-repeat;
+	width: 100px;
+	height: 58;
+	text-align: center;
+	margin-top: 5px;
+}
+
+.pressbgd.nyt {
+	width: 125px;
+}
+
+#copy {
+	position: relative;
+	top: 45px;
+	left: 5px;
+	color: #ffffff;
+	font-size: 0.75em;
+	line-height: 1.5em;
+	text-align: left;
+}
+
+#copy a { display: block; color: #333; text-decoration: none; font-weight: bold;}
+#copy a:visited { display: block; color: #333; text-decoration: none; font-weight: bold;}
+#copy a:hover { display: block; color: #333; text-decoration: none; font-weight: bold;}
+
+.l10px {
+	margin-left: 10px;
+
+}
+
+.l20px {
+	margin-left: 20px;
+
+}
+
+.r20px {
+	margin-right: 20px;
+
+}

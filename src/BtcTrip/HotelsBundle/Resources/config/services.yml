@@ -1,0 +1,14 @@
+parameters:
+
+
+services:
+    hotelshelper:
+        class: BtcTrip\HotelsBundle\DependencyInjection\HotelsHelper
+        arguments: [@service_container]
+    hotelmailtemplatemanager:
+        class: BtcTrip\HotelsBundle\DependencyInjection\MailTemplateManager
+        arguments: [@service_container]
+        
+    hotelsearchresultmanager:
+        class: BtcTrip\HotelsBundle\DocumentManager\HotelSearchResultManager
+        arguments: [@service_container]

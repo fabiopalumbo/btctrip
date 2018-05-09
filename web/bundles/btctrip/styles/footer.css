@@ -1,0 +1,114 @@
+.footer-container .footer-top {
+    padding: 0px 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.footer-container .footer-top .about #about-list .item {
+    font-size: 13px;
+    color: #FFAA00;
+    cursor: pointer;
+    float: left;
+    padding: 0px 8px 0px 0px;
+    margin: 0px 8px 10px 0px;
+    border-right: 1px solid #666;
+}
+
+.footer-container .footer-top .about #about-list .last {
+    border-right: 0px;
+}
+
+.footer-container .footer-top .about #blog-link .item {
+    font-size: 13px;
+    color: #FFAA00;
+    margin-bottom: 5px;
+    cursor: pointer;
+    float: left;
+    margin-right: 10px;
+}
+
+.footer-container .footer-top .countries {
+    width: 100%;
+    float: left;
+    color: #FFAA00;
+    font-size: 11px;
+    margin-top: 20px;
+}
+
+.footer-container .footer-top .countries .country {
+    float: left;
+    padding: 0px 5px 0px 0px;
+    margin: 0px 5px 10px 0px;
+    border-right: 1px solid #666;
+}
+
+.footer-container .footer-top .countries .country:last-child {
+    border-right: 0px solid #666;
+}
+
+.footer-container .footer-bottom {
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.footer-container .footer-bottom .secure {
+    float: left;
+}
+
+.footer-container .footer-bottom .secure [class^="logo-"] {
+    float: left;
+    margin: 3px 15px 0 0;
+}
+
+.footer-container .footer-bottom .secure .logo-geo-trust {
+    height: 37px;
+}
+
+.footer-container .footer-bottom p {
+    font-size: 11px;
+    color: #666;
+}
+
+.footer-container .footer-bottom .copyright {
+    color: #666;
+    font-size: 11px;
+}
+
+.footer-container .footer-bottom .copyright .website,.footer-container .footer-bottom .copyright .consultation {
+    color: #FFAA00;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.footer-container .footer-bottom .copyright .website .fake-link:hover,.footer-container .footer-bottom .copyright .consultation .fake-link:hover {
+    color: #6CF;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer-container .footer-bottom .legal {
+    float: left;
+    margin-top: 20px;
+    clear: both;
+}
+
+#pressContactPopUp {
+    position: absolute;
+}
+
+#pressContactPopUp .popUpContent div.message {
+    width: 300px;
+    padding: 15px;
+    overflow: hidden;
+    font-size: 13px;
+    color: #333;
+}
+
+#pressContactPopUp .topIndicator {
+    border-left: 0px;
+    border-right: 10px solid black;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    left: -20px;
+}

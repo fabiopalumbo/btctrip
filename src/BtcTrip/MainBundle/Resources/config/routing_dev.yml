@@ -1,0 +1,8 @@
+btc_trip_data_loader:
+    type:  annotation
+    resource: "@BtcTripMainBundle/Controller/DataLoaderController.php"
+
+
+btc_trip_testing:
+    type:  annotation
+    resource: "@BtcTripMainBundle/Controller/TestingController.php"

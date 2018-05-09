@@ -1,0 +1,21 @@
+<ul>
+    
+{% for r in results %}
+    Hotel:
+    <li>
+    <ul>
+    {% for key, value in r %}
+         <li> 
+         {% if value is iterable %}
+            {% for h in value %}
+                d
+            {% endfor %}
+        {% else %}
+          {{key }}:{{ value }}
+        {% endif %}
+         </li>
+    {% endfor %}
+    </ul>
+    </li>      
+{% endfor %}
+</ul>

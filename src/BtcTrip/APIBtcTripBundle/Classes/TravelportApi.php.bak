@@ -1,0 +1,966 @@
+<?php
+namespace BtcTrip\APIBtcTripBundle\Classes;
+use \BtcTrip\APIBtcTripBundle\Classes\TravelportCurl as TravelportCurl;
+
+//use \BtcTrip\FlightBundle\DocumentManager\CityManager as CityManager;
+//use \BtcTrip\APIBtcTripBundle\Classes\DespegarApiResponse as DespegarApiResponse;
+
+
+class TravelportApi extends BaseBookingApi {
+  
+    protected $apiUrl = 'http://consolid.webtravelcaster.com/api/1.1/';
+    protected $apiUsername = 'btctrip';
+    protected $apiPassword = 'u7N6gpP3';
+
+    private $activeToken = false;
+    //protected $activeToken = '2fd5870242e5fa62';
+
+    // passenger classes identifiers for travelport api.
+    protected $passengerClasses = array(
+        'ADT' => 'adults',
+        'CH' => 'childrens',
+        'IN' => 'infants',
+        /*
+        'adults' => 'ADT',
+        'childrens' => 'CHD',
+        'infants' => 'INF',
+        */
+    );
+
+    // comision sumada a cada pasajero en USD.
+    protected $comissionPerPassenger = 10;
+
+    /**
+     * horrible hacks for city and airport manager.
+     */
+    protected $cityManager = false;
+    public function setCityManager($manager) {
+        $this->cityManager = $manager;
+    }
+    protected $airportManager = false;
+    public function setAirportManager($manager) {
+        $this->airportManager = $manager;
+    }
+
+    protected $exchangeRates = false;
+    public function setExchangeRates($rates) {
+        $this->exchangeRates = $rates;
+    }
+
+    /**
+     * gets the active connection token to access api calls
+     */
+    private function getConnectionToken() {
+        $memcached = new \Memcached();
+        $memcached->addServer('localhost', 11211);
+
+        $cache = new \Doctrine\Common\Cache\MemcachedCache();
+        $cache->setMemcached($memcached);
+        $this->activeToken = $cache->fetch("travelportApiToken");
+
+        if($this->activeToken) {
+            return $this->activeToken;
+        } else {
+            $this->activeToken = $this->requestConnectionToken();
+            $cache->save("travelportApiToken", $this->activeToken, 3600);
+            return $this->activeToken;
+        }
+    }
+
+    /**
+     * requests a token from travelport to access the api calls.
+     */
+    private function requestConnectionToken() {
+        $parameters = array(
+            'username' => $this->apiUsername,
+            'password' => $this->apiPassword,
+        );
+
+        $response = $this->call('FlightService.json/GetAccessToken', $parameters);
+        if($response) {
+            return $response;
+        }
+    }
+
+    protected function call($apiOperation, $parameters = false, $httpMethod = 'GET', $httpHeaders = false) {
+        $callUrl = $this->apiUrl . $apiOperation;
+
+        if($parameters) {
+            $urlParams = http_build_query($parameters);
+            $callUrl .= '?' . $urlParams;
+        }
+
+        $curlHandler = curl_init($callUrl);
+        curl_setopt($curlHandler, CURLOPT_CUSTOMREQUEST, $httpMethod);                                                                     
+
+        curl_setopt($curlHandler, CURLOPT_RETURNTRANSFER, TRUE);
+        if($httpHeaders) {
+            curl_setopt($curlHandler, CURLOPT_HTTPHEADER, $httpHeaders);
+        }
+
+
+        $response = curl_exec($curlHandler); 
+        //$response = gzinflate(substr($response, 10, -8));
+        
+        return json_decode($response);
+    }
+
+    public function availabilityFlights($type, $from, $to, $departureDate, $returnDate, $adults, $childrens, $infants,
+        $orderBy, $orderDir, $departureTime, $returningTime, $classFlight, $scaleFlight, $airlineFlight, $filterParams) {
+
+        $token = $this->getConnectionToken();
+
+        // passengers
+        $passengersArray = array();
+        foreach($this->passengerClasses as $travelportId => $class) {
+            if(!empty($$class)) {
+                array_push($passengersArray, array(
+                    'Type' => $travelportId,
+                    'SubType' => 'NA',
+                    'Count' => $$class,
+                    'Age' => 0,
+                ));
+            }
+        }
+
+        $legs = array();
+
+        array_push($legs, array(
+            'DepartureAirportCity' => $from,
+            'ArrivalAirportCity' => $to,
+            'FlightDate' => $departureDate,
+        ));
+
+        if($type == 'roundtrip') {
+            array_push($legs, array(
+                'DepartureAirportCity' => $to,
+                'ArrivalAirportCity' => $from,
+                'FlightDate' => $returnDate,
+            ));
+        }
+
+        $searchParams = array(
+            'Token' => $token,
+            'Legs' => $legs,
+            'Passengers' => $passengersArray,
+            'Airlines' => array(
+                'AA'
+            ),
+        );
+
+        if(!empty($classFlight)) {
+            $searchParams['CabinClasses'] = array(
+                'F','A','P','Z','J','D','I','R','C',
+            );
+        }
+
+        $params = array(
+            'query' => json_encode($searchParams)
+        );
+        $response = $this->call('FlightService.json/GetFlightAvailability', $params);
+
+        // stops filter.
+        $maxStops = false;
+        if(!empty($filterParams['stops'])) {
+            if(strstr($filterParams['stops'], 'NONE') || strstr($scaleFlight, 'NONE')) {
+                $maxStops = 1;
+            }
+            if(strstr($filterParams['stops'], ',ONE') || strstr($scaleFlight, 'NONE')) {
+                $maxStops = 2;
+            }
+            if(strstr($filterParams['stops'], 'MORE_THAN_ONE') || strstr($scaleFlight, 'NONE')) {
+                $maxStops = false;
+            }
+        }
+
+        // departure time
+        $minTimeOutbound = false;
+        $maxTimeOutbound = false;
+        if(!empty($filterParams['timeoutbound'])) {
+            if(strstr($filterParams['timeoutbound'], 'EARLY_MORNING')) {
+                $minTimeOutbound = 0;
+                $maxTimeOutbound = 6;
+            }
+
+            if(strstr($filterParams['timeoutbound'], 'MORNING')) {
+                if($minTimeOutbound === false) {
+                    $minTimeOutbound = 6;
+                }
+                $maxTimeOutbound = 6;
+            }
+            if(strstr($filterParams['timeoutbound'], 'AFTERNOON')) {
+                if($minTimeOutbound === false) {
+                    $minTimeOutbound = 12;
+                }
+                $maxTimeOutbound = 20;
+            }
+            if(strstr($filterParams['timeoutbound'], 'NIGHT')) {
+                if($minTimeOutbound === false) {
+                    $minTimeOutbound = 20;
+                }
+                $maxTimeOutbound = 24;
+            }
+        }
+
+        // return time
+        $minTimeInbound = false;
+        $maxTimeInbound = false;
+        if(!empty($filterParams['timeinbound'])) {
+            if(strstr($filterParams['timeinbound'], 'EARLY_MORNING')) {
+                $minTimeInbound = 0;
+                $maxTimeInbound = 6;
+            }
+
+            if(strstr($filterParams['timeinbound'], 'MORNING')) {
+                if($minTimeInbound === false) {
+                    $minTimeInbound = 6;
+                }
+                $maxTimeInbound = 6;
+            }
+            if(strstr($filterParams['timeinbound'], 'AFTERNOON')) {
+                if($minTimeInbound === false) {
+                    $minTimeInbound = 12;
+                }
+                $maxTimeInbound = 20;
+            }
+            if(strstr($filterParams['timeinbound'], 'NIGHT')) {
+                if($minTimeInbound === false) {
+                    $minTimeInbound = 20;
+                }
+                $maxTimeInbound = 24;
+            }
+        }
+
+        // apply filters
+        foreach($response->Fares as $key => $fare) {
+            // stops filter
+            if($maxStops) {
+                $oStops = count($fare->Legs[0]->Options[0]->Segments);
+                $iStops = count($fare->Legs[1]->Options[0]->Segments);
+                if($oStops > $maxStops || $iStops > $maxStops) {
+                    unset($response->Fares[$key]);
+                }
+            }
+        }
+
+        $flights = $this->adaptToDespegarAvailabilityItems($response);
+
+        return $flights;
+    }
+
+    protected function formatCrypto($amount, $cryptoCode) {
+        // copy&paste de yamil.
+        if ($cryptoCode == 'BTC') {
+            return number_format($amount, 4, '.', ',');
+        } else if ($cryptoCode == 'XDG') {
+            return number_format($amount, 0, '.', ',');
+        } else if ($cryptoCode == 'LTC') {
+            return number_format($amount, 2, '.', ',');
+        } else {
+            return number_format($amount, 0, '.', ',');
+        }
+    }
+
+    protected function getClassDescription($class) {
+        switch($class) {
+            case 'F':
+            case 'A':
+            case 'P':
+            case 'Z':
+                $class = 'First Class';
+                break;
+            case 'J':
+            case 'D':
+            case 'I':
+            case 'R':
+            case 'C':
+                $class = 'Business Class';
+                break;
+            default:
+                $class = 'Economy Class (' . $class . ')';
+                break;
+        }
+        return $class;
+    }
+
+    private function adaptToDespegarAvailabilityItems($tpResponse) {
+        $items = array();
+        foreach($tpResponse->Fares as $fare) {
+            $item = array();
+
+            // TODO: fix this.
+            $item['id'] = 'XXXXXXXXXXXXXXXXXX';
+
+            foreach($fare->Legs as $leg) {
+                if($leg->LegNumber == 1) {
+                    $in_or_out = 'outbound';
+                } else {
+                    $in_or_out = 'inbound';
+                }
+
+                foreach($leg->Options as $legOption) {
+                    /* option->segment : route->segment*/
+                    $optionSegments = array();
+                    $optionAirlines = array();
+
+                    foreach($legOption->Segments as $key => $segment) {
+                        $airline = array(
+                            'code' => $segment->Airline,
+                            // TODO: fix htis.
+                            //'description' => $segment->Airline,
+                            'description' => 'American Airlines',
+                        );
+                        if(!in_array($airline, $optionAirlines)) {
+                            $optionAirlines[] = $airline;
+                        }
+
+                        $depDateTime = strtotime("{$segment->Departure->Date} {$segment->Departure->Time}");
+                        $arrivalDateTime = strtotime("{$segment->Arrival->Date} {$segment->Arrival->Time}");
+
+                        $optionSegments[] = array(
+                            'sequenceNumber' => $segment->SegmentNumber,
+                            'flightNumber' => $segment->FlightNumber,
+                            'bookingClass' => $segment->BookingClass,
+                            'operatingCarrier' => array(
+                                    'code' => $segment->Airline,
+                                    // TODO: fix this.
+                                    //'description' => $segment->Airline,
+                                    'description' => 'American Airlines',
+                            ),
+                            'carrier' => array(
+                                    'code' => $segment->Airline,
+                                    // TODO: fix this.
+                                    //'description' => $segment->Airline,
+                                    'description' => 'American Airlines',
+                            ),
+                            'departure' => array(
+                                'dateTime' => $depDateTime,
+                                'location' => array(
+                                    'code' => $segment->Departure->AirportCode,
+                                    'airport' => array(
+                                        'code' => $segment->Departure->AirportCode,
+                                        'description' => $this->getAirportNameByCode($segment->Departure->AirportCode),
+                                    ),
+                                    'city' => array(
+                                        'code' => $this->getAirportCityByCode($segment->Departure->AirportCode),
+                                        'description' => $this->getCityNameByCode($this->getAirportCityByCode($segment->Departure->AirportCode)),
+                                    ),
+                                ),
+                                'date' => array(
+                                    'raw' => $depDateTime * 1000,
+                                    'formatted' => date("D d F", $depDateTime),
+                                    'rawObject' => $depDateTime * 1000,
+                                ),
+                                'hour' => array(
+                                    'raw' => $depDateTime * 1000,
+                                    'formatted' => date("H:i", $depDateTime),
+                                    'rawObject' => $depDateTime * 1000,
+                                ),
+                            ),
+                            'arrival' => array(
+                                'dateTime' => $arrivalDateTime,
+                                'location' => array(
+                                    'code' => $segment->Arrival->AirportCode,
+                                    'airport' => array(
+                                        'code' => $segment->Arrival->AirportCode,
+                                        'description' => $this->getAirportNameByCode($segment->Arrival->AirportCode),
+                                    ),
+                                    'city' => array(
+                                        'code' => $this->getAirportCityByCode($segment->Arrival->AirportCode),
+                                        'description' => $this->getCityNameByCode($this->getAirportCityByCode($segment->Arrival->AirportCode)),
+                                    ),
+                                ),
+                                'date' => array(
+                                    'raw' => $arrivalDateTime * 1000,
+                                    'formatted' => date("D d F", $arrivalDateTime),
+                                    'rawObject' => $arrivalDateTime * 1000,
+                                ),
+                                'hour' => array(
+                                    'raw' => $arrivalDateTime * 1000,
+                                    'formatted' => date("H:i", $arrivalDateTime),
+                                    'rawObject' => $arrivalDateTime * 1000,
+                                ),
+                            ),
+                            // TODO: fix everything below this.
+                            'cabinTypeDescription' => $this->getClassDescription($segment->BookingClass),
+                            'tueketingCabinType' => '',
+                        );
+
+                        // TODO: fix this. theres a problem with timezones and wait duration. if you go from one timezone
+                        // to another you get a wrong wait duration.
+                        if($segment->SegmentNumber > 1) {
+                            $prevFlightArrivalDate = strtotime("{$legOption->Segments[$key]->Arrival->Date} {$legOption->Segments[$key]->Arrival->Time}");
+                            $waitDuration = $depDateTime - $prevFlightArrivalDate;
+
+                            $waitDuration = date('H', $waitDuration) . 'h ' . date('i', $waitDuration) . 'm';
+
+                            $optionSegments[count($optionSegments)-1]['waitDuration'] = array(
+                                'formatted' => $waitDuration,
+                            );
+                        }
+                    }
+
+                    $hours = floor($legOption->OptionDuration / 60);
+                    $minutes = $legOption->OptionDuration - ($hours * 60);
+                    $totalDuration = "{$hours}h {$minutes}m";
+
+                    /* option : route */
+                    $item['itinerariesBox'][$in_or_out . 'Routes'][] = array(
+                        'type' => 'AIR',
+                        'hidden' => false,
+                        // TODO: fix this
+                        'cityAirportChange' => false,
+                        // END FIX THIS
+                        'stopCount' => count($optionSegments) - 1,
+                        'segments' => $optionSegments,
+                        'totalDuration' => array(
+                            'formatted' => $totalDuration,
+                        ),
+                        'airlines' => $optionAirlines,
+                        'departureDateTime' => array(
+                            'raw' => $optionSegments[0]['departure']['dateTime'] * 1000,
+                            'formatted' => array(
+                                'date' => date("l d F Y", $optionSegments[0]['departure']['dateTime']),
+                                'time' => $optionSegments[0]['departure']['hour']['formatted'],
+                            ),
+                            'rawObject' => $optionSegments[0]['departure']['dateTime'] * 1000,
+                        ),
+                        'arrivalDateTime' => array(
+                            'raw' => $optionSegments[0]['arrival']['dateTime'] * 1000,
+                            'formatted' => array(
+                                'date' => date("l d F Y", $optionSegments[0]['arrival']['dateTime']),
+                                'time' => $optionSegments[0]['arrival']['hour']['formatted'],
+                            ),
+                            'rawObject' => $optionSegments[0]['arrival']['dateTime'] * 1000,
+                        ),
+                        // internal field, needed to confirm availability with travelport.
+                        'optionId' => $legOption->FlightOptionID,
+                    );
+                }
+
+                /* option -> location */
+                $depAirportCode = $legOption->Segments[0]->Departure->AirportCode;
+                $depAirportDescription = $this->getAirportNameByCode($legOption->Segments[0]->Departure->AirportCode);
+                $depCityCode = $this->getAirportCityByCode($legOption->Segments[0]->Departure->AirportCode);
+                $depCityDescription = $this->getCityNameByCode($this->getAirportCityByCode($legOption->Segments[0]->Departure->AirportCode));
+
+                $arrivalAirportCode = $legOption->Segments[count($legOption->Segments)-1]->Arrival->AirportCode;
+                $arrivalAirportDescription = $this->getAirportNameByCode($legOption->Segments[count($legOption->Segments)-1]->Arrival->AirportCode);
+                $arrivalCityCode = $this->getAirportCityByCode($legOption->Segments[count($legOption->Segments)-1]->Arrival->AirportCode);
+                $arrivalCityDescription = $this->getCityNameByCode($this->getAirportCityByCode($legOption->Segments[count($legOption->Segments)-1]->Arrival->AirportCode));
+
+                $item['itinerariesBox'][$in_or_out . 'Locations'] = array(
+                    'departure' => array(
+                        'code' => $depAirportCode,
+                        'airport' => array(
+                            'code' => $depAirportCode,
+                            'description' => $depAirportDescription,
+                        ),
+                        'city' => array(
+                            'code' => $depCityCode,
+                            'description' => $depCityDescription,
+                        ),
+                    ),
+                    'arrival' => array(
+                        'code' => $arrivalAirportCode,
+                        'airport' => array(
+                            'code' => $arrivalAirportCode,
+                            'description' => $arrivalAirportDescription,
+                        ),
+                        'city' => array(
+                            'code' => $arrivalCityCode,
+                            'description' => $arrivalCityDescription,
+                        ),
+                    ),
+                );
+            }
+
+            /**
+             * itinerariesBoxPriceList (precios)
+             */
+            $coins = array('USD', 'BTC', 'XDG', 'LTC');
+            foreach($coins as $key => $coin) {
+                $item['itinerariesBox']['itinerariesBoxPriceInfoList'][$key] = array(
+                    'currencyCode' => $coin,
+                );
+
+                // all prices originally in dollars.
+                if($coin == 'USD') {
+                    $exchangeRate = 1;
+                } else {
+                    $exchangeRate = 1 / $this->exchangeRates[$coin];
+                }
+
+                $passengerCount = 0;
+                foreach($fare->PaxFares as $paxFare) {
+                    $passengerCount += $paxFare->Count;
+
+                    switch($paxFare->PaxType) {
+                        case 'ADT':
+                            $idx = 'adult';
+                            break;
+                        case 'IN':
+                            $idx = 'infant';
+                            break;
+                        case 'CH':
+                            $idx = 'child';
+                            break;
+                    }
+
+                    $item['itinerariesBox']['itinerariesBoxPriceInfoList'][$key][$idx] = array(
+                        'quantity' => $paxFare->Count,
+                        'baseFare' => array(
+                            'raw' => $paxFare->PaxFareAmount * $exchangeRate,
+                            'formatted' => array(
+                                'code' => $coin,
+                                'amount' => $paxFare->PaxFareAmount * $exchangeRate,
+                                'mask' => $coin,
+                            )
+                        ),
+                        'totalFare' => array(
+                            'raw' => $paxFare->PaxFareAmount * $exchangeRate * $paxFare->Count,
+                            'formatted' => array(
+                                'code' => $coin,
+                                'amount' => $paxFare->PaxFareAmount * $exchangeRate * $paxFare->Count,
+                                'mask' => $coin,
+                            )
+                        ),
+                        // TODO: fix htis.
+                        'total' => array(
+                            'formatted' => array(
+                                'amount' => $this->formatCrypto((($paxFare->PaxFareAmount + $paxFare->PaxTaxAmount + ($this->comissionPerPassenger * $paxFare->Count)) * $paxFare->Count) * $exchangeRate, $coin),
+                            )
+                        ),
+                    );
+                }
+
+                /** adult only // yamil te odio. **/
+                $item['itinerariesBox']['itinerariesBoxPriceInfoList'][$key]['adult']['taxes'] = array(
+                    'raw' => $fare->TaxAmount * $exchangeRate,
+                    'formatted' => array(
+                        'code' => $coin,
+                        'amount' => $fare->TaxAmount * $exchangeRate,
+                        'mask' => $coin,
+                    )
+                );
+                $item['itinerariesBox']['itinerariesBoxPriceInfoList'][$key]['adult']['charges'] = array(
+                    'raw' => $fare->ServiceAmount / $passengerCount * $exchangeRate,
+                    'formatted' => array(
+                        'code' => $coin,
+                        // TODO: fix this.
+                        'amount' => $fare->ServiceAmount / $passengerCount * $exchangeRate,
+                        'mask' => $coin,
+                    )
+                );
+
+                $item['itinerariesBox']['itinerariesBoxPriceInfoList'][$key]['total'] = array(
+                    'fare' => array(
+                        'raw' => ($fare->FareAmount + $fare->TaxAmount) * $exchangeRate,
+                        'formatted' => array(
+                            'code' => $coin,
+                            // NOTE: NO TOCAR. ESTA HECHO ASI EN EL CODIGO DE YAMIL DE JS
+                            'amount' => $this->formatCrypto(($fare->FareAmount + $fare->TaxAmount + ceil($this->comissionPerPassenger * $passengerCount)) * $exchangeRate, $coin),
+                            'mask' => $coin,
+                        )
+                    ),
+                    'taxes' => array(
+                        'raw' => $fare->TaxAmount * $exchangeRate,
+                        'formatted' => array(
+                            'code' => $coin,
+                            'amount' => $fare->TaxAmount * $exchangeRate,
+                            'mask' => $coin,
+                        )
+                    ),
+                    'charges' => array(
+                        'raw' => $fare->ServiceAmount * $exchangeRate,
+                        'formatted' => array(
+                            'code' => $coin,
+                            'amount' => $fare->ServiceAmount * $exchangeRate,
+                            'mask' => $coin,
+                        )
+                    ),
+                    // NOTE: NO TOCAR. ESTA HECHO ASI EN EL CODIGO DE YAMIL DE JS
+                    'perPassenger' => array(
+                        'raw' => $this->formatCrypto(($fare->FareAmount + $fare->TaxAmount + ($this->comissionPerPassenger * $passengerCount)) * $exchangeRate / $passengerCount, $coin),
+                        'formatted' => array(
+                            'code' => $coin,
+                            'amount' => $this->formatCrypto(($fare->FareAmount + $fare->TaxAmount + ($this->comissionPerPassenger * $passengerCount)) * $exchangeRate / $passengerCount, $coin),
+                            'mask' => $coin,
+                        )
+                    ),
+                );
+            }
+
+            /* 
+             * matchingInfoMap
+             */
+            foreach($item['itinerariesBox']['outboundRoutes'] as $oIdx => $outboundRoute) {
+                foreach($item['itinerariesBox']['inboundRoutes'] as $iIdx => $inboundRoute) {
+                    $key = '_' . $oIdx . '_' . $iIdx;
+
+                    $item['itinerariesBox']['matchingInfoMap'][$key] = array(
+                        'sequenceNumber' => 0,
+                        //'id' => $itineraryInfo->id,
+                        // NOTE: esto es el ID de travelport que usa btctrip para los preorder y blabla.
+                        'id' => $tpResponse->RecommendationID .'_'. $fare->FareID .'_'. $outboundRoute['optionId'] .'_'. $inboundRoute['optionId'],
+                        'validatingCarrier' => $fare->ValidatingCarrier,
+                        // TODO: fix this. no commercialPolicyDescription found on travelport.
+                        'commercialPolicyDescription' => '',
+                        // TODO: fix this. no wishList found on travelport.
+                        'wishList' => '',
+                    );
+                }
+            }
+
+            $items[] = $item;
+        }
+
+        return $items;
+    }
+
+    public function getAirportNameByCode($code) {
+        $airport = $this->airportManager->getByCode($code);
+        return $airport['description'];
+    }
+
+    public function getAirportCityByCode($code) {
+        $airport = $this->airportManager->getByCode($code);
+        return $airport['parentCity'];
+    }
+
+    public function getCityNameByCode($code) {
+        $city = $this->cityManager->getByCode($code);
+        return $city['name'];
+    }
+
+    public function bookingFlightsFields($recommendationId, $fareId, $options) {
+        $token = $this->getConnectionToken();
+
+        $searchParams = array(
+            'Token' => $token,
+            'RecommendationID' => $recommendationId,
+            'FareID' => $fareId,
+            'OptionID' => $options,
+        );
+
+        $params = array(
+            'confirmation' => json_encode($searchParams)
+        );
+
+        $fields = $this->call('FlightService.json/ConfirmFlightAvailability', $params);
+
+        return $fields;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* OLD_CODE */
+    public function getHotelsAvailabilityByLocation($latitude, $longitude, $checkin='', $checkout='', $distribution = "1", $pagesize=0, $page=1, $filterParams=array()) {
+    	$serviceInvocation = DespegarCurl::create($this->buildUrl('availability/hotels') . "/" . $latitude . "/" . $longitude);
+    	if (!empty($checkin)){
+    		$serviceInvocation->setParameter('checkin', $checkin);
+    	}
+    	if (!empty($checkout)){
+    		$serviceInvocation->setParameter('checkout', $checkout);
+    	}
+    	$serviceInvocation->setParameter('includehotel', true)
+    	->setParameter('pagesize', 21)
+    	->setParameter("paymenttype",4)   // Filtrado de hoteles que se paguen en un pago
+    	->setParameter('page', $page)
+    	->setParameter('distribution', $distribution);
+    	$this->setFiltersParametersHotels($serviceInvocation, $filterParams);
+    	$result = $serviceInvocation->get();
+    
+    	try {
+    		 
+    		$this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	} catch (BookingApiBadRequestParameters $e)
+    	{
+    		$this->logger->error("Server error code: " . $result["error_code"] . ", msg: " . $result["error_msg"]);
+    		$this->logger->error(print_r($result["response"], true));
+    	}
+    
+    	$response=json_decode($result["response"]);
+    	return $response;
+    	 
+    }
+    
+    public function getHotelsAvailability($city, $checkin='', $checkout='', $distribution = "1", $pagesize=0,$page=1,$filterParams=array()) {
+        $serviceInvocation = DespegarCurl::create($this->buildUrl('availability/cities') . "/".$city."/hotels");
+        if (!empty($checkin)){
+            $serviceInvocation->setParameter('checkin', $checkin);
+        }
+        if (!empty($checkout)){
+            $serviceInvocation->setParameter('checkout', $checkout);
+        }
+          $serviceInvocation->setParameter('includehotel', true)
+            ->setParameter('pagesize', 21)
+            ->setParameter("paymenttype",4)   // Filtrado de hoteles que se paguen en un pago    
+            ->setParameter('page', $page)
+            ->setParameter('distribution', $distribution);
+        $this->setFiltersParametersHotels($serviceInvocation, $filterParams);
+    	$result = $serviceInvocation->get();
+        
+        try {
+           
+	    	$this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	} catch (BookingApiBadRequestParameters $e)
+            {
+    		$this->logger->error("Server error code: " . $result["error_code"] . ", msg: " . $result["error_msg"]);
+    		$this->logger->error(print_r($result["response"], true));
+    	}
+	   
+    	$response=json_decode($result["response"]);
+     return $response;
+   
+    }
+
+    public function getHotelAvailability($id, $checkin='', $checkout='', $distribution = "1") {
+        $serviceInvocation = DespegarCurl::create($this->buildUrl('availability/hotels') . "/$id/booking");
+           if (!empty($checkin)){
+            $serviceInvocation->setParameter('checkin', $checkin);
+        }
+        if (!empty($checkout)){
+            $serviceInvocation->setParameter('checkout', $checkout);
+        }
+            $serviceInvocation->setParameter('distribution', $distribution)
+            ->setParameter('includehotel', true);
+        $result = $serviceInvocation->get();
+
+         try {
+                $this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	} catch (BookingApiBadRequestParameters $e)
+            {
+    		$this->logger->error("Server error code: " . $result["error_code"] . ", msg: " . $result["error_msg"]);
+    		$this->logger->error(print_r($result["response"], true));
+    	}
+	   
+    	$response=json_decode($result["response"]);    
+        return $response;
+    }
+  public function getHotel($id) {
+     try {
+          $result = DespegarCurl::create($this->buildUrl('hotels') . "/$id")
+            ->setParameter('includeamenities', true)
+            ->setParameter('includesummary', true)      
+        ->get();
+          
+	    	$this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	} catch (BookingApiServerError $e) {
+    		$this->logger->error("Server error code: " . $result["error_code"] . ", msg: " . $result["error_msg"]);
+    		$this->logger->error(print_r($result["response"], true));
+    	}    
+      
+        return json_decode($result["response"]);
+    }
+    public function bookHotel($parameters) {
+        
+    }
+    
+    public function autoCompleteHotels($term) {
+        $result = DespegarCurl::create($this->buildUrl('autocomplete') . "/".rawurlencode($term)."?flow=hotels")
+        ->get();
+        $this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+        $response=json_decode($result["response"]);
+        return $response;
+    }
+    
+    
+    public function getHotelAmenities($hotel_id){
+        $result = DespegarCurl::create($this->buildUrl('hotels') . "/".$hotel_id."/amenities")
+        ->get();
+        $this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+        $response=json_decode($result["response"]);
+        return $response;
+    }
+    
+     public function getHotelPointSofInterest($hotel_id,$type){
+        $result = DespegarCurl::create($this->buildUrl('hotels') . "/".$hotel_id."/pointsofinterest")
+         ->setParameter('geotype', $type)
+       //  ->setParameter('maxresults', 4)
+                
+        ->get();
+        $this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+        $response=json_decode($result["response"]);
+        return $response;
+    }
+    
+    
+    public function getHotelReviews($hotel_id,$cantidad_comentarios,$page=1){
+        $result = DespegarCurl::create($this->buildUrl('hotels') . "/".$hotel_id."/reviews")
+          ->setParameter("notempty",1)
+          ->setParameter('pagesize', $cantidad_comentarios)  
+          ->setParameter('page', $page)      
+          ->get();
+        $this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+        $response=json_decode($result["response"]);
+        return $response;
+    }
+    public function getAmenities(){
+          $result = DespegarCurl::create($this->buildUrl('hotels/amenities'))
+        ->get();
+        $this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+        $response=json_decode($result["response"]);
+   
+        return $response;
+    }
+    	
+    
+	/**
+	 * @see http://api.despegar.com/docs/method/flights-roundtrip-flights
+	 */
+    public function OLD_availabilityFlightsRoundTrip($from, $to, $departureDate, $returnDate, $adults, $childrens, $infants,
+			$orderBy, $orderDir, $departureTime, $returningTime, $classFlight, $scaleFlight, $airlineFlight, $filterParams) {
+    	
+    	$serviceInvocation = DespegarCurl::create($this->buildUrl('availability/flights/roundTrip') . 
+    			"/". $from ."/". $to ."/". $departureDate ."/". $returnDate ."/". $adults ."/". $childrens ."/". $infants)
+    	->setParameter('pagesize', 10);
+    	
+    	$this->setOptionalParameters($serviceInvocation, $orderBy, $orderDir, $classFlight, $scaleFlight, $airlineFlight);
+    	$this->setFiltersParameters($serviceInvocation, $filterParams);
+    	
+    	$result = $serviceInvocation->get();
+    	
+    	try {
+    		$this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	} catch (BookingApiServerError $e) {
+    		$this->logger->error("Server error code: " . $result["error_code"] . ", msg: " . $result["error_msg"]);
+    		$this->logger->error(print_r($result["response"], true));
+    	}
+    	    	
+    	$response=json_decode($result["response"]);
+    	 
+    	return $response;
+    }
+
+    
+    /**
+     * @see http://api.despegar.com/docs/method/flights-one-way-flights
+     */
+    public function availabilityFlightsOneWay($from, $to, $departureDate, $adults, $childrens, $infants,
+    		$orderBy, $orderDir, $departureTime, $returningTime, $classFlight, $scaleFlight, $airlineFlight, $filterParams) {
+    	 
+    	$serviceInvocation = DespegarCurl::create($this->buildUrl('availability/flights/oneWay') .
+    			"/". $from ."/". $to ."/". $departureDate ."/". $adults ."/". $childrens ."/". $infants)
+    			->setParameter('pagesize', 10);
+    	 
+ 		$this->setOptionalParameters($serviceInvocation, $orderBy, $orderDir, $classFlight, $scaleFlight, $airlineFlight);
+ 		$this->setFiltersParameters($serviceInvocation, $filterParams);
+    	 
+    	$result = $serviceInvocation->get();
+    	
+    	try {
+	    	$this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	} catch (BookingApiServerError $e) {
+    		$this->logger->error("Server error code: " . $result["error_code"] . ", msg: " . $result["error_msg"]);
+    		$this->logger->error(print_r($result["response"], true));
+    	}
+	    
+    	$response=json_decode($result["response"]);
+    
+    	return $response;
+    }
+    
+    private function setOptionalParameters($serviceInvocation, $orderBy, $orderDir, $classFlight, $scaleFlight, $airlineFlight) {
+    	if (!empty($orderBy)) {
+    		$serviceInvocation->setParameter('sort', $orderBy);
+    	}
+    	if (!empty($orderDir)) {
+    		$serviceInvocation->setParameter('order', $orderDir);
+    	}
+    	
+    	// $departureTime, $returningTime: ignorados por estar deprecados en la api actual
+    	
+    	if (!empty($classFlight)) {
+    		$serviceInvocation->setParameter('cabintype', $classFlight);
+    	}
+    	if (!empty($scaleFlight)) {
+    		$serviceInvocation->setParameter('stopsadvancedparameter', $scaleFlight);
+    	}
+    	if (!empty($airlineFlight)) {
+    		$serviceInvocation->setParameter('airlinesadvancedparameter', $airlineFlight);
+    	}
+    }
+    
+    private function setFiltersParametersHotels($serviceInvocation, $filterParams) {
+    	if (isset($filterParams)) {
+            $params=array();
+            foreach($filterParams as $name => $value){
+                foreach ($value as $n => $v) {
+                     if(!empty($params[$n])){
+                         $valor=$params[$n];
+                         $params[$n]=$valor.'-'.$v;
+                     }else{
+                         $params[$n]=$v;
+                     }
+                }
+            }
+           $this->setFiltersParameters($serviceInvocation,$params);
+    	}
+        
+    }
+     private function setFiltersParameters($serviceInvocation, $filterParams) {
+    	if (isset($filterParams)) {
+            //print_r($filterParams);
+            foreach ($filterParams as $name => $value) {
+    	        $serviceInvocation->setParameter($name, $value);
+        }
+    	}
+    }
+    
+    
+    public function availabilityFlightsReprice($ticket, $itineraryId) {
+    	$result = DespegarCurl::create($this->buildUrl('availability/flights/reprice') . "/".$ticket."/".$itineraryId)
+    	->get();
+    	$this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	$response=json_decode($result["response"]);
+    	
+    	return $response;
+    }
+    
+    /**
+     * @see http://api.despegar.com/docs/method/Booking-flight-booking 
+     */
+    public function bookingFlightsBook($jsonParameters) {
+    	$serviceInvocation = DespegarCurl::create($this->buildUrl('booking/flights/book'));
+    	
+    	$serviceInvocation->setRawData($jsonParameters);
+    	
+    	$result = $serviceInvocation->post(true);
+    	
+    	$this->handleError($result["http_code"], $result["error_code"], $result["error_msg"]);
+    	$response=json_decode($result["response"]);
+    	 
+    	return $response;
+    }
+ 
+    
+} 
+

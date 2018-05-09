@@ -1,0 +1,2112 @@
+
+.checkout .cookie-value {
+    font-size: 13px;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.checkout .choose-another {
+    display: inline;
+    margin: 0 0 5px;
+}
+.checkout .choose-another .link {
+    font-size: 13x;
+    text-decoration: none;
+    color: #818181;
+}
+.checkout .notification-box.warn-box .text .box-title {
+    font-size: 20px;
+    letter-spacing: -1px;
+}
+.checkout .front-popup {
+    z-index: 1005 !important;
+}
+.btctrip .cookie-value {
+    color: #013D93;
+}
+#form {
+    font-size: 13px;
+    padding-bottom: 15px;
+}
+#form:before, #form:after {
+    content: "";
+    display: table;
+}
+#form:after {
+    clear: both;
+}
+.ie6 #form, .ie7 #form {
+}
+#form select {
+    padding: 6px;
+}
+
+.purchase-form {
+    clear: left;
+    background-color: white;
+    width: 578px;
+	padding: 20px;
+	line-height: 1.5em;
+	border: 1px solid #AAAAAA;
+}
+
+.purchase-info {
+    background-color: white;
+}
+
+#form .section .fields {
+    padding: 0 0 0 10px;
+}
+#form .section .line-form {
+    clear: both;
+    margin: 10px 0 0;
+    padding: 0 0 0 10px;
+}
+#form .section .line-form:before, #form .section .line-form:after {
+    content: "";
+    display: table;
+}
+#form .section .line-form:after {
+    clear: both;
+}
+.ie6 #form .section .line-form, .ie7 #form .section .line-form {
+}
+#form .section .line-form:first-child {
+    margin-top: 0;
+}
+.ie7 #form .section .line-form .first, .ie8 #form .section .line-form .first {
+    margin-top: 0;
+}
+#form .section .line-form .item {
+    float: left;
+    position: relative;
+}
+#form .section .line-form .item:before, #form .section .line-form .item:after {
+    content: "";
+    display: table;
+}
+#form .section .line-form .item:after {
+    clear: both;
+}
+.ie6 #form .section .line-form .item, .ie7 #form .section .line-form .item {
+}
+#form .section .line-form .item:last-child {
+    margin-right: 0;
+}
+#form .section .line-form .item .input {
+    display: block;
+    float: left;
+}
+#form .section .line-form .item .custom-label {
+    display: block;
+    margin-bottom: 2px;
+}
+#form .section .line-form .check-container {
+    position: relative;
+}
+#form .section .line-form .check-container.checkbox-error {
+    padding: 5px;
+}
+#form .section .line-form .check-container .input {
+    float: left;
+}
+#form .section .line-form .check-container .custom-label {
+    float: left;
+    line-height: 13px;
+    margin: 0 0 0 5px;
+}
+.ie7 #form .section .line-form .check-container .custom-label, .ie8 #form .section .line-form .check-container .custom-label {
+    margin-top: 3px;
+}
+#form .section .line-form .check-container .icon-error {
+    position: absolute;
+    right: -13px;
+    top: 6px;
+}
+#form .section .background {
+    padding: 10px 10px 15px;
+}
+#form .section .block-form:before, #form .section .block-form:after {
+    content: "";
+    display: table;
+}
+#form .section .block-form:after {
+    clear: both;
+}
+.ie6 #form .section .block-form, .ie7 #form .section .block-form {
+}
+#form .section .block-form .fields {
+    padding: 0;
+}
+#form .section .block-form .line-form {
+    padding: 0;
+}
+#form .section .date .day-container, #form .section .date .month-container, #form .section .date .year-container {
+    margin: 0 5px 0 0;
+}
+#form .section .date .day-container .input, #form .section .date .month-container .input, #form .section .date .year-container .input {
+    width: 70px;
+}
+#form .section .date .year-container {
+    margin: 0;
+}
+#form .section .address .description {
+    font-size: 20px;
+}
+#form .section .address .country-container {
+    margin: 0 20px 0 0;
+    width: 225px;
+}
+#form .section .address .country-container .input {
+    width: 225px;
+}
+#form .section .address .state-container {
+    width: 240px;
+}
+#form .section .address .state-container .input {
+    width: 240px;
+}
+#form .section .address .other-state-container {
+    width: 225px;
+}
+#form .section .address .other-state-container .input {
+    width: 225px;
+}
+#form .section .address .city-container {
+    margin: 0 20px 0 0;
+    width: 225px;
+}
+#form .section .address .city-container .input {
+    width: 225px;
+}
+#form .section .address .postal-code-container {
+    width: 200px;
+}
+#form .section .address .postal-code-container .input {
+    width: 77px;
+}
+#form .section .address .postal-code-container .search-postal-code {
+    font-size: 11px;
+    left: 94px;
+    position: absolute;
+    text-decoration: none;
+    top: 26px;
+    width: 60px;
+}
+#form .section .address .postal-code-container .icon-error {
+    left: 78px;
+    right: auto;
+}
+#form .section .address .address-group .street-container {
+    margin: 0 20px 0 0;
+    width: 322px;
+}
+#form .section .address .address-group .street-container .input {
+    width: 322px;
+}
+#form .section .address .address-group .address-number-container {
+    margin: 0 20px 0 0;
+    width: 42px;
+}
+#form .section .address .address-group .address-number-container .input {
+    width: 42px;
+}
+#form .section .address .floor-container {
+    margin: 0 20px 0 0;
+    width: 42px;
+}
+#form .section .address .floor-container .input {
+    width: 42px;
+}
+#form .section .address .deparment-container {
+    width: 42px;
+}
+#form .section .address .deparment-container .input {
+    width: 42px;
+}
+#form .error-message {
+    clear: both;
+    display: none;
+    font-size: 11px;
+}
+#form .error-message.show {
+    display: block;
+}
+#form .icon-error {
+    display: none;
+}
+#form .item-error .icon-error, #form .item-invalid-equal-names-error .icon-error, #form .item-invalid-names-length-error .icon-error, #form .checkbox-error .icon-error {
+    display: block;
+    position: absolute;
+    right: -12px;
+    top: 28px;
+}
+#form .group, #form .group-field_empty, #form .group-error, #form .group-invalid {
+    float: left;
+    position: relative;
+}
+#form .group:before, #form .group-field_empty:before, #form .group-error:before, #form .group-invalid:before, #form .group:after, #form .group-field_empty:after, #form .group-error:after, #form .group-invalid:after {
+    content: "";
+    display: table;
+}
+#form .group:after, #form .group-field_empty:after, #form .group-error:after, #form .group-invalid:after {
+    clear: both;
+}
+.ie6 #form .group, .ie6 #form .group-field_empty, .ie6 #form .group-error, .ie6 #form .group-invalid, .ie7 #form .group, .ie7 #form .group-field_empty, .ie7 #form .group-error, .ie7 #form .group-invalid {
+}
+#form .group .item .error-message, #form .group-field_empty .item .error-message, #form .group-error .item .error-message, #form .group-invalid .item .error-message {
+    display: none;
+}
+#form .group .item .icon-error, #form .group-field_empty .item .icon-error, #form .group-error .item .icon-error, #form .group-invalid .item .icon-error {
+    display: none;
+}
+#form .select-group {
+    float: left;
+}
+#form .select-group:before, #form .select-group:after {
+    content: "";
+    display: table;
+}
+#form .select-group:after {
+    clear: both;
+}
+.ie6 #form .select-group, .ie7 #form .select-group {
+}
+#form .group-field_empty .group-icon, #form .group-error .group-icon, #form .group-invalid .group-icon {
+    display: block;
+    position: absolute;
+    right: -12px;
+    top: 28px;
+}
+.btctrip #form .input {
+    border: 1px solid #CCCCCC;
+}
+.btctrip #form .placeholder {
+    color: #888888;
+}
+.btctrip #form .background {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+.btctrip #form .error, .btctrip #form .item-error .input, .btctrip #form .item-invalid-equal-names-error .input, .btctrip #form .item-invalid-names-length-error .input, .btctrip #form .checkbox-error, .btctrip #form .radio-error, .btctrip #form .block-error {
+    background: none repeat scroll 0 0 #FFE6E6;
+    border: 1px solid red;
+}
+.btctrip #form .item-warn .input {
+    background: none repeat scroll 0 0 #FFFFE1;
+    border: 1px solid #FFCC33;
+}
+.btctrip #form .radio-error {
+    margin: 0 0 10px 15px;
+    padding: 2px 6px;
+}
+.btctrip #form .radio-error .errorCrossIcon {
+    display: block;
+    float: left;
+    margin: 2px 6px 0 0;
+    position: inherit;
+}
+.btctrip #form .error-message {
+    color: red;
+}
+#additionals {
+    margin: 0;
+}
+#additionals .section {
+    margin-bottom: 5px;
+}
+#additionals .section .fields .line-form {
+    margin-top: 2px;
+    padding: 0;
+}
+#additionals .vouchers .codes {
+    margin: 5px 0 0;
+}
+#additionals .vouchers .codes:before, #additionals .vouchers .codes:after {
+    content: "";
+    display: table;
+}
+#additionals .vouchers .codes:after {
+    clear: both;
+}
+.ie6 #additionals .vouchers .codes, .ie7 #additionals .vouchers .codes {
+}
+#additionals .vouchers .codes .voucher-code-container {
+    margin: 0 0 5px;
+}
+#additionals .vouchers .codes .voucher-code-container:last-child {
+    margin-bottom: 0;
+}
+#additionals .vouchers .codes .voucher-code-container .input {
+    font-size: 11px;
+    height: 22px;
+    width: 200px;
+}
+#additionals .vouchers .codes .remove-voucher {
+    float: left;
+    font-size: 11px;
+    margin: 7px 0 0 10px;
+}
+#additionals .vouchers .add-voucher {
+    clear: both;
+    display: block;
+    font-size: 11px;
+    margin: 2px 0 7px;
+    text-decoration: none;
+}
+
+#additionals .vouchers .declaimer {
+    font-size: 11px;
+    float: left;
+    font-style: italic;
+    width: 200px;
+    margin-bottom: 7px;
+}
+
+#additionals .comment .comment-container {
+    margin: 10px 0 0;
+}
+#additionals .comment .comment-container .line-form .custom-label {
+    font-size: 11px;
+}
+#additionals .comment .comment-container .line-form .comment-text-container .input {
+    font-size: 11px;
+    height: 65px;
+    resize: none;
+    width: 288px;
+}
+#additionals .comment .comment-container .line-form .comment-reference-code-container {
+    float: none;
+    margin: 10px 0 0;
+}
+#additionals .comment .comment-container .line-form .comment-reference-code-container .custom-label {
+    float: left;
+    line-height: 21px;
+}
+#additionals .comment .comment-container .line-form .comment-reference-code-container .input {
+    float: right;
+    font-size: 11px;
+    height: 22px;
+    width: 160px;
+}
+#additionals .comment .comment-container .line-form .comment-reference-code-container .icon-error {
+    top: 6px;
+}
+#popup-remove-voucher-confirmation {
+    text-align: center;
+    width: 250px;
+}
+#popup-remove-voucher-confirmation .content-wrapper:before, #popup-remove-voucher-confirmation .content-wrapper:after {
+    content: "";
+    display: table;
+}
+#popup-remove-voucher-confirmation .content-wrapper:after {
+    clear: both;
+}
+.ie6 #popup-remove-voucher-confirmation .content-wrapper, .ie7 #popup-remove-voucher-confirmation .content-wrapper {
+}
+#popup-remove-voucher-confirmation .content-wrapper .confirmation-text {
+    display: block;
+}
+#popup-remove-voucher-confirmation .content-wrapper .buttons {
+    margin: 5px 0 0;
+}
+#popup-remove-voucher-confirmation .content-wrapper .buttons .confirm {
+    margin: 0 20px 0 0;
+}
+
+#agreement .read-agreement-container {
+    padding: 5px;
+}
+#agreement .read-agreement-container .agreement-link {
+    text-decoration: underline;
+}
+.popup-agreement-content {
+    font-size: 13px;
+    height: 200px;
+    overflow-y: scroll;
+    padding: 0 10px;
+    width: 780px;
+}
+.popup-agreement-content strong {
+    font-weight: bold;
+}
+.popup-agreement-content .item {
+    margin: 0 0 15px;
+}
+.popup-agreement-content table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 15px 0 10px 30px;
+}
+.popup-agreement-content thead {
+    background-color: lightgray;
+}
+.popup-agreement-content th, .popup-agreement-content td {
+    border: 1px solid black;
+    padding: 5px 20px 2px 5px;
+    text-align: left;
+}
+.popup-agreement-content .title {
+    margin: 0 0 10px;
+    padding: 4px 10px;
+}
+.btctrip .popup-agreement {
+    color: #444444;
+    height: 263px;
+}
+.btctrip .popup-agreement .title {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+.btctrip .popup-agreement .highlight-better-price {
+    color: #013D93;
+    font-weight: bold;
+    text-decoration: underline;
+}
+#buy {
+    margin-top: 10px;
+	margin-bottom: 0px;
+}
+#buy .submit {
+    float: left;
+}
+#buy .text {
+    float: left;
+    font-size: 16px;
+    line-height: 28px;
+    margin: 0 0 0 15px;
+}
+.btctrip #buy .text {
+    color: #222222;
+}
+#contact .content .contact-full-name {
+    width: 252px;
+}
+#contact .content .contact-full-name .input {
+    margin: 0 0 25px;
+    width: 252px;
+}
+#contact .content .email-label {
+    display: block;
+    margin: 0 0 2px;
+}
+#contact .content .email-label .ticket {
+    text-decoration: underline;
+}
+#contact .content .email-container {
+    width: 252px;
+}
+#contact .content .email-container .input {
+    width: 252px;
+}
+#contact .content .email-container .icon-error {
+    left: 252px;
+    right: auto;
+    top: 11px;
+}
+#contact .content .email-repeat-container {
+    width: 252px;
+}
+#contact .content .email-repeat-container .input {
+    width: 252px;
+}
+#contact .content .offers-container {
+    margin: 10px 0 0 3px;
+}
+#contact .content .phones {
+    margin: 15px 0 5px;
+}
+#contact .content .phones .phone .phone-type-container {
+    margin: 0 10px 0 0;
+    width: 110px;
+}
+#contact .content .phones .phone .phone-type-container .input {
+    width: 110px;
+}
+#contact .content .phones .phone .phone-type-container .icon-error {
+    display: none;
+}
+#contact .content .phones .phone .phone-group .country-code-container, #contact .content .phones .phone .phone-group .area-code-container {
+    margin: 0 10px 0 0;
+    width: 52px;
+}
+#contact .content .phones .phone .phone-group .country-code-container .input, #contact .content .phones .phone .phone-group .area-code-container .input {
+    width: 52px;
+}
+#contact .content .phones .phone .phone-group .phone-number-container {
+    width: 142px;
+}
+#contact .content .phones .phone .phone-group .phone-number-container .input {
+    width: 142px;
+}
+#contact .content .phones .phone .text {
+    float: left;
+    font-size: 11px;
+    margin: 18px 0 0 15px;
+    width: 192px;
+}
+#contact .content .phones .phone .remove-phone {
+    float: left;
+    font-size: 11px;
+    margin: 25px 0 0 15px;
+    text-decoration: none;
+}
+#contact .content .add {
+    margin-top: 0;
+}
+#contact .content .add .add-phone {
+    font-size: 11px;
+}
+#popup-ticket {
+    width: 250px;
+    height: 83px;
+}
+#popup-remove-phone-confirmation {
+    text-align: center;
+    width: 250px;
+}
+#popup-remove-phone-confirmation .content-wrapper:before, #popup-remove-phone-confirmation .content-wrapper:after {
+    content: "";
+    display: table;
+}
+#popup-remove-phone-confirmation .content-wrapper:after {
+    clear: both;
+}
+.ie6 #popup-remove-phone-confirmation .content-wrapper, .ie7 #popup-remove-phone-confirmation .content-wrapper {
+}
+#popup-remove-phone-confirmation .content-wrapper .confirmation-text {
+    display: block;
+}
+#popup-remove-phone-confirmation .content-wrapper .buttons {
+    margin: 5px 0 0;
+}
+#popup-remove-phone-confirmation .content-wrapper .buttons .confirm {
+    margin: 0 20px 0 0;
+}
+.btctrip #contact .emails .offers-container {
+    color: #666666;
+}
+.btctrip #contact .phones .text {
+    color: #666666;
+}
+#passengers {
+    margin: 0 0 25px;
+}
+#passengers .passenger {
+    margin: 0 0 10px;
+}
+#passengers .passenger:before, #passengers .passenger:after {
+    content: "";
+    display: table;
+}
+#passengers .passenger:after {
+    clear: both;
+}
+.ie6 #passengers .passenger, .ie7 #passengers .passenger {
+}
+#passengers .passenger:last-child {
+    margin: 0;
+}
+#passengers .passenger .reference {
+    float: left;
+    font-size: 13px;
+    width: 75px;
+}
+#passengers .passenger .inputs {
+    float: left;
+    width: 460px;
+}
+#passengers .passenger .inputs .line-form {
+    padding: 0;
+    position: relative;
+}
+#passengers .passenger .inputs .names:before, #passengers .passenger .inputs .names:after {
+    content: "";
+    display: table;
+}
+#passengers .passenger .inputs .names:after {
+    clear: both;
+}
+.ie6 #passengers .passenger .inputs .names, .ie7 #passengers .passenger .inputs .names {
+}
+#passengers .passenger .inputs .names .passenger-first-name-container, #passengers .passenger .inputs .names .passenger-last-name-container {
+    margin: 0 20px 0 0;
+    width: 220px;
+}
+#passengers .passenger .inputs .names .passenger-first-name-container .input, #passengers .passenger .inputs .names .passenger-last-name-container .input {
+    width: 218px;
+}
+#passengers .passenger .inputs .names .passenger-last-name-container {
+    margin: 0;
+}
+#passengers .passenger .inputs .names-length-error {
+    clear: both;
+    display: none;
+    font-size: 11px;
+    line-height: 16px;
+    margin: 10px 0 0;
+    text-align: justify;
+    width: 450px;
+}
+#passengers .passenger .inputs .names-length-error .tips {
+    list-style-type: disc;
+    margin: 5px 0 0;
+}
+#passengers .passenger .inputs .names-length-error .tips .tip {
+    line-height: 14px;
+    margin: 0 0 3px 15px;
+}
+#passengers .passenger .inputs .names-length-error.show {
+    display: block;
+}
+#passengers .passenger .inputs .equal-names-error {
+    margin: 10px 0 0;
+}
+#passengers .passenger .inputs .birthday-group {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 220px;
+}
+#passengers .passenger .inputs .birthday-group .custom-label {
+    display: block;
+    margin: 0 0 2px;
+}
+#passengers .passenger .inputs .passenger-gender-container {
+    width: 122px;
+}
+#passengers .passenger .inputs .passenger-gender-container .input {
+    width: 122px;
+}
+#passengers .passenger .inputs .document-group {
+    width: 220px;
+}
+#passengers .passenger .inputs .document-group .custom-label {
+    display: block;
+    margin: 0 0 2px;
+}
+#passengers .passenger .inputs .document-group .document-type-container {
+    margin: 0 6px 0 0;
+    width: 98px;
+}
+#passengers .passenger .inputs .document-group .document-type-container .input {
+    width: 94px;
+}
+/* #passengers .passenger .inputs .document-group .document-number-container { */
+/*     width: 132px; */
+/* } */
+#passengers .passenger .inputs .document-group .document-number-container .input {
+    width: 114px;
+}
+#passengers .passenger .inputs .document-group .document-number-container .icon-error {
+    top: 11px;
+}
+#passengers .passenger .inputs .nationality-container {
+    margin: 0 20px 0 0;
+    width: 220px;
+}
+#passengers .passenger .inputs .nationality-container .input {
+    width: 220px;
+}
+.popup-last-name-helper {
+    width: 230px;
+}
+.popup-last-name-helper .paragraph {
+    margin: 0 0 10px;
+}
+.popup-last-name-helper .paragraph.last {
+    margin: 0;
+}
+.popup-fast-checkout {
+    max-width: 220px;
+    padding: 0;
+}
+.popup-fast-checkout .popup-arrow {
+    top: -6px;
+}
+.popup-fast-checkout .popup-arrow.arrow-border {
+    left: 7px;
+    top: -8px;
+}
+.popup-fast-checkout .popup-content {
+    padding: 5px;
+}
+.popup-fast-checkout .popup-content .options {
+    overflow: hidden;
+}
+.popup-fast-checkout .popup-content .options .item {
+    cursor: pointer;
+    display: block;
+    font-size: 13px;
+    padding: 5px;
+    white-space: nowrap;
+}
+.btctrip #passengers .reference {
+    color: #222222;
+}
+.btctrip #passengers .names-length-error {
+    color: red;
+}
+.popup-fast-checkout {
+    background: none repeat scroll 0 0 white;
+    color: #319FDA;
+}
+.popup-fast-checkout .popup-arrow {
+    border-bottom: 6px solid white;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.popup-fast-checkout .popup-arrow.arrow-border {
+    border-bottom: 7px solid #CCCCCC;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+.popup-fast-checkout .options .item:hover {
+    background: none repeat scroll 0 0 #EFF7FC;
+}
+#owner-fiscal-id .owner-fiscal-id-number-container {
+}
+#owner-fiscal-id .owner-fiscal-id-number-container .input {
+    width: 222px;
+}
+#owner-fiscal-id .example {
+    float: left;
+    font-size: 13px;
+    margin: 25px 0 0 20px;
+}
+.btctrip #owner-fiscal-id .example {
+    color: #888888;
+}
+#payment {
+    position: relative;
+	display: table;
+}
+#payment.bradesco-banner {
+    margin: 40px 0 0;
+}
+#payment .payment-type .card-type-container {
+    width: 140px;
+}
+#payment .payment-type .card-type-container .input {
+    width: 140px;
+}
+#payment .payment-type .card-type-container .custom-label {
+    float: left;
+    line-height: 25px;
+    margin: 2px 20px 0 0;
+}
+#payment .bradesco-sale {
+    font-size: 11px;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    top: -15px;
+    width: 320px;
+}
+#payment .bradesco-sale:before, #payment .bradesco-sale:after {
+    content: "";
+    display: table;
+}
+#payment .bradesco-sale:after {
+    clear: both;
+}
+.ie6 #payment .bradesco-sale, .ie7 #payment .bradesco-sale {
+}
+#payment .bradesco-sale .text {
+    float: left;
+    width: 230px;
+}
+#payment .bradesco-sale .icon {
+    float: right;
+    margin: 2px 0 0;
+}
+#payment .content .installments {
+    margin: 0 0 15px;
+    padding: 0;
+}
+#payment .content .installments .installment:before, #payment .content .installments .installment:after {
+    content: "";
+    display: table;
+}
+#payment .content .installments .installment:after {
+    clear: both;
+}
+.ie6 #payment .content .installments .installment, .ie7 #payment .content .installments .installment {
+}
+#payment .content .installments .installment .custom-label {
+    display: block;
+    padding: 10px;
+}
+#payment .content .installments .installment .custom-label:before, #payment .content .installments .installment .custom-label:after {
+    content: "";
+    display: table;
+}
+#payment .content .installments .installment .custom-label:after {
+    clear: both;
+}
+.ie6 #payment .content .installments .installment .custom-label, .ie7 #payment .content .installments .installment .custom-label {
+}
+#payment .content .installments .installment .custom-label .radio {
+    float: left;
+    margin: 5px 5px 0 0;
+}
+#payment .content .installments .installment .custom-label .detail {
+    float: left;
+}
+#payment .content .installments .installment .custom-label .detail:before, #payment .content .installments .installment .custom-label .detail:after {
+    content: "";
+    display: table;
+}
+#payment .content .installments .installment .custom-label .detail:after {
+    clear: both;
+}
+.ie6 #payment .content .installments .installment .custom-label .detail, .ie7 #payment .content .installments .installment .custom-label .detail {
+}
+#payment .content .installments .installment .custom-label .detail .installment-info {
+    float: left;
+    line-height: 25px;
+}
+#payment .content .installments .installment .custom-label .detail .installment-info .without-interest {
+    border-radius: 3px 3px 3px 3px;
+    padding: 1px 5px 2px;
+}
+.ie9 #payment .content .installments .installment .custom-label .detail .installment-info .without-interest {
+    padding: 2px 5px 1px;
+}
+#payment .content .installments .installment .custom-label .detail .installments-price {
+    clear: both;
+    display: none;
+    float: left;
+    margin: 7px 0 0;
+}
+#payment .content .installments .installment .custom-label .detail .installments-price .price {
+    display: block;
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+#payment .content .installments .installment .custom-label .detail .installments-price .price.all-installments .amount {
+    font-size: 16px;
+}
+#payment .content .installments .installment .custom-label .detail .bank-interest-description {
+    clear: both;
+    display: none;
+    float: left;
+    font-size: 11px;
+    margin: 10px 0 0;
+}
+#payment .content .installments .installment .custom-label .cards {
+    float: right;
+    max-width: 306px;
+}
+#payment .content .installments .installment .custom-label .cards:before, #payment .content .installments .installment .custom-label .cards:after {
+    content: "";
+    display: table;
+}
+#payment .content .installments .installment .custom-label .cards:after {
+    clear: both;
+}
+.ie6 #payment .content .installments .installment .custom-label .cards, .ie7 #payment .content .installments .installment .custom-label .cards {
+}
+#payment .content .installments .installment .custom-label .cards .card {
+    float: left;
+    margin: 0 0 3px 5px;
+}
+#payment .content .installments .installment .custom-label .cards .card.linked-card {
+    cursor: pointer;
+}
+#payment .content .installments .installment .custom-label .cards .display-cards {
+    clear: both;
+    display: block;
+    float: none;
+    font-size: 11px;
+    text-align: right;
+    white-space: nowrap;
+}
+#payment .content .installments .installment .custom-label .cards .display-cards .link {
+    text-decoration: none;
+}
+#payment .content .installments .installment .installments-with-interest {
+    clear: both;
+    display: none;
+    padding: 0 10px;
+}
+#payment .content .installments .installment .installments-with-interest .list {
+    margin: 0 0 15px;
+}
+#payment .content .installments .installment .installments-with-interest .list:before, #payment .content .installments .installment .installments-with-interest .list:after {
+    content: "";
+    display: table;
+}
+#payment .content .installments .installment .installments-with-interest .list:after {
+    clear: both;
+}
+.ie6 #payment .content .installments .installment .installments-with-interest .list, .ie7 #payment .content .installments .installment .installments-with-interest .list {
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label {
+    cursor: pointer;
+    padding: 2px 8px;
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label .item {
+    float: left;
+    line-height: 24px;
+    margin: 0 0 0 5px;
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label .sub-radio {
+    margin: 5px 0 0;
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label .text {
+    width: 70px;
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label .card {
+    float: left;
+    margin: 0 3px 0 0;
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label .interest {
+    font-size: 11px;
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label .prices {
+    float: right;
+    font-size: 11px;
+}
+#payment .content .installments .installment .installments-with-interest .list .option .custom-label .prices .all-installments .amount {
+    font-size: 16px;
+}
+#payment .content .installments .installment .installments-with-interest .list .option.sub-selected .custom-label {
+    cursor: default;
+}
+#payment .content .installments .installment .installments-with-interest .list .option.empty {
+    border: 0 none;
+    margin: 15px 0;
+}
+#payment .content .installments .installment .installments-with-interest .list .option.empty:first-child {
+    margin: 0;
+}
+#payment .content .installments .installment.selected .custom-label {
+    cursor: default;
+}
+#payment .content .installments .installment.selected .custom-label .detail .installments-price {
+    display: block;
+}
+#payment .content .installments .installment.selected .custom-label .detail .bank-interest-description {
+    display: block;
+}
+#payment .content .installments .installment.selected .installments-with-interest {
+    display: block !important;
+}
+#payment .content .card-info.block-error {
+    margin: 0 0 10px;
+    position: relative;
+}
+#payment .content .card-info.block-error .block-icon {
+    display: block;
+    position: absolute;
+    right: -13px;
+    top: 2px;
+}
+#payment .content .card-info .bank-name-container {
+    margin: 0 25px 0 0;
+    width: 180px;
+}
+#payment .content .card-info .bank-name-container .input {
+    width: 180px;
+}
+#payment .content .card-info .other-bank-name-container {
+    margin: 0 25px 0 0;
+    width: 180px;
+}
+#payment .content .card-info .other-bank-name-container .input {
+    width: 180px;
+}
+#payment .content .card-info .card-group .card-brand-container {
+    margin: 0 20px 0 0;
+    width: 250px;
+}
+#payment .content .card-info .card-group .card-brand-container .input {
+    width: 250px;
+}
+#payment .content .card-info .card-group .card-number-container {
+    width: 250px;
+}
+#payment .content .card-info .card-group .card-number-container .input {
+    width: 250px;
+}
+#payment .content .card-info .card-group .selected-card-brand-icon {
+    float: left;
+    margin: 20px 0 0 10px;
+}
+#payment .content .card-info .owner-name-container {
+    margin: 0 20px 0 0;
+    width: 250px;
+}
+#payment .content .card-info .owner-name-container .input {
+    width: 250px;
+}
+#payment .content .card-info .document-group .custom-label {
+    display: block;
+    margin: 0 0 2px;
+}
+#payment .content .card-info .document-group .owner-document-type-container {
+    display: none !important;
+    width: 110px;
+}
+#payment .content .card-info .document-group .owner-document-type-container .input {
+    width: 110px;
+}
+#payment .content .card-info .document-group .owner-document-number-container {
+    width: 250px;
+}
+#payment .content .card-info .document-group .owner-document-number-container .input {
+    width: 250px;
+}
+#payment .content .card-info .document-group .owner-document-number-container.small {
+    width: 162px;
+}
+#payment .content .card-info .document-group .owner-document-number-container.small .input {
+    width: 162px;
+}
+#payment .content .card-info .owner-gender-container {
+    margin: 0 0 0 20px;
+    width: 122px;
+}
+#payment .content .card-info .owner-gender-container .input {
+    width: 122px;
+}
+#payment .content .card-info .expiration-group {
+    margin: 0 25px 0 0;
+    width: 160px;
+}
+#payment .content .card-info .expiration-group .custom-label {
+    display: block;
+    margin: 0 0 2px;
+}
+#payment .content .card-info .expiration-group .separator {
+    float: left;
+    margin: 8px 7px 0 3px;
+}
+#payment .content .card-info .security-code-container {
+    width: 180px;
+}
+#payment .content .card-info .security-code-container .input {
+    width: 62px;
+}
+#payment .content .card-info .security-code-container .icon-error {
+    left: 62px;
+    right: auto;
+}
+#payment .content .card-info .security-code-container .security-code-helper {
+    cursor: pointer;
+    float: left;
+    margin: 9px 0 0 14px;
+}
+#payment .content .card-info .billing-address-block {
+    margin: 25px 0 0;
+    padding: 0;
+}
+#payment .content .card-info .billing-address-block .billing-address {
+    margin: 0;
+}
+#payment .content .card-info .billing-address-block .billing-address .description {
+    font-size: 16px;
+    letter-spacing: 0;
+}
+
+#payment .payment .section {
+	margin-bottom: 0;
+}
+
+.popup-content {
+  	height: 280px;
+    width: 620px;
+}
+
+.popup-bradesco-sale, .popup-bradesco-sale-card {
+    width: 310px;
+}
+.popup-bradesco-sale .icons, .popup-bradesco-sale-card .icons {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+}
+.popup-bradesco-sale .icons:before, .popup-bradesco-sale-card .icons:before, .popup-bradesco-sale .icons:after, .popup-bradesco-sale-card .icons:after {
+    content: "";
+    display: table;
+}
+.popup-bradesco-sale .icons:after, .popup-bradesco-sale-card .icons:after {
+    clear: both;
+}
+.ie6 .popup-bradesco-sale .icons, .ie6 .popup-bradesco-sale-card .icons, .ie7 .popup-bradesco-sale .icons, .ie7 .popup-bradesco-sale-card .icons {
+}
+.popup-bradesco-sale .icons .icon-pre-compensa, .popup-bradesco-sale-card .icons .icon-pre-compensa {
+    float: left;
+    margin: 5px 0 0;
+}
+.popup-bradesco-sale .icons .icon-bradesco-cartoes, .popup-bradesco-sale-card .icons .icon-bradesco-cartoes {
+    float: right;
+}
+.popup-bradesco-sale .text, .popup-bradesco-sale-card .text {
+    font-size: 13px;
+}
+.popup-bradesco-sale-card .icon-decolar-promo {
+    float: left;
+}
+.popup-bradesco-sale-card .icon-bradesco-cartoes {
+    margin: 7px 0 0;
+}
+#popup-security-code {
+    width: 380px;
+}
+#popup-security-code .content-wrapper:before, #popup-security-code .content-wrapper:after {
+    content: "";
+    display: table;
+}
+#popup-security-code .content-wrapper:after {
+    clear: both;
+}
+.ie6 #popup-security-code .content-wrapper, .ie7 #popup-security-code .content-wrapper {
+}
+#popup-security-code .content-wrapper .icon {
+    float: left;
+}
+#popup-security-code .content-wrapper .text {
+    float: right;
+    margin: 5px 0 0;
+    width: 120px;
+}
+.popup-card-owner-name-helper {
+    width: 230px;
+}
+.btctrip #payment .bradesco-sale {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCCC #CCCCCC -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+}
+.btctrip #payment .bradesco-sale .text .highlight {
+    color: #EC062C;
+}
+.btctrip #payment .installment {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #CCCCCC white white;
+    border-image: none;
+    border-right: 1px solid white;
+    border-style: solid;
+    border-width: 1px;
+}
+.btctrip #payment .installment.next {
+    border-top: 1px solid white;
+}
+.btctrip #payment .installment:first-child {
+    border-top: 1px solid white;
+}
+.btctrip #payment .installment:hover {
+    background: none repeat scroll 0 0 #EFF7FC;
+    border: 1px solid #319FDA;
+}
+.btctrip #payment .installment.selected {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border: 1px solid #CCCCCC;
+    color: #222222;
+}
+.btctrip #payment .installment.disabled:hover {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid white;
+}
+.btctrip #payment .installment.disabled .custom-label {
+    cursor: default;
+}
+.btctrip #payment .installment .custom-label .detail .installment-info .without-interest {
+    background: linear-gradient(#013D93, #012B69 6px) repeat scroll 0 0 transparent;
+    color: white;
+}
+.btctrip #payment .installment .custom-label .card {
+    opacity: 0.5;
+}
+.btctrip #payment .installment .installments-with-interest .option {
+    border: 1px solid #EEEEEE;
+}
+.btctrip #payment .installment .installments-with-interest .option:hover {
+    background: none repeat scroll 0 0 #EFF7FC;
+    border: 1px solid #319FDA;
+}
+.btctrip #payment .installment .installments-with-interest .option.sub-selected {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+}
+.btctrip #payment .billing-address .description {
+    color: #222222;
+}
+.btctrip .popup-bradesco-sale .icons, .btctrip .popup-bradesco-sale-card .icons {
+    border-bottom: 1px solid #CCCCCC;
+}
+.btctrip .popup-card-owner-name-helper strong {
+    font-weight: bold;
+}
+#invoice .content .invoice-warning {
+    float: left;
+    font-size: 11px;
+    margin: 0 0 0 10px;
+}
+.ie7 #invoice .content .invoice-warning, .ie8 #invoice .content .invoice-warning {
+    line-height: 20px;
+}
+#invoice .content .description {
+    font-size: 16px;
+    letter-spacing: 0;
+    margin: 15px 0;
+}
+#invoice .content .fields {
+    padding: 0;
+}
+#invoice .content .fields .line-form {
+    padding: 0;
+}
+#invoice .content .fields .line-form .invoice-card-holder-name-container {
+    margin: 0 20px 0 0;
+    width: 250px;
+}
+#invoice .content .fields .line-form .invoice-card-holder-name-container .input {
+    width: 250px;
+}
+#invoice .content .fields .line-form .fiscal-status-container {
+    width: 250px;
+}
+#invoice .content .fields .line-form .fiscal-status-container .input {
+    width: 250px;
+}
+#invoice .content .fields .line-form .invoice-document-number-container {
+    margin: 0 20px 0 0;
+    width: 250px;
+}
+#invoice .content .fields .line-form .invoice-document-number-container .input {
+    width: 250px;
+}
+#invoice .content .fields .line-form .invoice-fiscal-id-container {
+    margin: 0 20px 0 0;
+    width: 250px;
+}
+#invoice .content .fields .line-form .invoice-fiscal-id-container .input {
+    width: 250px;
+}
+#invoice .content .fields .line-form .email-container {
+    margin: 0 20px 0 0;
+    width: 250px;
+}
+#invoice .content .fields .line-form .email-container .input {
+    width: 250px;
+}
+.btctrip #invoice .description {
+    color: #222222;
+}
+#detail .container {
+    padding: 0 20px;
+}
+#detail .content {
+    padding: 0 20px;
+}
+#detail .content .best-price {
+    display: block;
+    margin: 10px 0 0;
+    padding: 5px 10px;
+    position: relative;
+}
+#detail .content .best-price:before, #detail .content .best-price:after {
+    content: "";
+    display: table;
+}
+#detail .content .best-price:after {
+    clear: both;
+}
+.ie6 #detail .content .best-price, .ie7 #detail .content .best-price {
+}
+#detail .content .best-price .icon {
+    float: left;
+    margin: 4px 6px 0 0;
+}
+#detail .content .best-price .text {
+    float: left;
+}
+#detail .content .best-price .main-title {
+    display: block;
+    font-size: 13px;
+}
+#detail .content .best-price .description {
+    display: block;
+    font-size: 11px;
+}
+.btctrip #detail {
+    border: 1px solid #CCCCCC;
+    color: #666666;
+}
+.btctrip .additionals {
+    border: 0px solid #CCCCCC;
+    color: #666666;
+    margin: 0px;
+    padding: 10px;
+}
+.btctrip #detail .best-price {
+    background: none repeat scroll 0 0 #EEEEEE;
+    color: #444444;
+}
+.btctrip #popup-best-price {
+    width: 320px;
+}
+#itinerary .route {
+    font-size: 11px;
+    margin: 15px 0 10px;
+}
+#itinerary .route:before, #itinerary .route:after {
+    content: "";
+    display: table;
+}
+#itinerary .route:after {
+    clear: both;
+}
+.ie6 #itinerary .route, .ie7 #itinerary .route {
+}
+#itinerary .route.inbound-route {
+    margin: 20px 0 10px;
+}
+#itinerary .route .type {
+    float: left;
+    margin: 0 15px 0 0;
+    width: 50px;
+}
+#itinerary .route .type:before, #itinerary .route .type:after {
+    content: "";
+    display: table;
+}
+#itinerary .route .type:after {
+    clear: both;
+}
+.ie6 #itinerary .route .type, .ie7 #itinerary .route .type {
+}
+#itinerary .route .type .icon {
+    float: left;
+    margin: 0 5px 0 0;
+}
+#itinerary .route .type .text {
+    float: left;
+    line-height: 22px;
+}
+#itinerary .route .data {
+    float: left;
+	width: 190px;
+}
+#itinerary .route .data .item {
+    display: block;
+    line-height: 16px;
+}
+#itinerary .route .data .item .separator {
+    margin: 0 2px;
+}
+#itinerary .route .data .item .stops {
+    text-decoration: none;
+}
+#itinerary .route .data .item.airline:before, #itinerary .route .data .item.airline:after {
+    content: "";
+    display: table;
+}
+#itinerary .route .data .item.airline:after {
+    clear: both;
+}
+.ie6 #itinerary .route .data .item.airline, .ie7 #itinerary .route .data .item.airline {
+}
+#itinerary .route .data .item.date {
+    font-size: 14px;
+    margin: 0 0 3px;
+}
+#popup-detail .segment {
+    padding: 0 5px;
+}
+#popup-detail .segment:before, #popup-detail .segment:after {
+    content: "";
+    display: table;
+}
+#popup-detail .segment:after {
+    clear: both;
+}
+.ie6 #popup-detail .segment, .ie7 #popup-detail .segment {
+}
+#popup-detail .segment .detail {
+    float: left;
+    width: 500px;
+}
+#popup-detail .segment .detail:before, #popup-detail .segment .detail:after {
+    content: "";
+    display: table;
+}
+#popup-detail .segment .detail:after {
+    clear: both;
+}
+.ie6 #popup-detail .segment .detail, .ie7 #popup-detail .segment .detail {
+}
+#popup-detail .segment .detail .flight:before, #popup-detail .segment .detail .flight:after {
+    content: "";
+    display: table;
+}
+#popup-detail .segment .detail .flight:after {
+    clear: both;
+}
+.ie6 #popup-detail .segment .detail .flight, .ie7 #popup-detail .segment .detail .flight {
+}
+#popup-detail .segment .detail .flight .item {
+    float: left;
+    line-height: 28px;
+    margin: 0 4px 0 0;
+}
+#popup-detail .segment .detail .flight .airline {
+    float: right;
+    margin: 0;
+}
+#popup-detail .segment .detail .itinerary {
+    line-height: 14px;
+}
+#popup-detail .segment .detail .itinerary:before, #popup-detail .segment .detail .itinerary:after {
+    content: "";
+    display: table;
+}
+#popup-detail .segment .detail .itinerary:after {
+    clear: both;
+}
+.ie6 #popup-detail .segment .detail .itinerary, .ie7 #popup-detail .segment .detail .itinerary {
+}
+#popup-detail .segment .detail .itinerary .location {
+    float: left;
+    width: 340px;
+}
+#popup-detail .segment .detail .itinerary .date {
+    float: right;
+}
+#popup-detail .segment .detail .operated-by {
+    float: left;
+    margin: 3px 0 0;
+}
+#popup-detail .segment .detail .operated-by:before, #popup-detail .segment .detail .operated-by:after {
+    content: "";
+    display: table;
+}
+#popup-detail .segment .detail .operated-by:after {
+    clear: both;
+}
+.ie6 #popup-detail .segment .detail .operated-by, .ie7 #popup-detail .segment .detail .operated-by {
+}
+#popup-detail .segment .detail .operated-by .description {
+    float: left;
+    line-height: 26px;
+    margin: 0 4px 0 0;
+}
+#popup-detail .segment .detail .operated-by .airline {
+    float: left;
+}
+#popup-detail .segment .detail .stopovers {
+    float: right;
+}
+#popup-detail .segment .detail .stopovers .title {
+    margin: 0 0 0 -20px;
+}
+#popup-detail .segment .review {
+    float: left;
+    margin: 5px 0 0 50px;
+}
+#popup-detail .segment .review .qualification {
+    display: block;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+#popup-detail .segment .review .comments {
+    display: block;
+    font-size: 11px;
+    text-align: right;
+}
+#popup-detail .connection {
+    display: block;
+    margin: 10px 0 5px;
+    padding: 8px 0;
+    text-align: center;
+}
+#popup-detail .bottom-box {
+    display: block;
+    margin: 10px 0 0;
+}
+#popup-detail .bottom-box:before, #popup-detail .bottom-box:after {
+    content: "";
+    display: table;
+}
+#popup-detail .bottom-box:after {
+    clear: both;
+}
+.ie6 #popup-detail .bottom-box, .ie7 #popup-detail .bottom-box {
+}
+.ie7 #popup-detail .bottom-box, .ie8 #popup-detail .bottom-box {
+    width: 430px;
+}
+#popup-detail .bottom-box .show-rules {
+    float: left;
+}
+#popup-detail .bottom-box .local-time {
+    float: right;
+}
+#popup-detail .rules {
+    display: none;
+    margin: 10px 0 0;
+}
+#popup-detail .rules .airlines {
+    display: block;
+}
+#popup-detail .rules .airlines:before, #popup-detail .rules .airlines:after {
+    content: "";
+    display: table;
+}
+#popup-detail .rules .airlines:after {
+    clear: both;
+}
+.ie6 #popup-detail .rules .airlines, .ie7 #popup-detail .rules .airlines {
+}
+#popup-detail .rules .text .paragraph {
+    margin: 10px 0 0;
+}
+#popup-detail .baggage-fees {
+    display: block;
+    margin: 10px 0 0;
+    text-decoration: underline;
+}
+.btctrip #itinerary .route .date {
+    color: #ff7700;
+}
+.btctrip #popup-detail .detail .operated-by .description {
+    font-weight: bold;
+}
+.btctrip #popup-detail .review .qualification {
+    color: #013D93;
+}
+.btctrip #popup-detail .review .comments {
+    color: #888888;
+}
+.btctrip #popup-detail .connection {
+    background: none repeat scroll 0 0 #EEEEEE;
+    font-weight: bold;
+}
+.btctrip #popup-detail .bottom-box .show-rules {
+    text-decoration: underline;
+}
+#price-info .prices {
+    padding: 20px 20px 0;
+}
+.flight #price-info .prices {
+    padding: 5px 20px 0;
+}
+#price-info .prices .adult-price-conversion {
+    margin: 0 0 20px;
+}
+#price-info .prices .adult-price-conversion .fare-type {
+    display: block;
+    font-size: 13px;
+    letter-spacing: -0.5px;
+    margin: 0 0 10px;
+    text-align: center;
+}
+#price-info .prices .adult-price-conversion .currencies {
+    display: block;
+    text-align: center;
+}
+#price-info .prices .adult-price-conversion .currencies .currency .code {
+    font-size: 16px;
+}
+#price-info .prices .adult-price-conversion .currencies .currency .amount {
+    font-size: 20px;
+}
+#price-info .prices .adult-price-conversion .currencies .equals {
+    font-size: 20px;
+    margin: 0 15px;
+}
+#price-info .prices .adult-price-conversion .currencies .conversion {
+    display: block;
+    line-height: 15px;
+    margin: 12px 0 0;
+    position: relative;
+}
+#price-info .prices .adult-price-conversion .currencies .conversion .arrow, #price-info .prices .adult-price-conversion .currencies .conversion .arrow-border {
+    height: 0;
+    left: 125px;
+    position: absolute;
+    top: -11px;
+    width: 0;
+    z-index: 5;
+}
+#price-info .prices .adult-price-conversion .currencies .conversion .arrow-border {
+    left: 124px;
+    top: -12px;
+    z-index: 4;
+}
+#price-info .prices .adult-price-conversion .currencies .conversion .text {
+    font-size: 11px;
+    line-height: 15px;
+    padding: 3px 6px;
+    z-index: 5;
+}
+#price-info .prices .fare-detail {
+    font-size: 12px;
+    margin: 0 0 5px;
+}
+#price-info .prices .fare-detail .item {
+    margin: 0 0 10px;
+}
+#price-info .prices .fare-detail .item:before, #price-info .prices .fare-detail .item:after {
+    content: "";
+    display: table;
+}
+#price-info .prices .fare-detail .item:after {
+    clear: both;
+}
+.ie6 #price-info .prices .fare-detail .item, .ie7 #price-info .prices .fare-detail .item {
+}
+#price-info .prices .fare-detail .item .description {
+    float: left;
+    margin: 0 10px 0 0;
+    width: 150px;
+}
+#price-info .prices .fare-detail .item .price-currency {
+    float: right;
+}
+#price-info .prices .fare-detail .adult-price {
+    margin: 0 0 15px;
+}
+#price-info .prices .fare-detail .adult-price .description {
+    font-size: 13px;
+    letter-spacing: -0.5px;
+}
+#price-info .prices .fare-detail .adult-price .price-currency .currency {
+    font-size: 13px;
+}
+#price-info .prices .fare-detail .adult-price .price-currency .amount {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+#price-info .prices .fare-detail .total {
+    line-height: 20px;
+    margin: 20px 0 0;
+}
+#price-info .prices .fare-detail .total .description {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    width: 60px;
+}
+#price-info .prices .fare-detail .total .price-currency .currency {
+    font-size: 20px;
+    margin: 0 4px 0 0;
+}
+#price-info .prices .fare-detail .total .price-currency .amount {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+#price-info .prices .fare-detail .total .price-currency .aclaration {
+	float:right;
+    font-size: 12px;
+}
+#price-info .prices .fare-detail .fare-description {
+    margin: 0;
+}
+#price-info .prices .fare-detail .fare-description .description {
+    float: right;
+    font-size: 13px;
+    margin: 5px 0;
+    width: auto;
+}
+#price-info .commercial-policy {
+    font-size: 11px;
+}
+.btctrip #price-info .prices {
+   /* background: linear-gradient(#ffcc00, #FFFFFF 100%) repeat scroll 0 0 transparent; */
+    color: black;
+}
+.ie7 .btctrip #price-info .prices, .ie8 .btctrip #price-info .prices, .ie9 .btctrip #price-info .prices {
+    background:  repeat-x scroll 0 0 transparent;
+}
+.btctrip #price-info .prices .adult-price-conversion .currencies .conversion .arrow {
+    border-bottom: 10px solid white;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.btctrip #price-info .prices .adult-price-conversion .currencies .conversion .arrow-border {
+    border-bottom: 11px solid #CCCCCC;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+}
+.btctrip #price-info .prices .adult-price-conversion .currencies .conversion .text {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid #CCCCCC;
+    color: #444444;
+}
+#security {
+    margin: 50px 0 0;
+    padding: 15px 10px;
+    position: relative;
+}
+#security:before, #security:after {
+    content: "";
+    display: table;
+}
+#security:after {
+    clear: both;
+}
+.ie6 #security, .ie7 #security {
+}
+#security .description {
+    display: block;
+    left: 40px;
+    position: absolute;
+    top: -35px;
+}
+#security .description:before, #security .description:after {
+    content: "";
+    display: table;
+}
+#security .description:after {
+    clear: both;
+}
+.ie6 #security .description, .ie7 #security .description {
+}
+#security .description .icon {
+    float: left;
+    margin: 0 5px 0 0;
+}
+#security .description .text {
+    float: left;
+    font-size: 20px;
+    letter-spacing: -1px;
+    line-height: 48px;
+}
+#security .detail {
+    float: left;
+    font-size: 11px;
+}
+#security .detail .item {
+    line-height: 16px;
+    margin: 5px 0 10px;
+}
+#security .detail .item:before, #security .detail .item:after {
+    content: "";
+    display: table;
+}
+#security .detail .item:after {
+    clear: both;
+}
+.ie6 #security .detail .item, .ie7 #security .detail .item {
+}
+#security .detail .item .icon {
+    float: left;
+    margin: 3px 0 0;
+}
+#security .detail .item .text {
+    float: left;
+    margin: 0 0 0 10px;
+    width: 160px;
+}
+#security .detail .item.last {
+    margin: 0;
+}
+#security .icons {
+    float: right;
+    width: 110px;
+}
+#security .icons span {
+    cursor: default;
+    margin: 5px auto;
+}
+#security .icons .geoTrust img {
+    height: 37px;
+    width: 77px;
+}
+.btctrip #security {
+    background: none repeat scroll 0 0 #EEEEEE;
+    color: #666666;
+}
+.btctrip #security .description .text {
+    color: #013D93;
+}
+#happy-clients {
+    margin: 15px 0 0;
+}
+#happy-clients:before, #happy-clients:after {
+    content: "";
+    display: table;
+}
+#happy-clients:after {
+    clear: both;
+}
+.ie6 #happy-clients, .ie7 #happy-clients {
+}
+#happy-clients .review {
+    margin: 0 0 25px;
+}
+#happy-clients .review .comment blockquote {
+    white-space: normal !important;
+}
+#happy-clients .review .details {
+    font-size: 13px;
+    margin: 15px 0 0;
+}
+#happy-clients .review .details:before, #happy-clients .review .details:after {
+    content: "";
+    display: table;
+}
+#happy-clients .review .details:after {
+    clear: both;
+}
+.ie6 #happy-clients .review .details, .ie7 #happy-clients .review .details {
+}
+#happy-clients .review .details .name {
+    float: left;
+    margin: 0 0 3px;
+}
+#happy-clients .review .details .date {
+    float: right;
+}
+#happy-clients .review .details .product {
+    clear: both;
+    float: left;
+    font-size: 11px;
+}
+.btctrip #happy-clients .review .comment {
+    background: none repeat scroll 0 0 #EEEEEE;
+    border-radius: 5px 5px 5px 5px;
+    display: block;
+    padding: 10px;
+    position: relative;
+    width: auto;
+}
+.btctrip #happy-clients .review .comment:after, .ie7 .btctrip #happy-clients .review .comment .after {
+    bottom: -15px;
+    content: "";
+    height: 0;
+    left: 20px;
+    position: absolute;
+    width: 0;
+}
+.ie7 .btctrip #happy-clients .review .comment {
+}
+.btctrip #happy-clients .review .comment blockquote {
+    color: #666666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.btctrip #happy-clients .review .comment h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.btctrip #happy-clients .review .comment:after, .ie7 .btctrip #happy-clients .review .comment .after {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #EEEEEE;
+}
+.btctrip #happy-clients .review .details {
+    color: #888888;
+}
+.btctrip #happy-clients .review .details .name {
+    color: #FF9900;
+}
+#vip {
+    margin: 0 0 10px;
+    padding: 0 15px;
+}
+#vip:before, #vip:after {
+    content: "";
+    display: table;
+}
+#vip:after {
+    clear: both;
+}
+.ie6 #vip, .ie7 #vip {
+}
+#vip .icon {
+    float: left;
+    margin: 3px 0 0;
+}
+#vip .text {
+    float: left;
+    margin: 0 0 0 10px;
+    padding: 15px 0;
+    width: 550px;
+}
+#vip .text .vip-title {
+    display: block;
+    font-size: 20px;
+}
+#vip .text .commercial-policy {
+    display: block;
+    font-size: 13px;
+    margin: 3px 0 0;
+}
+.btctrip #vip {
+    background: linear-gradient(#EEEEEE, #CCCCCC 50%) repeat scroll 0 0 transparent;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6), 0 2px 2px rgba(255, 255, 255, 0.9) inset;
+}
+.btctrip #vip .text {
+    color: #013D93;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.form .form-title {
+	margin-bottom: 20px;
+}
+
+#paymentDefinition .content .payment-message {
+	font-size: 14px;
+}
+
+#update-search {
+	padding-bottom: 10px;
+	text-align: right;
+	padding-top: 10px;
+}
+
+#contact {
+	margin-bottom: 0px;
+}
+
+.success {
+	min-height: 350px;
+}
+
+.success .section {
+	font-size: 13px;
+	border: 0px;
+}
+
+.success .purchase-form {
+	background: white;
+	border: 1px solid #AAAAAA;
+}
+
+.success .purchase-info {
+	background: white;
+	padding: 20px;
+	width: 258px;
+	border: 1px solid #AAAAAA;
+}
+
+.success #detail {
+	border: 0px;
+}
+.success #detail .content {
+	padding: 0px;
+}
+
+.success .section span.description {
+	margin: 0px;
+}
+
+.success .passengers-column {
+	width: 120px;
+	font-style: italic;
+}
+
+
+/* --- hoteles --- */
+.ux-common-checkout-thanks-hotel {
+	min-height: 75px;
+}
+
+.success .ux-common-checkout-thanks-hotel {
+	margin-top: 20px;
+}
+
+
+.ux-common-checkout-thanks-hotel .ux-common-checkout-thanks-pic {
+	position: absolute;
+}
+
+.ux-common-checkout-thanks-hotel .ux-common-checkout-thanks-description {
+	padding-left: 75px;
+}
+
+.ux-common-checkout-thanks-hotel .ux-common-checkout-thanks-description .ux-hotel-name {
+	font-size: 16px;
+	font-size: 0.9rem;
+	color: #ff4400;
+	letter-spacing: 0;
+}
+
+.ux-common-checkout-thanks-hotel .ux-common-checkout-thanks-description .ux-hotel-name span {
+	color: #fc3;
+}
+
+.ux-common-checkout-hotel-details {
+	padding-bottom: 14px;
+}
+
+.detail-title {
+	color: #ff9900;
+	line-height: 1.5;	
+}
+
+.average-section {
+	text-align: center;
+}
+
+.average-title {
+	color: #f90;
+	font-size: 15px;
+}
+
+.average-price {
+	padding-top: 8px;
+	color: black;
+}
+
+.price-info {
+	padding-top: 20px;
+}
+
+#price-info .prices .fare-detail .total .description-for-hotels {
+	margin-top: 0px;
+}
+
+.prices .fare-detail .price-title {
+	text-align: center;
+	padding-left: 85px;
+	color: #f90;
+	font-size: 18px;
+}
+
+.payment.section {
+	margin-bottom: 5px;
+}
+
+.section .payment-option {
+	padding: 0 35px 10px 10px;
+	display: table-cell;
+}
+
+.section .payment-option input[type="radio"] {
+	margin: -18px 10px 20px 0;
+}
+
+.section .payment-option .payment-logo-coin {
+	height: 37px;
+	width: 97px;
+	padding: 5px 5px 5px 0px;
+}
+
+.section .payment-option .payment-logo-gateway {
+	padding: 5px 5px 5px 10px;
+}
+
+.section .payment-option .payment-logo-gateway.bitpay {
+	height: 32px;
+}
+.section .payment-option .payment-logo-gateway.gocoin {
+	height: 30px;
+}
+
+#payment-msg {
+	width: 85%;
+}

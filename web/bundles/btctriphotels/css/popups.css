@@ -1,0 +1,611 @@
+.popupHelp .closeWindow,.popupHelpVoucher .closeWindow {
+	top: 5px;
+	right: 5px
+}
+
+.popover.bottom {
+	margin-top: 5px
+}
+
+.fade.in {
+	opacity: 1
+}
+
+div.right {
+	margin-left: 8px;
+	margin-top: 5px
+}
+
+.fade {
+	-moz-transition: opacity 0.15s linear 0s;
+	opacity: 0
+}
+
+.popover {
+	display: none;
+	left: 0;
+	padding: 5px;
+	padding-top: 8px;
+	position: absolute;
+	top: 0;
+	z-index: 1010
+}
+
+.popover.bottom .arrow {
+	border-bottom: 8px solid #666;
+	border-bottom: 8px solid rgba(0, 0, 0, 0.6);
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+	left: 50%;
+	margin-left: -5px;
+	top: 0
+}
+
+.popover.right .arrow {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #666;
+	border-right: 10px solid rgba(0, 0, 0, 0.6);
+	left: -5px;
+	margin-top: -7px;
+	top: 50%
+}
+
+.popover.left {
+	margin-left: -5px
+}
+
+.popover.left .arrow {
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #666;
+	border-left: 10px solid rgba(0, 0, 0, 0.6);
+	right: -5px;
+	margin-top: -5px;
+	top: 50%
+}
+
+.popover .arrow {
+	height: 0;
+	position: absolute;
+	width: 0
+}
+
+.popover .clickover-close-button {
+	text-decoration: none;
+	cursor: pointer;
+	border: 3px solid white;
+	color: white;
+	font-weight: bold;
+	font-family: arial, sans-serif;
+	font-size: 20px;
+	background: #319fda;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+	position: absolute;
+	z-index: 10;
+	text-align: center;
+	line-height: 20px;
+	height: 20px;
+	width: 20px;
+	top: -9px;
+	right: -9px
+}
+
+.modal .clickover-close-button {
+	text-decoration: none;
+	cursor: pointer;
+	border: 3px solid white;
+	color: white;
+	font-weight: bold;
+	font-family: arial, sans-serif;
+	font-size: 20px;
+	background: #f40;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	-ms-border-radius: 20px;
+	-o-border-radius: 20px;
+	border-radius: 20px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+	position: absolute;
+	z-index: 10;
+	text-align: center;
+	line-height: 20px;
+	height: 20px;
+	width: 20px;
+	top: -9px;
+	right: -9px;
+	opacity: 1;
+}
+
+.popover-inner {
+	background: none repeat scroll 0 0 #666;
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.6);
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	overflow: hidden;
+	padding: 10px;
+	min-width: 300px;
+	max-width: 600px
+}
+
+.popover-title {
+	background-color: #F5F5F5;
+	border-bottom: 1px solid #EEEEEE;
+	border-radius: 3px 3px 0 0;
+	line-height: 1;
+	padding: 9px 15px;
+	color: #003770;
+	font-size: 16px;
+	font-weight: normal
+}
+
+.right .popover-title {
+	background-color: #FFF;
+	border-bottom: 1px solid white;
+	border-radius: 3px 3px 0 0;
+	padding: 3px 15px
+}
+
+.no-title-popover .popover-title {
+	background-color: #FFF;
+	border-bottom: 1px solid white;
+	border-radius: 3px 3px 0 0;
+	padding: 3px 15px
+}
+
+.no-title-popover .popover-inner {
+	min-width: 200px;
+	max-width: 400px;
+	width: auto
+}
+
+.no-title-popover .popover-inner .popover-content {
+	padding: 0 7px 5px 7px
+}
+
+.left-arrow {
+	margin-left: 140px !important
+}
+
+.left-arrow.bottom .arrow {
+	left: 10%
+}
+
+.left-arrow .popover-inner {
+	min-width: 150px;
+	max-width: 330px;
+	width: auto;
+	font-size: 13px;
+	color: #333;
+	text-align: left
+}
+
+.clickover-close-button {
+	float: right
+}
+
+.popover-content {
+	background-clip: padding-box;
+	background-color: #FFFFFF;
+	border-radius: 0 0 3px 3px;
+	padding: 14px;
+	overflow: auto
+}
+
+.right .popover-content {
+	padding-top: 10px
+}
+
+.popup-connection-div {
+	text-align: center;
+	background: #EEE;
+	font-weight: bold;
+	margin: 10px 0 10px 0;
+	height: 30px;
+	line-height: 30px
+}
+
+.showRules {
+	float: right
+}
+
+.popup-segment-info {
+	width: 550px;
+	margin-bottom: 10px
+}
+
+.popup-segment-info .popup-data {
+	color: #999;
+	line-height: 28px;
+	height: 28px
+}
+
+.popup-segment-info .popup-data span {
+	float: left
+}
+
+.popup-segment-info .popup-itinerary {
+	color: #000;
+	line-height: 20px;
+	height: 20px
+}
+
+.popup-segment-info .popup-itinerary span {
+	float: left
+}
+
+.popup-segment-info .popup-data .popupAirline,.popup-segment-info .popup-itinerary .popup-date
+	{
+	float: right
+}
+
+.popup-segment-info .popup-logo {
+	float: left
+}
+
+.flight-home-popup .popover-inner {
+	min-width: 200px
+}
+
+.flight-home-popup .popover-content {
+	background-color: #FF3
+}
+
+.flight-home-popup .popover-title {
+	background-color: #FF3;
+	border-bottom: none;
+	border-radius: 3px 3px 0 0;
+	padding: 5px 0 0 0
+}
+
+.no-title .popover-title {
+	background-color: #FFF;
+	border-bottom: none;
+	border-radius: 3px 3px 0 0;
+	padding: 5px 0 0 0
+}
+
+.flight-home-popup .passengers-container {
+	margin-top: 8px
+}
+
+.modal-open .dropdown-menu {
+	z-index: 2050
+}
+
+.modal-open .dropdown.open {
+	*z-index: 2050
+}
+
+.modal-open .popover {
+	z-index: 2060
+}
+
+.modal-open .tooltip {
+	z-index: 2070
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1040;
+	background-color: #000000;
+	opacity: 0.4;
+	filter: alpha(opacity = 40)
+}
+
+.modal-backdrop.fade {
+	opacity: 0
+}
+
+.modal-backdrop.fade.in {
+	opacity: 0.4;
+	filter: alpha(opacity = 40)
+}
+
+.ux-common-map .modal {
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	z-index: 2061;
+	width: 650px;
+	margin: -200px 0 0 -335px;
+	background: rgba(0, 0, 0, 0.5);
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-ms-border-radius: 6px;
+	border-radius: 6px;
+	-webkit-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+	opacity: 1;
+}
+
+.modal-inner {
+	background-color: #ffffff;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	margin: 7px;
+	z-index: 501;
+	position: relative
+}
+
+.opaque-div {
+	background: black;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0px;
+	right: 0;
+	z-index: 500;
+	filter: alpha(opacity = 50);
+	opacity: 0.5
+}
+
+.modal.fade {
+	top: -25%;
+	-webkit-transition: opacity 0.3s linear, top 0.3s ease-out;
+	-moz-transition: opacity 0.3s linear, top 0.3s ease-out;
+	-ms-transition: opacity 0.3s linear, top 0.3s ease-out;
+	-o-transition: opacity 0.3s linear, top 0.3s ease-out;
+	transition: opacity 0.3s linear, top 0.3s ease-out
+}
+
+.modal.fade.in {
+	top: 50%
+}
+
+.modal-header {
+	padding: 9px 15px;
+	background-color: #eee
+}
+
+.modal-header .close {
+	top: -18px;
+	right: -13px
+}
+
+.modal-header .modal-title {
+	font-size: 16px;
+	color: #f40;
+}
+
+.modal-header .modal-title .modal-title-emphasize {
+	font-size: 16px
+}
+
+.modal-body {
+	max-height: 450px;
+	padding: 15px;
+	overflow-y: auto;
+	font-size: 13px
+}
+
+.modal-body p {
+	margin-bottom: 10px
+}
+
+.modal-form {
+	margin-bottom: 0
+}
+
+.modal-footer {
+	padding: 14px 15px 15px;
+	margin-bottom: 0;
+	text-align: right;
+	background-color: #f5f5f5;
+	border-top: 1px solid #dddddd;
+	-webkit-border-radius: 0 0 6px 6px;
+	-moz-border-radius: 0 0 6px 6px;
+	border-radius: 0 0 6px 6px;
+	*zoom: 1;
+	-webkit-box-shadow: inset 0 1px 0 white;
+	-moz-box-shadow: inset 0 1px 0 white;
+	box-shadow: inset 0 1px 0 white
+}
+
+.modal-footer:before {
+	display: table;
+	content: ""
+}
+
+.modal-footer:after {
+	display: table;
+	content: "";
+	clear: both
+}
+
+.modal-footer .btn+.btn {
+	margin-bottom: 0;
+	margin-left: 5px
+}
+
+.modal-footer .btn-group .btn+.btn {
+	margin-left: -1px
+}
+
+.modal-body .modal-common-message {
+	font-size: 12px
+}
+
+.pnrErrorSelectionPopup {
+	position: absolute;
+	top: 10%;
+	width: 750px;
+	left: 45%;
+	z-index: 2059
+}
+
+.pnrErrorSelectionPopup .modal-header {
+	border-bottom: none
+}
+
+.pnrErrorSelectionPopup .modal-header .modal-title {
+	margin-top: 5px;
+	background-color: #EEE;
+	padding: 10px
+}
+
+.pnrErrorSelectionPopup .modal-header .modal-title .flights-info {
+	color: #333;
+	margin-top: 5px;
+	font-size: 13px
+}
+
+.pnrErrorSelectionPopup .modal-header .modal-title a {
+	float: right;
+	text-decoration: none
+}
+
+.pnrErrorSelectionPopup .modal-body {
+	max-height: 100%;
+	padding-top: 5px
+}
+
+.popover.contact-phone {
+	top: 13px !important
+}
+
+.popover.left.contact-phone .arrow {
+	top: 32px
+}
+
+.popover.contact-phone .popover-content {
+	font-size: 13px;
+	color: #444
+}
+
+.popover.contact-phone .popover-content span {
+	color: #013D93
+}
+
+.tooltip {
+	position: absolute;
+	z-index: 999;
+	left: -9999px;
+	background-color: #666;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 6px;
+	max-width: 250px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+}
+
+.tooltip p {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	background-color: #FFF;
+	padding: 2px 7px
+}
+
+.tooltip .arrow {
+	position: absolute;
+	width: 0;
+	height: 0;
+	top: -6px;
+	left: 17px;
+	margin-left: -6px;
+	border-right: 6px solid transparent;
+	border-bottom: 6px solid #666;
+	border-bottom: 6px solid rgba(0, 0, 0, 0.6);
+	border-left: 6px solid transparent
+}
+
+#changeRoomTable tbody {
+	background-color: #cccccc;
+	border: 1px solid #ddd;
+	color: #666;
+	font-size: 11px;
+	background-color: white
+}
+
+#changeRoomTable tbody .table-title th {
+	padding: 10px;
+	color: #333;
+	background-color: #ddd;
+	text-align: center
+}
+
+#changeRoomTable tbody .table-title .room-title {
+	width: 121px
+}
+
+#changeRoomTable tbody .table-title .room-condition {
+	width: 121px
+}
+
+#changeRoomTable tbody .table-title .room-price {
+	min-width: 140px
+}
+
+#changeRoomTable tbody td {
+	text-align: center;
+	padding: 10px;
+	vertical-align: middle;
+	border: 1px solid #ddd
+}
+
+#changeRoomTable tbody .button-cell {
+	border-left: 2px solid #FFF
+}
+
+#changeRoomTable .table-row {
+	border-bottom: 1px solid #ddd
+}
+
+.hotel-map-reference {
+	text-align: right;
+	margin-top: 10px;
+	font-size: 12px;
+	color: #888;
+}
+
+.hotel-map-reference .hotel-marker-mini {
+	margin-bottom: -5px;
+}
+
+.hotel-map-reference .hotel-marker-point {
+	margin-bottom: -2px;
+}
+
+.hotel-marker-mini {
+	background-image:
+		url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAQCAYAAAB+690jAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAArwAAAK8AFCrDSYAAAAB3RJTUUH3gIMDS87fzl5PQAAAZZJREFUSMfFlL9qlEEUxc/M3G/326wBA0kwTUwhWFsIgdS2PkHAF7ARhJAqhU9hkcLOLpDKBzCFoI0BwcZoDCioQdndfH/23nssdo3tZgXnllOc+c05c27YeHRwf3Vl+Vml6JJEjiGBxTLx2/lgR9QZKw3loLIyEw9IQmKkqSXxthaqwlSBbECAGQA4BNYmuP05yTQEGAAAQtPoNJAKIGSLjB4nQHAAdNDyAsET4ICEKA53wDNGRoIuAAwCSUY6SMvIQ2B6v8SiVLiBrrlKNnXIp38oRJJ5I/vrUIKEmAjapWXZHKJPgKytadZU2gx89pYRCDFEKbsEQwACL9eqO7WtwdkrSxJak46uyvDk9bvYK/bGzcWVOh+KhRv95fUHimLNfPKWTiHu9fBVfX52SNNqVi0zoB31UGk8mn/x3Nvu37q5uWvSezys2k5KiZ0w/uqj7w/Pnu8dzCub5gb68HY8Wrj+cXFp5U6U7kaR0GBcPf388sU+fn3S/w8EwE6Pf/Zub7X9/rW70ZujL+/fPNHjwx//ovkbhfXwryfqffoAAAAASUVORK5CYII=');
+	width: 36px;
+	height: 18px;
+}
+
+.hotel-marker-point {
+	background-image:
+		url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAArwAAAK8AFCrDSYAAAAB3RJTUUH3gIMDS0M9bK+sAAAAXRJREFUKM+dkstKAgEUhr+5aGUzZVmGuYouRE8QCQlteoLeQHyA9kVEvYT7Vi2DtqEhVDAbF5EZRGkTWQ2j40w5XqbNCF1ddODn8C/+c85/zoF/hPApB4Hh/OLidiQe3xBDoWmAruPorw8Ph4mrq13ABlzhkyB8mUjk1GRyYXBuDnFkBIBuvc77zQ1WNnu9lM+vAqYESIB6PD+/N5tKrXcsC1vTcDSNt0IBt1xGHhtDXVmJrJVK6oFhnArAIBC7TafP2i8v0bZp/upDDoeRJyaqM5nMsgwEAMVrNqNupfKnebfRQFLVKKDI/njBt2KRlm33X1uxCBCUe7xiGIYiiuP9NA3DMABEoAO457adq3e79MO5becAV/KFAyeWdZ9UlDVZENSW5/EdT63W42a5vAPoEuD53cWjWu1iKhAID4nipAcDrudhdjp1zXFyW7q+D9wB1S/HBWLANDAJhPxiDvAM6MAjYP54I2AUUHwO4AINoNZ7ow8V/LC1N8DWXQAAAABJRU5ErkJggg==');
+	width: 13px;
+	height: 13px;
+}
+
+.hotel-map-reference span {
+	margin: 0 5px;
+}
+
+.mainSprite {
+	display: inline-block;
+	background-repeat: no-repeat;
+}

@@ -1,0 +1,18 @@
+
+btc_trip_search:
+    type:  annotation
+    resource: "@BtcTripFlightsBundle/Controller/SearchController.php"
+
+btc_trip_autocomplete:
+    type:  annotation
+    resource: "@BtcTripFlightsBundle/Controller/AutocompleteController.php"
+
+btc_trip_checkout:
+    type:  annotation
+    resource: "@BtcTripFlightsBundle/Controller/CheckoutController.php"
+   
+#btc_trip_advertising:
+#    type:  annotation
+#    resource: "@BtcTripFlightsBundle/Controller/AdvertisingController.php"
+
+ 

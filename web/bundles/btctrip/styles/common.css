@@ -1,0 +1,761 @@
+
+
+label {
+    cursor: pointer;
+}
+.hidden {
+    display: none;
+}
+.page-title {
+    display: block;
+    font-size: 24px;
+    letter-spacing: -1px;
+}
+.section {
+    clear: both;
+    margin: 0 0 15px;
+    padding: 0 10px 0 0;
+}
+.section:before, .section:after {
+    content: "";
+    display: table;
+}
+.section:after {
+    clear: both;
+}
+.ie6 .section, .ie7 .section {
+}
+.section .description {
+    display: block;
+    font-size: 20px;
+    letter-spacing: -1px;
+    margin: 0 0 15px;
+    height: 22px;
+    line-height: 13px;
+}
+.section .content {
+    padding: 0 0 0 10px;
+}
+.underline {
+    text-decoration: underline;
+}
+.airlines-content {
+    line-height: 28px;
+}
+.airlines-content:before, .airlines-content:after {
+    content: "";
+    display: table;
+}
+.airlines-content:after {
+    clear: both;
+}
+.ie6 .airlines-content, .ie7 .airlines-content {
+}
+.airlines-content .icon {
+    float: left;
+    line-height: 0;
+}
+.airlines-content .name {
+    float: left;
+    margin: 0 0 0 5px;
+}
+.airlines-content .icon-plus {
+    float: left;
+    margin: 10px 5px 0;
+}
+.main-sprite {
+    display: block;
+}
+.notification-box {
+    margin: 0 0 20px;
+}
+.notification-box .notification-box-wrp {
+    padding: 20px;
+}
+.notification-box .notification-box-wrp:before, .notification-box .notification-box-wrp:after {
+    content: "";
+    display: table;
+}
+.notification-box .notification-box-wrp:after {
+    clear: both;
+}
+.ie6 .notification-box .notification-box-wrp, .ie7 .notification-box .notification-box-wrp {
+}
+.notification-box .notification-box-wrp .warning-icon {
+    float: left;
+    margin: 0 20px 0 0;
+}
+.notification-box .notification-box-wrp .text {
+    float: left;
+    width: 88%;
+    word-wrap: break-word;
+}
+.notification-box .notification-box-wrp .text .box-title {
+    display: block;
+    font-size: 16px;
+    margin: 0 0 5px;
+}
+.notification-box .notification-box-wrp .text .box-title:last-child {
+    margin: 0;
+}
+.notification-box .notification-box-wrp .text .box-description {
+    font-size: 13px;
+}
+.transition {
+    display: none;
+    text-align: center;
+}
+.transition.checkout-transition {
+    padding: 20px 40px 0px 40px;
+}
+.transition.checkout-transition .title {
+    display: block;
+    font-size: 16px;
+    margin: 0 0 10px;
+}
+.transition.checkout-transition .text {
+    display: block;
+    font-size: 13px;
+    margin: 0 0 15px;
+}
+.transition.checkout-transition .text .paragraph {
+    margin: 0 0 5px;
+}
+.template {
+    display: none;
+}
+#popup-initial-transition {
+    display: block;
+    height: 110px;
+    left: 0;
+    padding: 10px 0;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    z-index: 1002;
+}
+.checkout-popup {
+    font-size: 11px;
+}
+.checkout-popup .popup-content {
+    padding: 10px;
+}
+.checkout-popup .popup-content:before, .checkout-popup .popup-content:after {
+    content: "";
+    display: table;
+}
+.checkout-popup .popup-content:after {
+    clear: both;
+}
+.ie6 .checkout-popup .popup-content, .ie7 .checkout-popup .popup-content {
+}
+.modal {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
+    margin-left: 0px;
+    border-radius: 0px;
+}
+.modal-popup {
+    z-index: 1002 !important;
+}
+.front-popup {
+    z-index: 1005 !important;
+}
+.btctrip {
+    color: #222222;
+}
+.btctrip .page-title {
+    color: #ff9900;
+}
+.btctrip .section .description {
+    border-bottom: 1px solid #D92594;
+    color: #ff9900;
+    text-align: left;
+}
+.btctrip .bold {
+    font-weight: bold;
+}
+.btctrip .notification-box.warn-box {
+    background: none repeat scroll 0 0 #FFFFE1;
+    border: 1px solid #FFCC33;
+}
+.btctrip .notification-box.warn-box .box-title {
+    color: #013D93;
+}
+.btctrip .notification-box.error-box {
+    background: none repeat scroll 0 0 #FFE6E6;
+    border: 1px solid red;
+}
+.btctrip .notification-box.error-box .box-title {
+    color: red;
+}
+.btctrip .notification-box .box-title {
+    color: #013D93;
+}
+.btctrip .notification-box .box-description {
+    color: #444444;
+}
+.btctrip .transition.checkout-transition .title {
+    color: #013D93;
+}
+.btctrip .transition.checkout-transition .text {
+    color: #222222;
+}
+.btctrip .modal {
+    background: none repeat scroll 0 0 black;
+    opacity: 0.6;
+}
+.btctrip .popUpContent {
+    color: black;
+}
+.btctrip #popup-initial-transition {
+    background: none repeat scroll 0 0 white;
+    opacity: 0.9;
+}
+.icon-sprite, .icon-arrow, .icon-best-price-small-es, .icon-best-price-small-pt, .icon-bradesco-cartoes-small, .icon-bradesco-cartoes, .icon-bus, .icon-circle, .icon-clock-HIGH, .icon-clock-LOW, .icon-clock-MEDIUM, .icon-decolar-promo, .icon-eco-flight, .icon-empty-leaf, .icon-error, .icon-facebook, .icon-full-leaf, .icon-green-indicator, .icon-hot-offers, .icon-hotels-logo, .icon-lock, .icon-plane-inbound, .icon-plane-outbound, .icon-plus, .icon-pre-compensa, .icon-security-code-amex, .icon-security-code, .icon-star, .icon-vip {
+    background: url("../../despegar/images/icon-sd50893ab6f.png") no-repeat scroll 0 0 transparent;
+}
+.icon-arrow {
+    background-position: 0 -321px;
+    height: 10px;
+    width: 12px;
+}
+.icon-best-price-small-es {
+    background-position: 0 0;
+    height: 47px;
+    width: 46px;
+}
+.icon-best-price-small-pt {
+    background-position: 0 -585px;
+    height: 47px;
+    width: 47px;
+}
+.icon-bradesco-cartoes-small {
+    background-position: 0 -242px;
+    height: 24px;
+    width: 86px;
+}
+.icon-bradesco-cartoes {
+    background-position: 0 -185px;
+    height: 29px;
+    width: 106px;
+}
+.icon-bus {
+    background-position: 0 -337px;
+    height: 16px;
+    width: 13px;
+}
+.icon-circle {
+    background-position: 0 -266px;
+    height: 7px;
+    width: 7px;
+}
+.icon-clock-HIGH {
+    background-position: 0 -695px;
+    height: 10px;
+    width: 10px;
+}
+.icon-clock-LOW {
+    background-position: 0 -675px;
+    height: 10px;
+    width: 10px;
+}
+.icon-clock-MEDIUM {
+    background-position: 0 -685px;
+    height: 10px;
+    width: 10px;
+}
+.icon-decolar-promo {
+    background-position: 0 -81px;
+    height: 43px;
+    width: 144px;
+}
+.icon-eco-flight {
+    background-position: 0 -723px;
+    height: 16px;
+    width: 15px;
+}
+.icon-empty-leaf {
+    background-position: 0 -705px;
+    height: 18px;
+    width: 103px;
+}
+.icon-error {
+    background-position: 0 -393px;
+    height: 10px;
+    width: 10px;
+}
+.icon-facebook {
+    background-position: 0 -379px;
+    height: 14px;
+    width: 14px;
+}
+.icon-full-leaf {
+    background-position: 0 -632px;
+    height: 18px;
+    width: 103px;
+}
+.icon-green-indicator {
+    background-position: 0 -214px;
+    height: 10px;
+    width: 10px;
+}
+.icon-hot-offers {
+    background-position: 0 -650px;
+    height: 25px;
+    width: 18px;
+}
+.icon-hotels-logo {
+    background-position: 0 -47px;
+    height: 34px;
+    width: 25px;
+}
+.icon-lock {
+    background-position: 0 -273px;
+    height: 48px;
+    width: 38px;
+}
+.icon-plane-inbound {
+    background-position: 0 -366px;
+    height: 13px;
+    width: 15px;
+}
+.icon-plane-outbound {
+    background-position: 0 -353px;
+    height: 13px;
+    width: 15px;
+}
+.icon-plus {
+    background-position: 0 -331px;
+    height: 6px;
+    width: 6px;
+}
+.icon-pre-compensa {
+    background-position: 0 -224px;
+    height: 18px;
+    width: 123px;
+}
+.icon-security-code-amex {
+    background-position: 0 -418px;
+    height: 84px;
+    width: 203px;
+}
+.icon-security-code {
+    background-position: 0 -502px;
+    height: 83px;
+    width: 200px;
+}
+.icon-star {
+    background-position: 0 -403px;
+    height: 15px;
+    width: 16px;
+}
+.icon-vip {
+    background-position: 0 -124px;
+    height: 61px;
+    width: 35px;
+}
+input.checkout-textfield {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-box-sizing: border-box;
+    border-color: gray #CCCCCC #CCCCCC;
+    border-image: none;
+    border-radius: 3px 3px 3px 3px;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    color: black;
+    font-size: 13px;
+    height: 30px !important;
+    line-height: 16px !important;
+    padding: 0px;
+	text-indent:4px;
+    width: auto;
+}
+input.checkout-textfield:focus {
+    border: 1px solid blue;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset, 0 0 2px 0 #FACD46;
+    outline: 0 none;
+}
+select.checkout-select {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-box-sizing: border-box;
+    border-color: gray #CCCCCC #CCCCCC;
+    border-image: none;
+    border-radius: 3px 3px 3px 3px;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    color: black;
+    font-size: 13px;
+    height: 30px !important;
+    line-height: 30px !important;
+    padding: 1px;
+    width: auto;
+}
+select.checkout-select:focus {
+    border: 1px solid blue;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset, 0 0 2px 0 #FACD46;
+    outline: 0 none;
+}
+textarea.checkout-textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    -moz-box-sizing: border-box;
+    border-color: gray #CCCCCC #CCCCCC;
+    border-image: none;
+    border-radius: 3px 3px 3px 3px;
+    border-right: 1px solid #CCCCCC;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset;
+    color: black;
+    font-size: 13px;
+    height: auto;
+    padding: 1px;
+    width: auto;
+}
+textarea.checkout-textarea:focus {
+    border: 1px solid blue;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2) inset, 0 0 2px 0 #FACD46;
+    outline: 0 none;
+}
+a.checkout-button {
+    border: 1px solid #C00811;
+    border-radius: 0.4em 0.4em 0.4em 0.4em;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 2.2em;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 black;
+}
+a.checkout-button:active {
+    position: relative;
+    top: 1px;
+}
+a.checkout-button.disabled:active {
+    position: static;
+}
+a.checkout-button span {
+    display: block;
+    padding: 0 13px;
+}
+a.checkout-button:visited {
+    color: white;
+}
+a.checkout-button:hover {
+    color: white;
+    text-decoration: none;
+}
+a.checkout-button span {
+    background-color: #FF5500;
+    background-image: linear-gradient(#FF5500, #FF9900);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0.1em 0 rgba(255, 255, 255, 0.5) inset;
+}
+a.checkout-button span:hover {
+    background-color: #FF5500;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), #FF9900);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0.1em 0 rgba(255, 255, 255, 0.5) inset, 0 0 1em #FF9900 inset;
+}
+a.checkout-button span:active {
+    background-image: linear-gradient(#FF5500, #FF9900);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.1), 0 0.1em 0.2em rgba(0, 0, 0, 0.5) inset, 0 0.1em 0 rgba(0, 0, 0, 0.1) inset, 0 0 1em rgba(0, 0, 0, 0.75) inset;
+    text-shadow: 0 -1px 0 black;
+}
+a.checkout-button.disabled {
+    border: 1px solid #755354;
+    color: white;
+    cursor: not-allowed;
+}
+a.checkout-button.disabled span, a.checkout-button.disabled span:hover, a.checkout-button.disabled span:active {
+    background-image: linear-gradient(#E9E9E9, #797979);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0.1em 0 rgba(255, 255, 255, 0.25) inset, 0 0 1em rgba(155, 154, 154, 0.75) inset;
+    text-shadow: 0 -1px 0 black;
+}
+.ie7 a.checkout-button span, .ie8 a.checkout-button span, .ie9 a.checkout-button span {
+}
+.ie7 a.checkout-button span:hover, .ie8 a.checkout-button span:hover, .ie9 a.checkout-button span:hover {
+}
+.ie7 a.checkout-button span:active, .ie8 a.checkout-button span:active, .ie9 a.checkout-button span:active {
+}
+.ie7 a.checkout-button.disabled span, .ie7 a.checkout-button.disabled span:hover, .ie7 a.checkout-button.disabled span:active, .ie8 a.checkout-button.disabled span, .ie8 a.checkout-button.disabled span:hover, .ie8 a.checkout-button.disabled span:active, .ie9 a.checkout-button.disabled span, .ie9 a.checkout-button.disabled span:hover, .ie9 a.checkout-button.disabled span:active {
+}
+a.checkout-second-button {
+    border: 1px solid #004466;
+    border-radius: 0.4em 0.4em 0.4em 0.4em;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 2.2em;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px 0 black;
+}
+a.checkout-second-button:active {
+    position: relative;
+    top: 1px;
+}
+a.checkout-second-button.disabled:active {
+    position: static;
+}
+a.checkout-second-button span {
+    display: block;
+    padding: 0 13px;
+}
+a.checkout-second-button:visited {
+    color: white;
+}
+a.checkout-second-button:hover {
+    color: white;
+    text-decoration: none;
+}
+a.checkout-second-button span {
+    background-color: #0088CC;
+    background-image: linear-gradient(#0088CC, #002233);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0.1em 0 rgba(255, 255, 255, 0.5) inset;
+}
+a.checkout-second-button span:hover {
+    background-color: #0088CC;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), #004466);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0.1em 0 rgba(255, 255, 255, 0.5) inset, 0 0 1em #0088CC inset;
+}
+a.checkout-second-button span:active {
+    background-image: linear-gradient(#0088CC, #002233);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.1), 0 0.1em 0.2em rgba(0, 0, 0, 0.5) inset, 0 0.1em 0 rgba(0, 0, 0, 0.1) inset, 0 0 1em rgba(0, 0, 0, 0.75) inset;
+    text-shadow: 0 -1px 0 black;
+}
+a.checkout-second-button.disabled {
+    border: 1px solid #755354;
+    color: white;
+    cursor: not-allowed;
+}
+a.checkout-second-button.disabled span, a.checkout-second-button.disabled span:hover, a.checkout-second-button.disabled span:active {
+    background-image: linear-gradient(#979797, #4B4B4B);
+    box-shadow: 0 0.1em 0.1em rgba(0, 0, 0, 0.5), 0 0.1em 0 rgba(255, 255, 255, 0.25) inset, 0 0 1em rgba(0, 0, 0, 0.75) inset;
+    text-shadow: 0 -1px 0 black;
+}
+.ie7 a.checkout-second-button span, .ie8 a.checkout-second-button span, .ie9 a.checkout-second-button span {
+}
+.ie7 a.checkout-second-button span:hover, .ie8 a.checkout-second-button span:hover, .ie9 a.checkout-second-button span:hover {
+}
+.ie7 a.checkout-second-button span:active, .ie8 a.checkout-second-button span:active, .ie9 a.checkout-second-button span:active {
+}
+.ie7 a.checkout-second-button.disabled span, .ie7 a.checkout-second-button.disabled span:hover, .ie7 a.checkout-second-button.disabled span:active, .ie8 a.checkout-second-button.disabled span, .ie8 a.checkout-second-button.disabled span:hover, .ie8 a.checkout-second-button.disabled span:active, .ie9 a.checkout-second-button.disabled span, .ie9 a.checkout-second-button.disabled span:hover, .ie9 a.checkout-second-button.disabled span:active {
+}
+.checkout-popup {
+    padding: 10px;
+    position: absolute;
+}
+
+.checkout-popup:after, .ie7 .checkout-popup .after {
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}
+.checkout-popup .popup-header h4 {
+    line-height: 20px;
+    padding: 10px;
+}
+.checkout-popup .popup-container {
+    position: relative;
+    z-index: 1;
+}
+.checkout-popup .popup-arrow {
+    height: 0;
+    position: absolute;
+    width: 0;
+}
+.checkout-popup .popup-arrow-bottom {
+    bottom: -10px;
+    left: 10px;
+}
+.checkout-popup .popup-arrow-top {
+    left: 10px;
+    top: -10px;
+}
+.checkout-popup .popup-arrow-left {
+    left: -10px;
+    top: 10px;
+}
+.checkout-popup .popup-arrow-right {
+    right: -10px;
+    top: 10px;
+}
+.checkout-popup .popup-close {
+    height: 20px;
+    line-height: 17px;
+    position: absolute;
+    right: -13px;
+    text-align: center;
+    top: -13px;
+    width: 20px;
+    z-index: 10;
+}
+.ie7 .checkout-popup .popup-close, .ie8 .checkout-popup .popup-close {
+    height: 26px;
+    line-height: 23px;
+    right: -13px;
+    top: -13px;
+    width: 26px;
+}
+.ie7 .checkout-popup {
+}
+.checkout-popup:after, .ie7 .checkout-popup .after {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.7);
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.checkout-popup .popup-header {
+    background: none repeat scroll 0 0 #F7F7F7;
+    display: block;
+}
+.checkout-popup .popup-header h4 {
+    color: #FA890E;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0;
+}
+.checkout-popup .popup-content {
+    background: none repeat scroll 0 0 white;
+    border: 1px solid transparent;
+	width: initial;
+	height: initial;
+}
+.checkout-popup .popup-arrow-bottom {
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid rgba(0, 0, 0, 0.7);
+}
+.checkout-popup .popup-arrow-top {
+    border-bottom: 10px solid rgba(0, 0, 0, 0.7);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.checkout-popup .popup-arrow-left {
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, 0.7);
+    border-top: 10px solid transparent;
+}
+.checkout-popup .popup-arrow-right {
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgba(0, 0, 0, 0.7);
+    border-top: 10px solid transparent;
+}
+.checkout-popup .popup-close {
+    background: none repeat scroll 0 0 #ffaa00;
+    border: 3px solid white;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ie7 .checkout-popup:after, .ie7 .checkout-popup .after, .ie8 .checkout-popup:after, .ie8 .checkout-popup .after {
+    background: none repeat scroll 0 0 black;
+}
+.ie7 .checkout-popup .popup-arrow, .ie8 .checkout-popup .popup-arrow {
+}
+.ie7 .checkout-popup .popup-arrow-bottom, .ie8 .checkout-popup .popup-arrow-bottom {
+    border-top: 10px solid black;
+}
+.ie7 .checkout-popup .popup-arrow-top, .ie8 .checkout-popup .popup-arrow-top {
+    border-bottom: 10px solid black;
+}
+.ie7 .checkout-popup .popup-arrow-left, .ie8 .checkout-popup .popup-arrow-left {
+    border-right: 10px solid black;
+}
+.ie7 .checkout-popup .popup-arrow-right, .ie8 .checkout-popup .popup-arrow-right {
+    border-left: 10px solid black;
+}
+.ie7 .checkout-popup .popup-close, .ie8 .checkout-popup .popup-close {
+    background: url("../../despegar/img/picasso/popup.png") repeat scroll 0 -1px transparent;
+    border-width: 0;
+}
+.checkout-list-grid:before, .checkout-list-grid:after {
+    content: "";
+    display: table;
+}
+.checkout-list-grid:after {
+    clear: both;
+}
+.ie6 .checkout-list-grid, .ie7 .checkout-list-grid {
+}
+.checkout-list-grid ul {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 130px;
+}
+.checkout-list-grid ul li {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.checkout-list-grid ul {
+    border-bottom: 1px solid #CCCCCC;
+    border-right: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+    list-style: none outside none;
+}
+.checkout-list-grid ul:first-child {
+    border-left: 1px solid #CCCCCC;
+}
+.checkout-list-grid ul li {
+    border: 1px solid transparent;
+    text-align: center;
+}
+.checkout-list-grid ul li:first-child {
+    border-bottom: 1px solid #CCCCCC;
+}
+.checkout-list-grid ul li:nth-child(2n+1) {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+.checkout-list-grid ul li:nth-child(2n) {
+    background: none repeat scroll 0 0 white;
+}
+.checkout-list-grid ul li.cell-hover:hover {
+    background: none repeat scroll 0 0 #F4FAFD;
+    border: 1px solid #319FDA;
+    cursor: pointer;
+}
+.ie7 .checkout-list-grid ul li:first-child, .ie8 .checkout-list-grid ul li:first-child {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+.ie7 .checkout-list-grid ul li.even, .ie8 .checkout-list-grid ul li.even {
+    background: none repeat scroll 0 0 white;
+}
+.ie7 .checkout-list-grid ul li.odd, .ie8 .checkout-list-grid ul li.odd {
+    background: none repeat scroll 0 0 #EEEEEE;
+}
+

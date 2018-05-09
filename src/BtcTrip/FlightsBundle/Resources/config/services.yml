@@ -1,0 +1,23 @@
+parameters:
+
+services:
+    flightshelper:
+        class: BtcTrip\FlightsBundle\DependencyInjection\FlightsHelper
+        arguments: [@service_container]
+    dataloader:
+        class: BtcTrip\FlightsBundle\DependencyInjection\DataLoader
+        arguments: [@service_container]
+    megahelper:
+        class: BtcTrip\FlightsBundle\DependencyInjection\MegaHelper
+        arguments: [@service_container]
+    flightmailtemplatemanager:
+        class: BtcTrip\FlightsBundle\DependencyInjection\MailTemplateManager
+        arguments: [@service_container]
+
+    flightssearchmanager:
+        class: BtcTrip\FlightsBundle\DocumentManager\FlightsSearchManager
+        arguments: [@service_container]
+    airportmanager:
+        class: BtcTrip\FlightsBundle\DocumentManager\AirportManager
+        arguments: [@service_container]
+ 

@@ -1,0 +1,11 @@
+btc_trip_backoffice_dashboard:
+    type:  annotation
+    resource: "@BtcTripBackofficeBundle/Controller/DashboardController.php"
+
+btc_trip_backoffice_flights:
+    type:  annotation
+    resource: "@BtcTripBackofficeBundle/Controller/FlightsController.php"
+
+btc_trip_backoffice_accounting:
+    type:  annotation
+    resource: "@BtcTripBackofficeBundle/Controller/AccountingController.php"

@@ -1,0 +1,15 @@
+btc_trip_main_home:
+    type:  annotation
+    resource: "@BtcTripMainBundle/Controller/HomeController.php"
+
+
+btc_trip_about_us:
+    path: /about_us
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: "BtcTripMainBundle:StaticPages:about_us.html.php"
+
+btc_trip_payment_handler:
+    type:  annotation
+    resource: "@BtcTripMainBundle/Controller/PaymentHandlerController.php"
+

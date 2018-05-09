@@ -1,0 +1,10 @@
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+/app/config/parameters.yml
+.DS_Store
+/nbproject/private/
+/.settings
+/.buildpath
+/.project
+/nbproject/private/

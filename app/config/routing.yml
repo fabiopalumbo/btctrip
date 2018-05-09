@@ -1,0 +1,20 @@
+btc_trip_backoffice:
+    resource: "@BtcTripBackofficeBundle/Resources/config/routing.yml"
+    prefix:   /backoffice
+
+btc_trip_main:
+    resource: "@BtcTripMainBundle/Resources/config/routing.yml"
+    prefix:   /
+
+btc_trip_flights:
+    resource: "@BtcTripFlightsBundle/Resources/config/routing.yml"
+    prefix:   /
+    
+btc_trip_api_btc_trip:
+    resource: "@BtcTripAPIBtcTripBundle/Resources/config/routing.yml"
+    prefix:   /apibtctrip
+
+btc_trip_hotels:
+    resource: "@BtcTripHotelsBundle/Resources/config/routing.yml"
+    prefix:   /    
+

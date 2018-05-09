@@ -1,0 +1,27 @@
+parameters:
+
+services:
+    bitpayapi:
+        class: BtcTrip\SearchBundle\DependencyInjection\BitPayApi
+        arguments: [@service_container, %btc_trip.service.bitpay.apikey%, %btc_trip.service.bitpay.notificationURL%, %btc_trip.service.bitpay.notificationEmail%]
+    dataloader:
+        class: BtcTrip\SearchBundle\DependencyInjection\DataLoader
+        arguments: [@service_container]
+    megahelper:
+        class: BtcTrip\SearchBundle\DependencyInjection\MegaHelper
+        arguments: [@service_container]
+    remailer:
+        class: BtcTrip\SearchBundle\DependencyInjection\ReMailer
+        arguments: [@service_container, %btc_trip.service.remailer.systemEmail%, %btc_trip.service.remailer.adminEmail%]
+    simplecaptcha:
+        class: BtcTrip\SearchBundle\DependencyInjection\SimpleCaptcha
+        arguments: [@service_container]
+    exchangerate:
+        class: BtcTrip\SearchBundle\DependencyInjection\ExchangeRate
+        arguments: [@service_container]
+    autoincrement:
+        class: BtcTrip\SearchBundle\DependencyInjection\Autoincrement
+        arguments: [@service_container]
+    sessionmanager:
+        class: BtcTrip\SearchBundle\DependencyInjection\SessionManager
+        arguments: [@service_container]

@@ -1,0 +1,1899 @@
+.ac_input {
+	font-size: 14px;
+	width: 400px;
+}
+
+.ac_results {
+	border: 1px solid #000;
+	background-color: #FFF;
+	overflow: hidden;
+	z-index: 0;
+	width: 505px !important;
+	padding: 0;
+}
+
+.ac_results ul {
+	width: 100%;
+	list-style-position: outside;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ac_results iframe {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	width: 3000px;
+	height: 3000px;
+}
+
+.ac_results li {
+	border-bottom: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+	color: #1A1A1A;
+	cursor: pointer;
+	display: block;
+	width: 100%;
+	font: menu;
+	font-size: 12px;
+	overflow: hidden;
+	margin: 0;
+	padding: 2px 5px;
+}
+
+.ac_over {
+	border-bottom: 1px solid #FFF;
+	border-top: 1px solid #FFF;
+	color: #000 !important;
+	border-bottom-color: #D8DBD4 !important;
+	border-top-color: #D8DBD4 !important;
+	background-color: #EEE !important;
+}
+
+.minCharsLeyend {
+	font-style: italic !important;
+	width: auto !important;
+	left: auto !important;
+}
+
+.locator {
+	font-family: tahoma, verdana, arial, helvetica;
+	font-size: 8pt;
+	background: #fff;
+	border: 1px solid #666;
+	text-align: left;
+	height: 135px;
+	overflow: auto;
+	overflow-x: visible;
+	overflow-y: auto;
+	margin: 0;
+	padding: 0 1.5em 0 0;
+}
+
+.locator .locatoroption {
+	position: relative;
+	background: #fff;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	color: #1A1A1A;
+}
+
+.locator .locatoroptionmo {
+	position: relative;
+	background-color: #E7EFDE;
+	cursor: pointer;
+	color: #000;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+
+.locator .noresults {
+	font-style: italic;
+}
+
+.ac_results ul.facetedList {
+	height: auto !important;
+	border-bottom: 1px dotted #CCC;
+	position: relative !important;
+	overflow: hidden !important;
+}
+
+.typeItem {
+	height: 100%;
+	position: absolute;
+	width: 27%;
+	right: 0;
+	z-index: 1002;
+}
+
+.typeItem span {
+	display: block;
+	font-family: Arial;
+	font-size: 11px;
+	position: relative;
+	text-align: right;
+	top: 4px;
+	text-transform: uppercase;
+	color: #818181;
+	right: 6px;
+	padding-right: 27px;
+	background-image: none;
+	background-repeat: no-repeat;
+	white-space: nowrap;
+}
+
+.Listac .typeItem span {
+	background-position: 113px 0;
+}
+
+.Listad .typeItem span {
+	background-position: 113px -15px;
+}
+
+.Listah .typeItem span {
+	background-position: 113px -91px;
+}
+
+.Listap .typeItem span {
+	background-position: 113px -33px;
+}
+
+.Listai .typeItem span {
+	background-position: 113px -51px;
+	height: 18px;
+}
+
+.Listaa .typeItem span {
+	background-position: 113px -73px;
+}
+
+.liFirst.ac_over {
+	-moz-border-radius-topleft: 10px;
+	border-top-left-radius: 10px;
+}
+
+.liLast.ac_over {
+	-moz-border-radius-bottomleft: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.itemLast {
+	-moz-border-radius-bottomright: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.forAutoComplete {
+	position: relative;
+	z-index: 1002 !important;
+}
+
+.ac_results ul li {
+	border-bottom: 1px solid transparent !important;
+	border-top: 1px solid transparent !important;
+}
+
+.subtitleCountry {
+	color: #ADADAD;
+	font-style: italic;
+	font-size: 11px;
+}
+
+.ac_results ul li span {
+	color: #4F4F4F;
+	display: block;
+	font-family: Arial;
+	font-size: 11px;
+	width: 70%;
+}
+
+.subitem {
+	position: relative;
+	left: 6% !important;
+	height: 15px !important;
+	width: 68.5% !important;
+}
+
+.itemType span {
+	background-image:
+		url(http://desa.ar.despegar.com/images/Autocomplete/autocompleteItems.png);
+}
+
+.Listac .itemType span {
+	display: block;
+	height: 17px;
+	position: absolute;
+	right: 4px;
+	width: 12px;
+	background-position: 0 5px;
+}
+
+.Listah .itemType span {
+	display: block;
+	height: 18px;
+	position: absolute;
+	right: 4px;
+	width: 12px;
+	background-position: 0 65px;
+}
+
+.Listai .itemType span {
+	display: block;
+	height: 18px;
+	position: absolute;
+	right: 4px;
+	width: 12px;
+	background-position: 0 23px;
+}
+
+.itemType em {
+	color: #ADADAD;
+	font-family: verdana;
+	font-size: 12px;
+	position: absolute;
+	right: 26px;
+	top: 3px;
+}
+
+.more {
+	background-image:
+		url(http://desa.ar.despegar.com/images/Autocomplete/autocompleteSprite.png);
+	color: blue;
+	cursor: pointer;
+	height: 11px;
+	left: 5px;
+	position: absolute;
+	top: 8px;
+	width: 11px;
+}
+
+.noSelectable span {
+	margin-left: 15px;
+}
+
+.more.clossed {
+	background-position: -20px 0;
+}
+
+.more.clossed:hover {
+	background-position: -20px -15px;
+}
+
+.more.opened {
+	background-position: 0 0;
+}
+
+.more.opened:hover {
+	background-position: 0 -15px;
+}
+
+.ac_results b {
+	font-weight: 400;
+	background-color: #FF0;
+}
+
+.com-city-hotels .com-autocomplete {
+	width: 500px;
+	position: absolute;
+	z-index: 2;
+	display: none;
+	-webkit-box-shadow: #888 0 1px 2px;
+	-moz-box-shadow: #888 0 1px 2px;
+	box-shadow: #888 0 1px 2px;
+	-webkit-border-radius: 3px 3px 3px 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px;
+	border: 1px solid #888;
+	border-top: 1px solid #aaa;
+	background: #fff;
+	color: #444;
+	overflow: hidden;
+	margin: 50;
+	margin-top: -10px;
+}
+
+.ie7 .com-autocomplete {
+	left: 49;
+	top: 45px;
+}
+
+.com-autocomplete>ul>li {
+	position: relative;
+	border-bottom: 1px dotted #ccc;
+}
+
+.com-autocomplete>ul>li [class^="title-"] {
+	position: absolute;
+	height: 15px;
+	display: block;
+	width: 130px;
+	right: 0;
+	top: 3px;
+	font-size: 11px;
+	line-height: 15px;
+	text-align: right;
+	text-transform: uppercase;
+	color: #888;
+	background: none no-repeat right -1px;
+	padding: 0 23px 0 0;
+}
+
+.com-autocomplete>ul>li ul {
+	position: relative;
+	z-index: 1;
+	top: 0;
+}
+
+.ie7 .com-autocomplete>ul>li ul {
+	margin-top: -15px;
+}
+
+.com-autocomplete>ul>li ul li {
+	height: 20px;
+	cursor: pointer;
+	font-size: 11px;
+	line-height: 20px;
+	padding: 0 5px;
+}
+
+.com-autocomplete>ul>li ul li a {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #444;
+}
+
+.com-autocomplete>ul>li ul li.first a {
+	width: 75%;
+}
+
+.com-autocomplete [class^="msg-"] {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: none;
+	font-size: 11px;
+	line-height: 20px;
+	font-style: italic;
+	color: #666;
+	padding: 0 5px;
+}
+
+.com-city-hotels .origin .com-autocomplete {
+	margin-top: 24px;
+}
+
+.searchbox [class^="pdt-"] label {
+	font-size: 13px;
+	color: black;
+	margin: 0 0 3px;
+}
+
+#lbl-destination-hotels {
+	float: left;
+	margin-right: 33px;
+}
+
+#lbl-origin-hotels {
+	float: left;
+	margin-right: 16px;
+}
+
+.searchbox [class^="pdt-"] input[type="text"],.searchbox [class^="pdt-"] select
+	{
+	height: 24px;
+	cursor: text;
+	line-height: 22px;
+	color: #444;
+	font-size: 14px;
+	border: 1px solid #eee;
+	border-top: 1px solid #888;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+	padding: 1px;
+}
+
+html.ie7 .searchbox [class^="pdt-"] input[type="text"],html.ie7 .searchbox [class^="pdt-"] select
+	{
+	height: 20px;
+	padding: 2px;
+}
+
+.searchbox [class^="pdt-"] p.error {
+	display: block;
+	clear: both;
+	color: red;
+	font-size: 9px;
+	margin: 3px 0 0;
+}
+
+.searchbox [class^="pdt-"] p.error .errorCrossIcon {
+	float: left;
+	margin: 0 5px 0 0;
+}
+
+.searchbox [class^="pdt-"] p.error .errortext {
+	float: left;
+	line-height: 10px;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip,.searchbox .pdt-hotels .ctn-multipledestination
+	{
+	position: relative;
+	float: left;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip .mod-addsegment-hotels .com-addsegmentlink-hotels,.searchbox .pdt-hotels .ctn-multipledestination .mod-addsegment-hotels .com-addsegmentlink-hotels
+	{
+	cursor: pointer;
+	clear: both;
+	color: #FF4400;
+	text-decoration: underline;
+	font-size: 11px;
+	margin: 0 0 15px;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip [class^="segment-"],.searchbox .pdt-hotels .ctn-multipledestination [class^="segment-"]
+	{
+	position: relative;
+	float: left;
+	margin: 10px 0 0;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip [class^="segment-"] .segmenttitle,.searchbox .pdt-hotels .ctn-multipledestination [class^="segment-"] .segmenttitle
+	{
+	color: #444;
+	font-size: 16px;
+	text-decoration: none;
+	border-bottom: 1px solid #444;
+	margin: 0 0 10px;
+}
+
+.searchbox .pdt-hotels .com-deletesegment {
+	float: right;
+	cursor: pointer;
+	color: #FF4400;
+	font-size: 11px;
+	margin: 5px 0 0;
+}
+
+.searchbox .pdt-hotels .com-adddestiny {
+	float: right;
+	cursor: pointer;
+	color: #FF4400;
+	font-size: 11px;
+	text-decoration: underline;
+	margin: -10px 0 5px;
+}
+
+.searchbox .pdt-hotels .mod-places {
+	float: left;
+	position: relative;
+	margin: 0 0 10px;
+}
+
+.searchbox .pdt-hotels .mod-places .com-city {
+	float: left;
+	margin: 0;
+}
+
+.searchbox .pdt-hotels .mod-places .com-city label {
+	cursor: pointer;
+	font-size: 15px;
+	margin: 0 0 5px;
+}
+
+.searchbox .pdt-hotels .mod-dates {
+	float: left;
+	position: relative;
+	width: 100%;
+	margin: 0 0 10px;
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein,.searchbox .pdt-hotels .mod-dates .com-dateout
+	{
+	float: left;
+	position: relative;
+	width: 40%;
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein label,.searchbox .pdt-hotels .mod-dates .com-dateout label
+	{
+	display: block;
+	cursor: pointer;
+	color: white;
+	font-size: 15px;
+	margin: 0 0 5px;
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein input,.searchbox .pdt-hotels .mod-dates .com-dateout input
+	{
+	width: 100%;
+	-webkit-border-radius: 3px 3px;
+	-moz-border-radius: 3px 0 0 3px/3px 0 0 3px;
+	-ms-border-radius: 3px 0 0 3px/3px 0 0 3px;
+	-o-border-radius: 3px 0 0 3px/3px 0 0 3px;
+	border-radius: 3px 0 0 3px/3px 0 0 3px;
+	margin-bottom: 3px;
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein .buttonCalendarOn, .searchbox .pdt-hotels .mod-dates .com-dateout .buttonCalendarOn
+	{
+	cursor: pointer;
+	position: absolute;
+	right: 3px;
+	bottom: 1px;
+	top: 28px;
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein {
+	margin-right: 4%;
+}
+
+.searchbox .pdt-hotels .mod-dates .datepicker {
+	overflow: hidden;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar {
+	float: left;
+	min-height: 200px;
+	font-size: 13px;
+	color: #FF4400;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .prev {
+	float: left;
+	overflow: hidden;
+	bottom: 0;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	background: none repeat scroll 0 0 #eee;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .next {
+	float: left;
+	bottom: 0;
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	background: none repeat scroll 0 0 #eee;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .prev span {
+	margin-top: -10px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+	height: 0;
+	left: 5px;
+	border-bottom: 10px solid transparent;
+	border-right: 10px solid #FF4400;
+	border-top: 10px solid transparent;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .next span {
+	margin-top: -10px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+	height: 0;
+	left: 5px;
+	border-bottom: 10px solid transparent;
+	border-left: 10px solid #FF4400;
+	border-top: 10px solid transparent;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar.first .ctn-dates {
+	margin: 0 10px 0 30px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar.last .ctn-dates {
+	margin: 0 30px 0 10px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates {
+	float: left;
+	min-width: 183px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates .head {
+	color: #FF4400;
+	text-align: center;
+	margin: 10px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table {
+	float: left;
+	width: 175px;
+	border-collapse: collapse;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr th {
+	width: 25px;
+	font-weight: 400;
+	text-align: center;
+	font-size: 11px;
+	color: #666;
+	border: 1px solid #fff;
+	padding: 2px 5px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td span
+	{
+	display: block;
+	line-height: 16px;
+	border: 1px solid #fff;
+	padding: 2px 5px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.not-in span
+	{
+	cursor: pointer;
+	color: #fff;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span
+	{
+	cursor: pointer;
+	color: #FF4400;
+	-webkit-transition-property: all;
+	-moz-transition-property: all;
+	-ms-transition-property: all;
+	-o-transition-property: all;
+	transition-property: all;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	transition-duration: .5s;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.today
+	{
+	font-weight: 700;
+	background: #fff;
+	-webkit-border-radius: 3px 3px;
+	-moz-border-radius: 3px 3px 3px 3px/3px 3px 3px 3px;
+	-ms-border-radius: 3px 3px 3px 3px/3px 3px 3px 3px;
+	-o-border-radius: 3px 3px 3px 3px/3px 3px 3px 3px;
+	border-radius: 3px 3px 3px 3px/3px 3px 3px 3px;
+	color: #27476e;
+	border: 2px solid #27476e;
+	padding: 1px 3px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.disabled
+	{
+	cursor: default;
+	color: #aaa;
+	text-decoration: line-through;
+}
+
+.ie7 .searchbox .pdt-hotels .mod-dates {
+	width: 100%;
+}
+
+.searchbox .pdt-lbl-datein .com-oneway {
+	float: left;
+	margin-bottom: 5px;
+	margin-top: -7px;
+	width: 90px;
+}
+
+.searchbox .pdt-lbl-datein .com-oneway .lbl-oneway {
+	float: right;
+	cursor: pointer;
+	font-size: 15px;
+	margin: 0 0 0 5px;
+}
+
+.searchbox .pdt-lbl-datein .com-oneway .sb-oneway {
+	margin: 0;
+}
+
+.searchbox .pdt-lbl-datein .mod-passengers-lbl-datein .ctn-passengers .com-adults-lbl-datein
+	{
+	display: block;
+	float: left;
+	width: 72px;
+}
+
+.searchbox .pdt-lbl-datein .mod-passengers-lbl-datein .ctn-passengers .com-adults-lbl-datein label
+	{
+	display: block;
+	color: white;
+	font-size: 15px;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers .com-childrens-hotels
+	{
+	display: block;
+	float: left;
+	width: 72px;
+	margin: 0 0 0 20px;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers .com-childrens-hotels label
+	{
+	display: block;
+	font-size: 15px;
+	color: white;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers .com-infants-hotels
+	{
+	display: block;
+	float: left;
+	width: 72px;
+	margin: 0 0 0 20px;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers .com-infants-hotels label
+	{
+	display: block;
+	font-size: 15px;
+	color: white;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels .ctn-select-ages
+	{
+	float: left;
+	clear: both;
+	margin: 5px 0 0;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels .ctn-select-ages .ctn-select-age
+	{
+	float: left;
+	width: 100%;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels .ctn-select-ages .ctn-select-age select
+	{
+	float: left;
+	height: 20px;
+	width: 110px;
+	font-size: 15px;
+	margin: 0 0 5px;
+	padding: 1px;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels .ctn-select-ages .ctn-select-age .rateMessage
+	{
+	float: left;
+	position: relative;
+	min-width: 70px;
+	font-size: 11px;
+	background: #808019;
+	color: #fff;
+	text-align: center;
+	margin: 0 0 0 10px;
+	padding: 2px 4px;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels .ctn-select-ages .ctn-select-age .rateMessage .arrow
+	{
+	width: 0;
+	height: 0;
+	position: absolute;
+	left: -6px;
+	top: 4px;
+	border-top: 6px solid transparent;
+	border-bottom: 6px solid transparent;
+	border-right: 6px solid #808019;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels .ctn-select-ages p.error
+	{
+	margin: 0 0 5px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-business-hotels {
+	float: left;
+	clear: both;
+	margin: 5px 0;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-business-hotels input
+	{
+	float: left;
+	margin: 0 10px 0 0;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-business-hotels label
+	{
+	float: left;
+	cursor: pointer;
+	color: white;
+	font-size: 15px;
+	margin-right: 10px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels [class^="com-advancedlink"]
+	{
+	width: 130px;
+	cursor: pointer;
+	color: white;
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels [class^="com-advancedlink"]:after
+	{
+	content: "    \00BB";
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels [class^="com-advancedlink"].active:after
+	{
+	content: "";
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels [class^="com-advancedlink"].active:before
+	{
+	content: "\00AB    ";
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels {
+	overflow: hidden;
+	clear: both;
+	margin: 0;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels .ctn-departureTime,.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels .ctn-returnTime
+	{
+	float: left;
+	margin: 0 0 10px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels .ctn-departureTime label,.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels .ctn-returnTime label
+	{
+	float: left;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels .ctn-departureTime select,.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels .ctn-returnTime select
+	{
+	float: left;
+	clear: both;
+	width: 95px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-scaleandclass {
+	clear: both;
+	overflow: hidden;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-airline-hotels {
+	clear: both;
+	float: left;
+}
+
+
+
+.searchbox .pdt-hotels .mod-places .com-city input {
+	width: 201px;
+	margin: 0;
+}
+
+.searchbox .pdt-hotels .mod-places .com-city.origin input {
+	float: right;
+	margin: 0;
+}
+
+.ie7 .searchbox .pdt-hotels .mod-places .destination .com-autocomplete {
+	top: 103px;
+}
+
+.ie7 .searchbox .pdt-hotels .mod-dates .com-datein,.ie7 .searchbox .pdt-hotels .mod-dates .com-dateout
+	{
+	width: 47%;
+}
+
+.ie7 .searchbox .pdt-hotels .mod-dates .com-datein input,.ie7 .searchbox .pdt-hotels .mod-dates .com-dateout input
+	{
+	height: 17px;
+	padding: 0;
+}
+
+.ie7 .searchbox .pdt-hotels .mod-dates .com-datein .buttonCalendarOn,.ie7 .searchbox .pdt-hotels .mod-dates .com-dateout .buttonCalendarOn
+{
+	right: -1px;
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein .popUpNew,.searchbox .pdt-hotels .mod-dates .com-dateout .popUpNew
+	{
+	width: 473px;
+	z-index: 2000;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers {
+	margin: 0 10px 0 0;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels {
+	clear: both;
+	width: 100%;
+	margin: 5px 0 0;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .com-age-hotels label {
+	font-size: 11px;
+	color: #444;
+	margin: 0;
+}
+
+.searchbox .pdt-hotels .com-oneway.selected {
+	bottom: 6px;
+}
+
+.ie7 .searchbox .pdt-hotels .com-oneway.selected {
+	bottom: 5px;
+	right: -85px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .com-time-hotels .ctn-departureTime
+	{
+	margin: 0 10px 10px 0;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options {
+	margin: 10px 0 0;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options .ctn-scaleandclass .com-scale-hotels
+	{
+	float: left;
+	width: 95px;
+	margin: 0 10px 0 0;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options .ctn-scaleandclass .com-class-hotels
+	{
+	float: left;
+	width: 95px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options .com-airline-hotels
+	{
+	clear: both;
+	float: left;
+	margin: 0;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options .com-airline-hotels input
+	{
+	width: 200px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton {
+	display: inline-block;
+	text-align: center;
+	z-index: 0;
+	width: 280px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-betterprice {
+	display: none;
+	margin: 0 auto 10px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a span {
+	background-position: left -99px;
+	background-color: #ffaa00;
+	line-height: 31px;
+	padding: 0 0 2px 30px;
+}
+
+.ie7 .searchbox .pdt-hotels .mod-searchbutton {
+	display: inline;
+}
+
+.ie7 .com-autocomplete,.ie8 .com-autocomplete {
+	border-bottom: 2px solid #888;
+	border-right: 2px solid #888;
+}
+
+.com-autocomplete>ul>li:last-child {
+	border-bottom: 0;
+}
+
+.com-autocomplete>ul>li [class^="title-"].title-d {
+	background-position: right -16px;
+}
+
+.com-autocomplete>ul>li [class^="title-"].title-q {
+	background-position: right -31px;
+}
+
+.com-autocomplete>ul>li [class^="title-"].title-i {
+	background-position: right -45px;
+}
+
+.com-autocomplete>ul>li [class^="title-"].title-a {
+	background-position: right -61px;
+}
+
+.com-autocomplete>ul>li [class^="title-"].title-h {
+	background-position: right -75px;
+}
+
+.com-autocomplete>ul>li [class^="title-"].title-p {
+	background-position: right -90px;
+}
+
+.com-autocomplete>ul>li [class^="title-"].title-e {
+	background-position: right -106px;
+}
+
+.com-autocomplete>ul>li ul li a span {
+	background: #ffaa00;
+}
+
+.com-autocomplete>ul>li ul li a:hover {
+	text-decoration: none;
+}
+
+.com-autocomplete>ul>li ul li.active {
+	outline: 1px solid #FF4400;
+	background: #FFFF88;
+	text-decoration: none;
+}
+
+.ie7 .com-autocomplete>ul>li ul li.active,.ie8 .com-autocomplete>ul>li ul li.active
+	{
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1064d2ff,
+		endColorstr=#1064d2ff);
+	zoom: 1;
+}
+
+.com-autocomplete [class^="msg-"] span {
+	color: #222;
+}
+
+.searchbox [class^="pdt-"] input[type="text"]:focus,.searchbox [class^="pdt-"] select:focus
+	{
+	outline: none;
+	border: 1px solid #FF4400;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset, #FF4400 0 0
+		2px 0;
+	-moz-box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset, #FF4400 0 0 2px 0;
+	box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset, #FF4400 0 0 2px 0;
+}
+
+.searchbox [class^="pdt-"] input[type="text"].error,.searchbox [class^="pdt-"] select.error
+	{
+	border: 1px solid red;
+	background: #ffe6e6;
+	-webkit-box-shadow: red 0 0 3px 0 inset;
+	-moz-box-shadow: red 0 0 3px 0 inset;
+	box-shadow: red 0 0 3px 0 inset;
+}
+
+.searchbox [class^="pdt-"] input:-moz-placeholder {
+	color: #888;
+	font-style: italic;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip .segment-1,.searchbox .pdt-hotels .ctn-multipledestination .segment-1
+	{
+	z-index: 5;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip .segment-2,.searchbox .pdt-hotels .ctn-multipledestination .segment-2
+	{
+	z-index: 4;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip .segment-3,.searchbox .pdt-hotels .ctn-multipledestination .segment-3
+	{
+	z-index: 3;
+}
+
+.searchbox .pdt-hotels .ctn-roundtrip .segment-6,.searchbox .pdt-hotels .ctn-multipledestination .segment-6
+	{
+	z-index: 0;
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein .popUpNew .opaqueDiv,.searchbox .pdt-hotels .mod-dates .com-dateout .popUpNew .opaqueDiv
+	{
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .prev:hover span {
+	border-right: 10px solid #19648c;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .prev.disabled span {
+	border-right: 10px solid #eee;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .next:hover span {
+	border-left: 10px solid #19648c;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .next.disabled span {
+	border-left: 10px solid #eee;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td {
+	text-align: center;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.in-range
+	{
+	background-color: #FF4400;
+	color: #fff;
+	border: 1px solid #FF4400;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.selected,.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.referenced
+	{
+	color: #FF4400;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.referenced
+	{
+	background-color: #FF4400;
+	color: #fff;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.selected
+	{
+	background-color: #FF4400;
+	border: 1px solid #FF4400;
+	color: #fff;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span.disabled.selected
+	{
+	background-color: #FF4400;
+	border: 1px solid #fff;
+	color: #fff;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates table tr td.in span:hover
+	{
+	background-color: #eff7fc;
+	border: 1px solid #FF4400;
+	color: #FF4400;
+}
+
+.ie7 .searchbox .pdt-hotels .com-oneway {
+	line-height: 18px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton input {
+	float: right;
+	padding-right: 30px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a:hover {
+	background-position: right -132px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a:hover span
+	{
+	background-position: left -132px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a:active {
+	background-position: right -167px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a:active span
+	{
+	background-position: left -167px;
+}
+
+* html .ac_results,*+html .ac_results {
+	width: 300px;
+}
+
+.popup,.popupcover,.autopopup,.autopopupcover {
+	position: absolute;
+	display: none;
+	visibility: hidden;
+	z-index: 500;
+}
+
+.popupcover,.autopopupcover {
+	z-index: 499;
+}
+
+.com-autocomplete>ul,.com-autocomplete>ul>li ul li.hidden,.searchbox [class^="pdt-"] p.error.hidden,.searchbox [class^="pdt-"].hidden,.searchbox [class^="pdt-"] .hidden,.searchbox .pdt-hotels .segment-1 .com-deletesegment,.searchbox .pdt-hotels .mod-dates .calendar.first .next,.searchbox .pdt-hotels .mod-dates .calendar.last .prev
+	{
+	display: none;
+}
+
+.com-autocomplete.list>ul,.com-autocomplete.msg-blank .msg-blank,.com-autocomplete.msg-error .msg-error,.com-autocomplete.msg-empty .msg-empty,.com-autocomplete.msg-loading .msg-loading,.com-autocomplete.msg-max-chars .msg-max-chars,html.ie8 .searchbox [class^="pdt-"] .searchBoxCornerTR,html.ie7 .searchbox [class^="pdt-"] .searchBoxCornerTR,html.ie8 .searchbox [class^="pdt-"] .searchBoxCornerTL,html.ie7 .searchbox [class^="pdt-"] .searchBoxCornerTL,html.ie8 .searchbox [class^="pdt-"] .searchBoxCornerBR,html.ie7 .searchbox [class^="pdt-"] .searchBoxCornerBR,html.ie8 .searchbox [class^="pdt-"] .searchBoxCornerBL,html.ie7 .searchbox [class^="pdt-"] .searchBoxCornerBL
+	{
+	display: block;
+}
+
+.searchbox [class^="pdt-"]:before,.searchbox [class^="pdt-"]:after,.searchbox [class^="pdt-"] [class^="mod-"]:before,.searchbox [class^="pdt-"] [class^="mod-"]:after,.searchbox:before,.searchbox:after,.searchbox .pdt-hotels:before,.searchbox .pdt-hotels:after,.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers:before,.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers:after,.searchbox .pdt-hotels .mod-passengers-hotels:before,.searchbox .pdt-hotels .mod-passengers-hotels:after
+	{
+	content: "";
+	display: table;
+}
+
+.searchbox [class^="pdt-"]:after,.searchbox [class^="pdt-"] [class^="mod-"]:after,.searchbox:after,.searchbox .pdt-hotels:after,.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers:after,.searchbox .pdt-hotels .mod-passengers-hotels:after
+	{
+	clear: both;
+}
+
+.ie6 .searchbox [class^="pdt-"],.ie7 .searchbox [class^="pdt-"],.ie6 .searchbox [class^="pdt-"] [class^="mod-"],.ie7 .searchbox [class^="pdt-"] [class^="mod-"],.ie6 .searchbox,.ie7 .searchbox,.ie6 .searchbox .pdt-hotels,.ie7 .searchbox .pdt-hotels,.ie6 .searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers,.ie7 .searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers,.ie6 .searchbox .pdt-hotels .mod-passengers-hotels,.ie7 .searchbox .pdt-hotels .mod-passengers-hotels
+	{
+	zoom: 1;
+}
+
+.searchbox [class^="pdt-"] select,.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates .head:hover,.searchbox .pdt-hotels .mod-dates .calendar .ctn-dates .months [class^="month-"]
+	{
+	cursor: pointer;
+}
+
+.ie7 .searchbox .pdt-hotels .ctn-roundtrip,.ie7 .searchbox .pdt-hotels .ctn-multipledestination,.searchbox .pdt-hotels .ctn-roundtrip .segment-5,.searchbox .pdt-hotels .ctn-multipledestination .segment-5
+	{
+	z-index: 1;
+}
+
+.ie7 .searchbox .pdt-hotels .mod-places,.searchbox .pdt-hotels .ctn-roundtrip .segment-4,.searchbox .pdt-hotels .ctn-multipledestination .segment-4
+	{
+	z-index: 2;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .prev:hover,.searchbox .pdt-hotels .mod-dates .calendar .next:hover
+	{
+	cursor: pointer;
+	background: none repeat scroll 0 0 #eee;
+}
+
+.searchbox .pdt-hotels .mod-dates .calendar .prev.disabled,.searchbox .pdt-hotels .mod-dates .calendar .next.disabled
+	{
+	cursor: default;
+	background: none repeat scroll 0 0 #eee;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels,.searchbox .pdt-hotels .mod-passengers-hotels
+	{
+	width: 100%;
+	margin: 0 0 15px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-scaleandclass .com-scale-hotels,.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-scaleandclass .com-class-hotels
+	{
+	float: left;
+	width: 130px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-scaleandclass .com-scale-hotels select,.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-scaleandclass .com-class-hotels select
+	{
+	width: 130px;
+}
+
+.searchbox .pdt-hotels .mod-places .com-city.origin,.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options .ctn-scaleandclass
+	{
+	margin: 0 0 10px;
+}
+
+.searchbox .pdt-hotels .mod-places .com-city .error-ve-destination .errortext,.searchbox .pdt-hotels .mod-places .com-city .error-ve-origin .errortext,.searchbox .pdt-hotels .mod-places .error-ve-noLocal .errortext
+	{
+	width: 180px;
+}
+
+.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers .com-adults-hotels select,.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers .com-childrens-hotels select,.searchbox .pdt-hotels .mod-passengers-hotels .ctn-passengers .com-infants-hotels select
+	{
+	width: 70px;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options .ctn-scaleandclass .com-scale-hotels select,.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-options .ctn-scaleandclass .com-class-hotels select
+	{
+	width: 95px;
+}
+
+html.ie8 .searchbox [class^="pdt-"] input[type="text"]:focus,html.ie8 .searchbox [class^="pdt-"] select:focus,html.ie7 .searchbox [class^="pdt-"] input[type="text"]:focus,html.ie7 .searchbox [class^="pdt-"] select:focus
+	{
+	outline: 1px solid #b3dbf1;
+	border: 1px solid #FF4400;
+}
+
+html.ie8 .searchbox [class^="pdt-"] input[type="text"].error,html.ie8 .searchbox [class^="pdt-"] select.error,html.ie7 .searchbox [class^="pdt-"] input[type="text"].error,html.ie7 .searchbox [class^="pdt-"] select.error
+	{
+	outline: 1px solid red;
+	border: 1px solid #f99;
+}
+
+.searchbox [class^="pdt-"] input[type="text"].placeholder,.searchbox [class^="pdt-"] select.placeholder,.searchbox [class^="pdt-"] ::-webkit-input-placeholder
+	{
+	font-style: italic;
+	color: #888;
+}
+
+.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-scaleandclass .com-scale-hotels label,.searchbox .pdt-hotels .mod-advancedsearch-hotels .ctn-scaleandclass .com-class-hotels label
+	{
+	font-size: 11px;
+}
+
+.searchbox .pdt-hotels .mod-roomsquantity {
+	clear: both
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers {
+	overflow: hidden;
+	clear: both;
+	margin: 0px
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger {
+	clear: both;
+	overflow: hidden
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger [class^="lbl-room-"]
+	{
+	float: left;
+	margin: 23px 10px 0 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .lbl-room-1
+	{
+	margin: 22px 10px 0 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger
+	{
+	float: left
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-adult
+	{
+	float: left
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-child
+	{
+	float: left;
+	margin: 0 0 0 10px
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages
+	{
+	margin: 0;
+	width: 150px;
+	float: left
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages .ctn-selects-age
+	{
+	float: left;
+	margin: 2px 2px 3px 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages .ctn-selects-age .sb-age
+	{
+	height: 20px;
+	width: 40px;
+	padding: 2px;
+	margin: 0 2px 0 0
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a {
+	display: block;
+	margin: 0 auto;
+	cursor: pointer
+}
+
+.searchbox .pdt-hotels.fh {
+	min-height: 250px
+}
+
+.searchbox .pdt-hotels .mod-places-hotels {
+	float: left
+}
+
+.searchbox 
+.pdt-hotels 
+.mod-places-hotels 
+.com-city-hotels {
+	float: left
+}
+
+.searchbox 
+.pdt-hotels 
+.mod-places-hotels 
+.com-city-hotels label {
+	font-size: 15px;
+	margin: 0 0 3px 0
+}
+
+.searchbox 
+.pdt-hotels 
+.mod-places-hotels 
+.com-city-hotels input {
+	width: 250px
+}
+
+.searchbox 
+.pdt-hotels 
+.mod-dates {
+	margin: 0 0 4px 0
+}
+
+.searchbox 
+.pdt-hotels 
+.mod-dates 
+.com-datein input,.searchbox .pdt-hotels .mod-dates .com-dateout input {
+	width: 100%
+}
+
+html.ie7 .searchbox .pdt-hotels .mod-dates .com-datein input,html.ie7 .searchbox .pdt-hotels .mod-dates .com-dateout input
+	{
+	width: 124px
+}`
+
+.searchbox .pdt-hotels .mod-dates .com-datein .buttonCalendarOn,.searchbox .pdt-hotels .mod-dates .com-dateout .buttonCalendarOn
+{
+	position: absolute;
+	right: 6px;
+	bottom: 6px;
+	cursor: pointer
+}
+
+html.ie7 .searchbox .pdt-hotels .mod-dates .com-datein .buttonCalendarOn,html.ie7 .searchbox .pdt-hotels .mod-dates .com-dateout .buttonCalendarOn
+{
+	right: 4px;
+	bottom: 4px
+}
+
+.searchbox .pdt-hotels .mod-dates .com-datein {
+	margin-right: 10px
+}
+
+.searchbox .pdt-hotels div.mod-no-dates {
+	float: left;
+	padding: 5px 0 0 10px;
+}
+
+.searchbox .pdt-hotels div.mod-no-dates label {
+	display: inline;
+	position: relative;
+	top: -2px;
+	margin: 0;
+	font-size: 11px
+}
+
+.searchbox .pdt-hotels .mod-roomsquantity {
+	float: left;
+	margin-right: 16px;
+}
+
+.searchbox .pdt-hotels .mod-roomsquantity .com-roomquantity .sb-hotels {
+	width: 114px
+}
+
+.searchbox .pdt-hotels .mod-passengers {
+	margin: 0px;
+	float: left;
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers {
+	margin: 0px
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger {
+	margin: 0px 0px 10px 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger:last-child
+	{
+	margin: 0px 0px 10px 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger [class^="lbl-room-"]
+	{
+	float: left;
+	margin: 28px 10px 0 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .lbl-room-1
+	{
+	margin: 27px 10px 0 0;
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger
+	{
+	float: left;
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger select
+	{
+	width: 55px;
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-adult
+	{
+	float: left;
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-child
+	{
+	float: left;
+	margin: 0 10px 0 10px
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age
+	{
+	float: left;
+	margin: 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages
+	{
+	margin: 0;
+	width: 190px;
+	float: left
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages .ctn-selects-age
+	{
+	float: left;
+	margin: 2px 2px 3px 0
+}
+
+.searchbox .pdt-hotels .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages .ctn-selects-age .sb-age
+	{
+	height: 25px;
+	width: 45px;
+	padding: 2px
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-betterprice {
+	display: inline-block;
+	margin: 0 auto 10px auto
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a {
+	margin: 0 auto;
+	height: 27px;
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a span {
+	padding: 0 30px 2px 30px
+}
+
+.searchbox .pdt-hotels .mod-searchbutton .com-searchbutton a img {
+	padding-left: 138px;
+}
+
+html.ie7 .searchbox .pdt-hotels .mod-searchbutton {
+	width: 110px
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises {
+	clear: both;
+	display: block
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector {
+	position: absolute;
+	background-color: #FFF;
+	width: 510px;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 2px 2px;
+	z-index: 30;
+	cursor: default;
+	overflow: hidden;
+	opacity: 0;
+	display: none
+}
+
+.ie7 .searchbox .pdt-cruises .mod-regions-cruises div.region-selector,.ie8 .searchbox .pdt-cruises .mod-regions-cruises div.region-selector,.ie9 .searchbox .pdt-cruises .mod-regions-cruises div.region-selector
+	{
+	border: 1px solid #CCC;
+	border-top: 0
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector>ul {
+	list-style-type: none
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector>ul>li {
+	border-top: 1px solid #CCC;
+	padding: 3px 0;
+	position: relative
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector>ul>li:first-child
+	{
+	border-top: 0
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector ul li span
+	{
+	position: absolute;
+	right: 0;
+	padding: 5px 10px 0 0;
+	font-size: 11px;
+	text-transform: uppercase;
+	color: #999;
+	line-height: 13px
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector ul li ul
+	{
+	position: relative;
+	z-index: 29
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector ul li a
+	{
+	display: block;
+	padding: 2px 8px;
+	font-size: 13px;
+	color: #444
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector ul li a
+	{
+	border: 1px solid transparent;
+	border-left: 0;
+	border-right: 0;
+	outline: none;
+	text-decoration: none;
+	transition: all 100ms
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-selector ul li a.active
+	{
+	border-color: #319fda;
+	background-color: rgba(100, 210, 255, 0.1)
+}
+
+.ie7 .searchbox .pdt-cruises .mod-regions-cruises div.region-selector ul li a.active,.ie8 .searchbox .pdt-cruises .mod-regions-cruises div.region-selector ul li a.active
+	{
+	background: transparent;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#1064d2ff,
+		endColorstr=#1064d2ff);
+	zoom: 1
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises div.region-trigger {
+	position: absolute;
+	background-color: transparent;
+	top: 19px;
+	cursor: pointer;
+	z-index: 32
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises .com-regions-cruises {
+	position: relative;
+	z-index: 31
+}
+
+.searchbox .pdt-cruises .mod-regions-cruises .com-regions-cruises select.regionselect.focus
+	{
+	outline: none;
+	border: 1px solid #319fda;
+	-webkit-box-shadow: #319fda 0 0 3px 0 inset;
+	-moz-box-shadow: #319fda 0 0 3px 0 inset;
+	box-shadow: #319fda 0 0 3px 0 inset
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises {
+	float: left;
+	clear: both;
+	margin: 0 0 10px
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises {
+	overflow: hidden
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises label {
+	cursor: pointer
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises select option
+	{
+	color: #444
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises select option[disabled]
+	{
+	color: #CCC
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises label#sbl-month
+	{
+	display: none
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises div.month-to
+	{
+	display: none
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises div.month-to span
+	{
+	padding: 5px;
+	color: #444
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises div.select-range
+	{
+	display: inline-block;
+	padding-left: 10px
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-month-cruises div.select-range label
+	{
+	display: inline;
+	position: relative;
+	top: -2px;
+	font-size: 11px
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises div.range div.month-to {
+	display: inline-block
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises div.range #lbl-month {
+	display: none
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises div.range #sbl-month {
+	display: block !important
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-duration-cruises {
+	clear: both
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-duration-cruises:before,.searchbox .pdt-cruises .mod-dates-cruises .com-duration-cruises:after
+	{
+	content: "";
+	display: table
+}
+
+.searchbox .pdt-cruises .mod-dates-cruises .com-duration-cruises:after {
+	clear: both
+}
+
+.ie6 .searchbox .pdt-cruises .mod-dates-cruises .com-duration-cruises,.ie7 .searchbox .pdt-cruises .mod-dates-cruises .com-duration-cruises
+	{
+	zoom: 1
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers {
+	overflow: hidden;
+	clear: both;
+	margin: 0px
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger {
+	clear: both;
+	overflow: hidden
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger [class^="lbl-room-"]
+	{
+	float: left;
+	margin: 23px 10px 0 0
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger .lbl-room-1
+	{
+	margin: 22px 10px 0 0
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger .ctn-passenger
+	{
+	float: left
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-adult
+	{
+	float: left
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-child
+	{
+	float: left;
+	margin: 0 0 0 10px
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages
+	{
+	margin: 0;
+	width: 150px;
+	float: left
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages .ctn-selects-age
+	{
+	float: left;
+	margin: 2px 2px 3px 0
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger .ctn-passenger .ctn-age .ctn-selects-ages .ctn-selects-age .sb-age
+	{
+	height: 20px;
+	width: 40px;
+	padding: 2px;
+	margin: 0 2px 0 0
+}
+
+.searchbox .pdt-cruises .mod-passengers .ctn-passengers .com-passenger [class^="lbl-room-"]
+	{
+	display: none
+}
+
+.searchbox .pdt-cruises .mod-searchbutton .com-searchbutton a {
+	display: block;
+	margin: 0 auto;
+	cursor: pointer
+}

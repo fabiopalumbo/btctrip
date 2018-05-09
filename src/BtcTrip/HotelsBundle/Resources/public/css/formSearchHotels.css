@@ -1,0 +1,45 @@
+scaleandclass .com-class-hotels label {
+font-size:11px;
+}
+
+.searchbg {
+	background: url('/bundles/btctriphotels/images/searchbg.png');  
+	background-color: #231f20;
+	background-position: top;
+	background-repeat: no-repeat;
+	padding-bottom: 21px;
+	-moz-box-shadow: 3px 3px 0px 6px #444;
+ 	-webkit-box-shadow: 3px 3px 5px 0px #444;
+ 	box-shadow: 3px 3px 5px 0px #444;
+}
+
+.searchform {
+	margin-left: 20px;
+	margin-top: 95px;
+
+}
+.ux-common-detail-search-summary {
+    background-color: rgb(46, 46, 46);
+    margin-bottom: 15px;
+    padding: 5%;
+    color:white;
+    padding-left: 9%;
+}
+
+.ux-common-detail-search-summary .ux-common-detail-search-summary-list li {
+    color: white;
+    font-size: 0.6875rem;
+    letter-spacing: 0;
+    line-height: 1.6;
+    margin-bottom: 6px;
+}
+
+.ux-common-detail-search-summary .ux-common-detail-search-summary-title {
+    color: white;
+    font-size: 1rem;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+}
+
+.ux-common-grid-row [class^="ux-common-grid-col"]:first-child {
+}

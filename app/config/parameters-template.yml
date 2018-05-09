@@ -1,0 +1,24 @@
+parameters:
+
+    database_server:   mongodb://localhost:27017
+    database_name:     btctrip
+
+    mailer_transport:  YOUR_PREFERED_FOR_DEV
+    mailer_user:       YOUR_PREFERED_FOR_DEV
+    mailer_password:   YOUR_PREFERED_FOR_DEV
+
+    locale:            en
+    secret:            ThisTokenIsNotSoSecretChangeIt
+   
+    testing_price:     true
+    
+    btc_trip.service.remailer.systemEmail: YOUR_PREFERED_FOR_DEV
+    btc_trip.service.remailer.adminEmail:  YOUR_PREFERED_FOR_DEV 
+    
+    btc_trip.service.bitpay.apikey:             HWEyigomR3OH2DulpZpGK3awO2wnduSlpFX3HhV2a2I
+    btc_trip.service.bitpay.notificationURL:    http://btctrip.com/ph/bpNotification
+    btc_trip.service.bitpay.notificationEmail:  YOUR_PREFERED_FOR_DEV
+    
+    # fee 2: aplicado sobre el fee de despegar
+    btc_trip.percent_fee: 33.4
+

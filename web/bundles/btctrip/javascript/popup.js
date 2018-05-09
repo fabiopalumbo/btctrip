@@ -1,0 +1,4 @@
+/*!
+FRAMEWORK_VERSION:1.1.197
+*/
+registerNameSpace("Nibbler.Popup.js");Nibbler.Popup.js.Creator=function(a){a=a||{};a.id=a.id||false;a.title=a.title||false;a.hideCloseIcon=a.hideCloseIcon||false;a.noPuntita=a.noPuntita||false;a.indicatorPosition=a.indicatorPosition||"top";this.template='<div class="popUpNew"'+(a.id?'id="'+a.id+'"':"")+'> 		<div class="opaqueDiv"></div> 		<div class="popUpContainer"> 	        '+(a.hideCloseIcon?"":'<div class="commonSprite closePopUp closeBlueIcon"></div>')+" 	        "+(a.noPuntita?"":'<span class="indicator '+a.indicatorPosition+'Indicator"></span>')+" 	        "+(a.title?'<div class="titlePopUpContainer"><span class="titlePopUp">'+a.title+"</span></div>":"")+' 			<div class="popUpContent"></div> 	    </div>	</div>';var b=$(this.template);$(".closePopUp",b).click(function(){$(this).parents(".popUpNew").hide()});return b};registerNameSpace("Common");Common.PopupCreatorNew=Nibbler.Popup.js.Creator;

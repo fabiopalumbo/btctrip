@@ -1,0 +1,11 @@
+parameters:
+#    btc_trip_api_btc_trip.example.class: BtcTrip\APIBtcTripBundle\Example
+
+services:
+    btctripapi:
+        class: BtcTrip\APIBtcTripBundle\DependencyInjection\BtctripApi
+        arguments: [@service_container]
+    
+#    btc_trip_api_btc_trip.example:
+#        class: %btc_trip_api_btc_trip.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

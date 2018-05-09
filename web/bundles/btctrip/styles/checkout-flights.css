@@ -1,0 +1,233 @@
+
+
+/*!FRAMEWORK_VERSION:1.43.1 */
+.cardsSprite { background-image: url(/app_dev.php/bundles/btctrip/images/cardsSprite.png);background-repeat:no-repeat;background-attachment:scroll;display:block; }
+* html .cardsSprite { background-image: url(/app_dev.php/bundles/btctrip/images/cardsSpriteIE6.png); }
+img.cardsSprite { display: inline; }
+.brandVisa,
+.brandVI,
+.brand-vi-credit { width: 46px;height:25px;background-position:-1px -157px; }
+.brandVisaSantander,
+.brandVR,
+.brandVI_SAN,
+.brandVI_SARIO,
+.brandVI_RIO,
+.brandVI_RI2,
+.brandVI_STR,
+.brand-vi-san-credit,
+.brand-vi-sario-credit,
+.brand-vi-rio-credit,
+.brand-vi-ri2-credit,
+.brand-vi-str-credit { width: 46px;height:25px;background-position:-142px -157px; }
+.brandMasterCard,
+.brandCA,
+.brand-ca-credit { width: 46px;height:25px;background-position:-48px -157px; }
+.brandAmex,
+.brandAX,
+.brand-ax-credit { width: 46px;height:25px;background-position:-95px -157px; }
+.brandAmexSantander,
+.brandAR,
+.brandAX_SARIO,
+.brandAX_RIO,
+.brandAX_STR,
+.brand-ax-san-credit,
+.brand-ax-sario-credit,
+.brand-ax-rio-credit,
+.brand-ax-str-credit { width: 46px;height:25px;background-position:-189px -157px; }
+.brandCreditoDespegar,
+.brandCD,
+.brandCreditoViajo,
+.brandCV { width: 46px;height:25px;background-position:-142px -183px; }
+.brandCreditoDecolar,
+.brandCreditoViagem { width: 46px;height:25px;background-position:-189px -183px; }
+.brandVI_BAN,
+.brandVI_BAMEX,
+.brandVisaBana,
+.brand-vi-ban-credit,
+.brand-vi-bamex-credit { width: 46px;height:25px;background-position:-1px -209px; }
+.brandCA_BAN,
+.brandCA_BAMEX,
+.brandMasterCardBana,
+.brand-ca-ban-credit,
+.brand-ca-bamex-credit { width: 46px;height:25px;background-position:-48px -209px; }
+.brandCartaBlanca,
+.brandCB,
+.brand-cb-credit { width: 46px;height:25px;background-position:-95px -209px; }
+.brandArgenCard,
+.brandCM,
+.brand-cm-credit { width: 46px;height:25px;background-position:-142px -209px; }
+.brandDiscover,
+.brandDS,
+.brand-ds-credit { width: 46px;height:25px;background-position:-1px -183px; }
+.brandDinersClub,
+.brandDC,
+.brand-dc-credit { width: 46px;height:25px;background-position:-48px -183px; }
+.brandHiperCard,
+.brandHC,
+.brand-hc-credit { width: 46px;height:25px;background-position:-95px -183px; }
+.brandCabal,
+.brandCAB,
+.brand-cab-credit { width: 46px;height:25px;background-position:-189px -313px; }
+.brandVD,
+.brandVisaDebit,
+.brand-vi-debit { width: 46px;height:25px;background-position:-189px -209px; }
+.brandMD,
+.brandMasterCardDebit,
+.brand-ca-debit { width: 46px;height:25px;background-position:-1px -235px; }
+.brandMG,
+.brandMagna,
+.brand-mg-credit { width: 46px;height:25px;background-position:-95px -235px; }
+.brandPR,
+.brandPresto,
+.brand-pr-credit { width: 46px;height:25px;background-position:-48px -235px; }
+.brandVI_COM,
+.brand-vi-com-credit { width: 46px;height:25px;background-position:-95px -27px; }
+.brandVI_CDC,
+.brand-vi-cdc-credit { width: 46px;height:25px;background-position:-48px -1px; }
+.brandVI_NAC,
+.brand-vi-nac-credit { width: 46px;height:25px;background-position:-142px -1px; }
+.brandVI_PRO,
+.brand-vi-pro-credit { width: 46px;height:25px;background-position:-1px -27px; }
+.brandVI_HIP,
+.brand-vi-hip-credit { width: 46px;height:25px;background-position:-95px -1px; }
+.brandVI_ITU,
+.brand-vi-itu-credit { width: 46px;height:25px;background-position:-189px -27px; }
+.brandVI_PAT,
+.brand-vi-pat-credit { width: 46px;height:25px;background-position:-48px -27px; }
+.brandVI_FRN,
+.brand-vi-frn-credit { width: 46px;height:25px;background-position:-142px -27px; }
+.brandVI_STD,
+.brand-vi-std-credit { width: 46px;height:25px;background-position:-189px -1px; }
+.brandVI_GLC,
+.brand-vi-glc-credit { width: 46px;height:25px;background-position:-1px -1px; }
+.brandCA_COM,
+.brand-ca-com-credit { width: 46px;height:25px;background-position:-95px -79px; }
+.brandCA_CDC,
+.brand-ca-cdc-credit { width: 46px;height:25px;background-position:-48px -53px; }
+.brandCA_NAC,
+.brand-ca-nac-credit { width: 46px;height:25px;background-position:-142px -53px; }
+.brandCA_PRO,
+.brand-ca-pro-credit { width: 46px;height:25px;background-position:-1px -79px; }
+.brandCA_HIP,
+.brand-ca-hip-credit { width: 46px;height:25px;background-position:-95px -53px; }
+.brandCA_ITU,
+.brand-ca-itu-credit { width: 46px;height:25px;background-position:-189px -79px; }
+.brandCA_PAT,
+.brand-ca-pat-credit { width: 46px;height:25px;background-position:-48px -79px; }
+.brandCA_FRN,
+.brand-ca-frn-credit { width: 46px;height:25px;background-position:-142px -79px; }
+.brandCA_STD,
+.brand-ca-std-credit { width: 46px;height:25px;background-position:-189px -53px; }
+.brandCA_GLC,
+.brand-ca-glc-credit { width: 46px;height:25px;background-position:-1px -53px; }
+.brandAX_COM,
+.brand-ax-com-credit { width: 46px;height:25px;background-position:-95px -131px; }
+.brandAX_CDC,
+.brand-ax-cdc-credit { width: 46px;height:25px;background-position:-48px -105px; }
+.brandAX_NAC,
+.brand-ax-nac-credit { width: 46px;height:25px;background-position:-142px -105px; }
+.brandAX_PRO,
+.brand-ax-pro-credit { width: 46px;height:25px;background-position:-1px -131px; }
+.brandAX_HIP,
+.brand-ax-hip-credit { width: 46px;height:25px;background-position:-95px -105px; }
+.brandAX_ITU,
+.brand-ax-itu-credit { width: 46px;height:25px;background-position:-189px -131px; }
+.brandAX_PAT,
+.brand-ax-pat-credit { width: 46px;height:25px;background-position:-48px -131px; }
+.brandAX_FRN,
+.brand-ax-frn-credit { width: 46px;height:25px;background-position:-142px -131px; }
+.brandAX_STD,
+.brand-ax-std-credit { width: 46px;height:25px;background-position:-189px -105px; }
+.brandAX_GLC,
+.brand-ax-glc-credit { width: 46px;height:25px;background-position:-1px -105px; }
+.brandMasterCardSantander,
+.brandCA_SAN,
+.brandCA_RIO,
+.brandCA_STR,
+.brand-ca-san-credit,
+.brand-ca-sario-credit,
+.brand-ca-rio-credit,
+.brand-ca-str-credit { width: 46px;height:25px;background-position:-142px -235px; }
+.brandVI_CIU,
+.brand-vi-ciu-credit { width: 46px;height:25px;background-position:-189px -235px; }
+.brandCA_CIU,
+.brand-ca-ciu-credit { width: 46px;height:25px;background-position:-1px -261px; }
+.brandVI_DAV,
+.brand-vi-dav-credit { height: 25px;width:46px;background-position:-95px -313px; }
+.brandCA_DAV,
+.brand-ca-dav-credit { height: 25px;width:46px;background-position:-48px -313px; }
+.brandDC_DAV,
+.brand-dc-dav-credit { width: 46px;height:25px;background-position:-142px -313px; }
+.brandVI_BX,
+.brand-vi-bx-credit { background-position: -48px -261px;height:25px;width:46px; }
+.brandCA_BX,
+.brand-ca-bx-credit { background-position: -95px -261px;height:25px;width:46px; }
+.brandVI_BC,
+.brand-vi-bc-credit { background-position: -142px -261px;height:25px;width:46px; }
+.brandCA_BC,
+.brand-ca-bc-credit { background-position: -189px -261px;height:25px;width:46px; }
+.brandVI_BN,
+.brand-vi-bn-credit { background-position: -1px -287px;height:25px;width:46px; }
+.brandCA_BN,
+.brand-ca-bn-credit { background-position: -48px -287px;height:25px;width:46px; }
+.brandVI_HSB,
+.brand-vi-hsb-credit { background-position: -95px -287px;height:25px;width:46px; }
+.brandCA_HSB,
+.brand-ca-hsb-credit { background-position: -142px -287px;height:25px;width:46px; }
+.brandAX_HSB,
+.brand-ax-hsb-credit { background-position: -48px -469px;height:25px;width:46px; }
+.brandVI_SB,
+.brand-vi-sb-credit { background-position: -189px -287px;height:25px;width:46px; }
+.brandCA_SB,
+.brand-ca-sb-credit { background-position: -1px -313px;height:25px;width:46px; }
+.brandCL,
+.brand-cl-credit { background-position: -189px -313px;height:25px;width:46px; }
+.brandTN,
+.brand-tn-credit { background-position: -1px -339px;height:25px;width:46px; }
+.brandNT,
+.brand-nt-credit { background-position: -48px -339px;height:25px;width:46px; }
+.brandAX_MAC,
+.brand-ax-mac-credit { background-position: -95px -339px;height:25px;width:46px; }
+.brandVI_MAC { background-position: -1px -417px;height:25px;width:46px; }
+.brandCA_MAC { background-position: -189px -391px;height:25px;width:46px; }
+.brandCA_STC,
+.brand-ca-stc-credit,
+.brand-ca-scr-credit { background-position: -142px -339px;height:25px;width:46px; }
+.brandCA_CIT,
+.brand-ca-cit-credit { background-position: -189px -339px;height:25px;width:46px; }
+.brandCA_CMR,
+.brand-ca-cmr-credit { background-position: -1px -365px;height:25px;width:46px; }
+.brandCA_BRA,
+.brand-ca-bra-credit { background-position: -48px -365px;height:25px;width:46px; }
+.brandVI_BRA,
+.brand-vi-bra-credit { background-position: -48px -365px;height:25px;width:46px; }
+.brandAX_BRA,
+.brand-ax-bra-credit { background-position: -48px -365px;height:25px;width:46px; }
+.brandVI_CIT { background-position: -95px -365px;height:25px;width:46px; }
+.brand-hsbc-credit { background-position: -48px -391px;height:25px;width:46px; }
+.brand-san-credit { background-position: -95px -391px;height:25px;width:46px; }
+.brand-ban-credit { background-position: -142px -365px;height:25px;width:46px; }
+.brand-bbvab-credit { background-position: -1px -391px;height:25px;width:46px; }
+.brand-banor-credit { background-position: -189px -365px;height:25px;width:46px; }
+.brand-scinv-credit { background-position: -142px -391px;height:25px;width:46px; }
+.brandEC,
+.brand-ec-credit { background-position: -48px -417px;height:25px;width:46px; }
+.brandVI_AZU,
+.brand-vi-azu-credit { background-position: -142px -417px;height:25px;width:46px; }
+.brandVI_BCO,
+.brand-vi-bco-credit { background-position: -189px -417px;height:25px;width:46px; }
+.brandVI_SUP,
+.brand-vi-sup-credit { background-position: -1px -443px;height:25px;width:46px; }
+.brandVI_ROS,
+.brand-vi-ros-credit { background-position: -48px -443px;height:25px;width:46px; }
+.brandVI_NEU,
+.brand-vi-neu-credit { background-position: -95px -443px;height:25px;width:46px; }
+.brandVI_FOR,
+.brand-vi-for-credit { background-position: -142px -443px;height:25px;width:46px; }
+.brandVI_TUC,
+.brand-vi-tuc-credit { background-position: -189px -443px;height:25px;width:46px; }
+.brandSUP,
+.brand-sup-credit { background-position: -1px -521px;height:25px;width:46px; }
+.brandTSB,
+.brand-tsb-credit { background-position: -48px -521px;height:25px;width:46px; }
+

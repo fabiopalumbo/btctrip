@@ -1,0 +1,68 @@
+btc_trip_hotels_homepage:
+    pattern:  /hotels/search
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:searchHotels }
+
+btc_trip_hotels_homepage:
+    pattern:  /hotels/map/{latitude}/{longitude}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:getHotelMap }
+
+
+btc_trip_result_hotels:
+    pattern:  /hotels/result/{hotel_id}/{check_in}/{check_out}/{distribution}/{page}/{filterParams}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:resultHotels, filterParams: null}
+
+btc_trip_result_hotelsFacets:
+    pattern:  /hotels/resultFacets/{hotel_id}/{check_in}/{check_out}/{distribution}/{page}/{filterParams}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:resultFacets , filterParams: null}
+
+btc_trip_result_hotels_no_date:
+    pattern:  /hotels/result/{hotel_id}/{distribution}/{page}/{filterParams}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:resultHotels, check_in: null, check_out: null, filterParams: null}
+
+btc_trip_result_hotelsFacets_no_date:
+    pattern:  /hotels/resultFacets/{hotel_id}/{distribution}/{page}/{filterParams}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:resultFacets , check_in: null, check_out: null, filterParams: null}
+
+
+
+btc_trip_getHotelsByAjax:
+    pattern:  /hotels/autocomplete/{term}
+    defaults: { _controller: BtcTripHotelsBundle:Autocomplete:getHotelsByAjax }
+
+
+btc_trip_showHotel:
+    pattern:  /hotels/show/{hotel_id}/{check_in}/{check_out}/{distribution}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:showHotel }
+
+btc_trip_showHotel_no_date:
+    pattern:  /hotels/show/{hotel_id}/{distribution}/{ciudad}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:showHotel, check_in: null, check_out: null, ciudad: null }
+
+
+btc_trip_searchAvailableHotel:
+    pattern:  /hotels/searchAvailableHotel/{hotel_id}/{check_in}/{check_out}/{distribution}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:searchAvailableHotel }
+
+btc_trip_searchAvailableHotel_no_date:
+    pattern:  /hotels/searchAvailableHotel/{hotel_id}/{distribution}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:searchAvailableHotel }
+
+
+btc_trip_showMoreComments:
+    pattern:  /hotels/showMoreComments/{hotel_id}/{cantidad_comentarios}/{page}/{parcial_comentarios}/{total_comentarios}
+    defaults: { _controller: BtcTripHotelsBundle:CoreHotels:showMoreComments }
+
+btc_trip_checkoutForm:
+    pattern:  /hotels/book/checkout/{sessionTicket}/{room_id}
+    defaults: { _controller: BtcTripHotelsBundle:Checkout:form }        
+    
+btc_trip_checkoutSubmit:
+    pattern:  /hotels/book/checkout/submit
+    defaults: { _controller: BtcTripHotelsBundle:Checkout:submit } 
+    
+
+btc_trip_checkout_form_payment_notification:
+    pattern:  /hotels/book/checkout/payment
+    defaults: { _controller: BtcTripHotelsBundle:Checkout:payment } 
+    
+   

@@ -1,0 +1,97 @@
+
+#header {
+    background: url("/img/ui/header-bg.png") repeat-x scroll 0 0 #FFFFFF;
+    height: 111px;
+}
+#header .content {
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+    width: 980px;
+}
+#header .logo {
+    background: url("/img/ui/sprite_avantrip.png") no-repeat scroll 0 0 transparent;
+    height: 91px;
+    margin: 0;
+    position: absolute;
+    text-indent: -9999em;
+    top: 10px;
+    width: 91px;
+}
+#header .logo > a {
+    display: block;
+    height: 91px;
+    width: 91px;
+}
+.call-us a {
+    background: none repeat scroll 0 0 transparent;
+    height: 90px;
+    position: static;
+    right: 0;
+    text-indent: 0;
+    top: 0;
+    width: 257px;
+}
+.call-us a:hover {
+    text-decoration: none;
+}
+.call-us {
+    font-family: 'BitterRegular','Times New Roman',serif;
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.call-us p {
+    color: #808080;
+    font-size: 15px;
+    margin: 0 0 3px;
+    text-align: right;
+}
+.call-us p.horario {
+    font-size: 13px;
+    font-weight: normal;
+}
+.call-us p a {
+    color: #E90010;
+    font-size: 24px;
+    text-align: right;
+}
+.encuesta {
+    bottom: 0;
+    font-size: 13px;
+    position: absolute;
+    right: 0;
+}
+#header .socials {
+    left: 110px;
+    position: absolute;
+    top: 20px;
+}
+#header #nav {
+    bottom: 0;
+    left: 330px;
+    position: absolute;
+}
+#header #nav li {
+    float: left;
+}
+#header #nav li a {
+    background: url("/img/ui/sprite_avantrip.png") no-repeat scroll -100px -91px transparent;
+    color: #E90010;
+    display: block;
+    font-family: 'BitterRegular',Arial,Helvetica,sans-serif;
+    font-size: 14px;
+    height: 40px;
+    line-height: 47px;
+    margin: 0 5px 0 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 90px;
+}
+#header #nav li a.active {
+    background-position: 0 -91px;
+    color: #333333;
+    padding: 0 5px;
+    text-shadow: 0 1px 0 white;
+}

@@ -1,0 +1,16 @@
+Options +FollowSymLinks
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule shop/flights/search/(.*) /shop/flights/result/$1 [R=301,L] 
+
+#/shop/flights/results/roundtrip/ROM/PAR/2013-08-01/2013-08-08/1/0/0
+RewriteRule shop/flights/results/roundtrip/?([A-Z_-]+)/?([A-Z_-]+)/?([0-9]{4}\-[0-9]{2}\-[0-9]{2})/?([0-9]{4}\-[0-9]{2}\-[0-9]{2})/?([0-9_-]+)/?([0-9_-]+)/?([0-9_-]+) index.php?from=$1&to=$2&departureDate=$3&returningDate=$4&adults=$5&children=$6&infants=$7 [L,QSA]
+
+RewriteRule shop/flights/data/search/roundtrip/?([A-Z_-]+)/?([A-Z_-]+)/?([0-9]{4}\-[0-9]{2}\-[0-9]{2})/?([0-9]{4}\-[0-9]{2}\-[0-9]{2})/?([0-9_-]+)/?([0-9_-]+)/?([0-9_-]+) search.php?from=$1&to=$2&departureDate=$3&returningDate=$4&adults=$5&children=$6&infants=$7 [L,QSA]
+
+RewriteRule shop/flights/result/roundtrip/?([A-Z_-]+)/?([A-Z_-]+)/?([0-9]{4}\-[0-9]{2}\-[0-9]{2})/?([0-9]{4}\-[0-9]{2}\-[0-9]{2})/?([0-9_-]+)/?([0-9_-]+)/?([0-9_-]+) result.php?from=$1&to=$2&departureDate=$3&returningDate=$4&adults=$5&children=$6&infants=$7 [L,QSA]
+

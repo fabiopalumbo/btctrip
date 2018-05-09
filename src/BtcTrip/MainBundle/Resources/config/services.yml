@@ -1,0 +1,41 @@
+parameters:
+#    btc_trip_main.example.class: BtcTrip\MainBundle\Example
+
+services:
+    simplecaptcha:
+        class: BtcTrip\MainBundle\DependencyInjection\SimpleCaptcha
+        arguments: [@service_container]
+    autoincrement:
+        class: BtcTrip\MainBundle\DependencyInjection\Autoincrement
+        arguments: [@service_container]
+    sessionmanager:
+        class: BtcTrip\MainBundle\DependencyInjection\SessionManager
+        arguments: [@service_container]
+    exchangerate:
+        class: BtcTrip\MainBundle\DependencyInjection\ExchangeRate
+        arguments: [@service_container]
+        
+    ordermanager:
+        class: BtcTrip\MainBundle\DocumentManager\OrderManager
+        arguments: [@service_container]
+    citymanager:
+        class: BtcTrip\MainBundle\DocumentManager\CityManager
+        arguments: [@service_container]
+    accountingmanager:
+        class: BtcTrip\MainBundle\DocumentManager\AccountingManager
+        arguments: [@service_container]
+
+    remailer:
+        class: BtcTrip\MainBundle\DependencyInjection\ReMailer
+        arguments: [@service_container, %btc_trip.service.remailer.systemEmail%, %btc_trip.service.remailer.adminEmail%]
+
+    paymentmanager:
+        class: BtcTrip\MainBundle\DependencyInjection\PaymentManager
+        arguments: [@service_container]
+    bitpayapi:
+        class: BtcTrip\MainBundle\DependencyInjection\BitPayApi
+        arguments: [@service_container, %btc_trip.service.bitpay.apikey%, %btc_trip.service.bitpay.notificationURL%, %btc_trip.service.bitpay.notificationEmail%]
+    gocoinapi:
+        class: BtcTrip\MainBundle\DependencyInjection\GoCoinApi
+        arguments: [@service_container, %btc_trip.service.gocoin.token%, %btc_trip.service.gocoin.notificationURL%, %btc_trip.service.gocoin.clientId%, %btc_trip.service.gocoin.clientSecret%, %btc_trip.service.gocoin.merchantId%]
+

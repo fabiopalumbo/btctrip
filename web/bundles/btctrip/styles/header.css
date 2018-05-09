@@ -1,0 +1,275 @@
+@import url(../../../../tooltip/css/despegar/pkg/tooltip.css);
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container [class^="info-"] {
+    font-size: 11px;
+    text-align: center;
+    border: 1px solid transparent;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container [class^="info-"]:hover {
+    text-decoration: none;
+    background: #eff7fc;
+    border: 1px solid #319fda;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container [class^="info-"] a { color: #666 }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-city a:hover { text-decoration: none }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-city .city {
+    text-decoration: underline;
+    color: #319fda;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact:hover {
+    background: transparent;
+    border: 1px solid transparent;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .call-description {
+    color: #444;
+    font-weight: bold;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .call-description .number {
+    font-size: 16px;
+    color: #e20a16;
+    font-weight: bold;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .call-description .number .hours { font-size: 11px }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR:hover,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR:hover {
+    text-decoration: none;
+    background: #eff7fc;
+    border: 1px solid #319fda;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR a,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR a { cursor: pointer }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR .contact-link .call-description,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR .contact-link .call-description {
+    color: #444;
+    text-decoration: underline;
+    color: #319fda;
+    font-weight: normal;
+}
+.ie7 .header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR .contact-link,
+.ie7 .header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR .contact-link { text-decoration: none }
+.ie7 .header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR .contact-link .call-description,
+.ie7 .header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR .contact-link .call-description { text-decoration: none }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-my-orders { text-decoration: none }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-my-orders .my-despegar {
+    text-decoration: underline;
+    color: #319fda;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-my-orders .my-orders { color: #444 }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-my-orders:hover a { text-decoration: none }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-client-attention a {
+    text-decoration: underline;
+    color: #319fda;
+}
+.header .header-container .navigation-links .nav-links-header [class^="link-"]:hover { background-color: #9db9fc }
+.header .header-container .navigation-links .nav-links-header [class^="link-"]:hover a { text-decoration: none }
+.header .header-container .navigation-links .nav-links-header [class^="link-"] a { color: white }
+.header .header-container .navigation-links .nav-links-header [class^="link-"] a.arrow-nav:before {
+    border-right: 9px solid transparent;
+    border-bottom: 8px solid white;
+    border-left: 9px solid transparent;
+}
+.header #popupCountries .popUpContainer .popUpContent .countries { font-size: 13px }
+.header #popupCountries .popUpContainer .popUpContent .cancel { font-size: 11px }
+.header #popupTelephones .popUpContainer .popUpContent .telephone-contact .other-telephone { border-top: 1px solid #ccc }
+.header .header-container {
+    height: 105px;
+    width: 970px;
+    padding: 5px 0 0 20px;
+    margin-bottom: 10px;
+}
+.header .header-container .logo-and-contact-container {
+    float: left;
+    width: 230px;
+    margin-top: 0px;
+}
+.ie7 .header .header-container .logo-and-contact-container { z-index: 0 }
+.header .header-container .logo-and-contact-container .likeItFacebook {
+    float: left;
+    margin: 22px 0 0 25px;
+}
+.header .header-container .logo-and-contact-container .logo-container { float: left }
+.header .header-container .logo-and-contact-container .logo-container.ssl a { cursor: default }
+.header .header-container .logo-and-contact-container .personal-info {
+    float: right;
+    margin-top: 10px;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container [class^="info-"] {
+    float: left;
+    height: 27px;
+    padding: 10px 5px 5px 5px;
+    margin: 0 10px;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container [class^="info-"]:hover {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-city { position: relative }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-city a:hover { text-decoration: none }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact { position: relative }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact:hover { cursor: default }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact a { cursor: default }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .girl-call { float: right }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .call-description {
+    margin-top: 5px;
+    float: right;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .call-description .number {
+    margin-top: 5px;
+    float: left;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .telephone-icon { float: left }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact::after {
+    content: "|";
+    position: absolute;
+    left: -12px;
+    top: 15px;
+}
+.ie7 .header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact { width: 95px }
+.ie7 .header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .call-description .number { line-height: 15px }
+.ie7 .header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact .contact-link .telephone-icon { float: left }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR {
+    padding: 3px 5px 3px 5px;
+    height: 36px;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR:hover,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR:hover {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    cursor: default;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR a,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR a { cursor: pointer }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR .contact-link .girl-call,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR .contact-link .girl-call { float: right }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR .contact-link .call-description,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR .contact-link .call-description {
+    margin-top: 5px;
+    float: left;
+    margin-right: 5px;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR .contact-link .telephone-icon,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR .contact-link .telephone-icon { float: left }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.BR::after,
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-contact.AR::after { left: -12px }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-my-orders {
+    width: 75px;
+    position: relative;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-my-orders::after {
+    content: "|";
+    position: absolute;
+    left: -12px;
+    top: 15px;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-client-attention { position: relative }
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container .info-client-attention::after {
+    content: "|";
+    position: absolute;
+    left: -12px;
+    top: 15px;
+}
+.header .header-container .logo-and-contact-container .personal-info .personal-info-container.ssl .info-contact::after { content: "" }
+.header .header-container .navigation-links {
+    float: left;
+    padding-top: 13px;
+}
+.ie7 .header .header-container .navigation-links { z-index: -1 }
+.header .header-container .navigation-links .nav-links-header [class^="link-"] {
+    float: left;
+    margin: 0 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+.header .header-container .navigation-links .nav-links-header [class^="link-"]:first-child { margin: 0 10px 0 -5px }
+.header .header-container .navigation-links .nav-links-header [class^="link-"]:hover {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+}
+.header .header-container .navigation-links .nav-links-header [class^="link-"] [class^="nav-"] {
+    float: left;
+    margin-right: 5px;
+}
+.header .header-container .navigation-links .nav-links-header [class^="link-"] a { float: left }
+.header .header-container .navigation-links .nav-links-header [class^="link-"] a.arrow-nav { position: relative }
+.header .header-container .navigation-links .nav-links-header [class^="link-"] a.arrow-nav:before {
+    content: "";
+    position: absolute;
+    left: 34%;
+    top: 21px;
+    width: 0;
+    height: 0;
+}
+.header .header-container .navigation-links .nav-links-header [class^="link-"] a:first-child.arrow-nav::before { left: 10px }
+.header .header-container .bestPricelogo {
+    cursor: pointer;
+    float: right;
+}
+.header .header-container .bestPricelogo.ssl { cursor: auto }
+.header #popupCountries {
+    z-index: 1000;
+    left: -157%;
+    top: 54px;
+    display: none;
+    padding: 10px;
+}
+.header #popupCountries .topIndicator { left: 100px }
+.header #popupCountries .popUpContainer { margin: 0px }
+.ie7 .header #popupCountries .popUpContainer { width: 220px }
+.header #popupCountries .popUpContainer .popUpContent { overflow: hidden }
+.header #popupCountries .popUpContainer .popUpContent .telephonesContact { margin: 0px 10px 10px 10px }
+.header #popupCountries .popUpContainer .popUpContent .countries {
+    width: 200px;
+    padding: 2px;
+}
+.header #popupCountries .popUpContainer .popUpContent .submit { margin: 0 10px 20px 10px }
+.header #popupCountries .popUpContainer .popUpContent .cancel {
+    margin: 20px 0px 0px 0px;
+    display: block;
+}
+.header #popupTelephones {
+    z-index: 1000;
+    left: -106%;
+    top: 54px;
+    display: none;
+    padding: 10px;
+}
+.header #popupTelephones .topIndicator { left: 100px }
+.header #popupTelephones .popUpContainer { margin: 0px }
+.header #popupTelephones .popUpContainer .popUpContent {
+    overflow: hidden;
+    width: 224px;
+}
+.header #popupTelephones .popUpContainer .popUpContent .telephone-contact {
+    width: auto;
+    padding: 0px;
+}
+.header .telephone-contact {
+    margin: 5px;
+    overflow: hidden;
+    width: 170px;
+    padding: 5px;
+}
+.header .telephone-contact ul li {
+    padding-top: 5px;
+    height: 15px;
+}
+.header .telephone-contact .first-telephone .telephone-description { float: left }
+.header .telephone-contact .first-telephone .telephone-number { float: right }
+.header .telephone-contact .other-telephone .telephone-description { float: left }
+.header .telephone-contact .other-telephone .telephone-number { float: right }
+
+.header .social-media { 
+	float: left;
+	margin-top: 60px;
+	padding-left: 20px;
+}
